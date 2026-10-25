@@ -1,0 +1,862 @@
+<!DOCTYPE html><html dir="rtl" lang="ar" style=""><head><meta charset="utf-8"><meta name="description" content="سجل العمليات - مدرسة القديس أرسانيوس للألحان">><title>سجل العمليات - مدرسة القديس أرسانيوس للألحان</title><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#f2f0ed", "outline-variant": "#d9c1ba", "surface-container-highest": "#e4e2df", "tertiary": "#270600", "secondary-fixed": "#ffddb8", "on-secondary-container": "#754900", "on-secondary-fixed-variant": "#653e00", "secondary-fixed-dim": "#fdb965", "text-primary": "#2B1E1A", "on-primary-fixed": "#390b00", "on-tertiary-fixed-variant": "#763219", "error-container": "#ffdad6", "tertiary-fixed": "#ffdbcf", "on-error": "#ffffff", "on-primary": "#ffffff", "tertiary-container": "#69270d", "surface-container-high": "#eae8e4", "surface-bright": "#fbf9f5", "on-primary-container": "#ca775c", "surface-container": "#efeeea", "on-surface-variant": "#54433e", "on-error-container": "#93000a", "on-background": "#1b1c1a", "on-secondary-fixed": "#2a1700", "on-secondary": "#ffffff", "on-tertiary-fixed": "#390c00", "semantic-success": "#2E7D32", "surface": "#FFFFFF", "on-tertiary": "#ffffff", "secondary": "#855300", "on-primary-fixed-variant": "#74341e", "audio-scrubber-track": "#E2DACF", "background": "#fbf9f5", "primary-container": "#662914", "primary-fixed": "#ffdbd0", "primary-fixed-dim": "#ffb59d", "secondary-container": "#fdb965", "surface-container-low": "#f5f3f0", "text-secondary": "#6E6058", "inverse-primary": "#ffb59d", "on-surface": "#1b1c1a", "tertiary-fixed-dim": "#ffb59c", "inverse-surface": "#30312e", "outline": "#87736d", "surface-variant": "#e4e2df", "semantic-error": "#C62828", "surface-tint": "#924a33", "semantic-warning": "#E65100", "surface-subtle": "#F4EFEA", "surface-dim": "#dbdad6", "semantic-disabled": "#BDBDBD", "error": "#ba1a1a", "on-tertiary-container": "#ed8d6c", "surface-container-lowest": "#ffffff", "border-warm": "#E6DFD5", "border-focused": "#C88A36", "primary": "#270600" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-tablet": "1.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem", "space-xl": "2rem", "space-md": "1rem", "margin-tablet": "1.5rem", "margin-desktop": "2.5rem" }, "fontFamily": { "body-lg": ["Cairo"], "body-md": ["Cairo"], "body-sm": ["Cairo"], "label-lg": ["Cairo"], "label-md": ["Cairo"], "label-sm": ["Cairo"], "title-lg": ["Cairo"], "title-md": ["Cairo"], "display-lg": ["Noto Serif"], "headline-lg": ["Noto Serif"], "headline-md": ["Noto Serif"] }, "fontSize": { "body-lg": ["17px", { "lineHeight": "28px", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "400" }], "title-lg": ["18px", { "lineHeight": "28px", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-lg": ["26px", { "lineHeight": "36px", "fontWeight": "700" }], "display-lg": ["32px", { "lineHeight": "44px", "fontWeight": "700" }] } } } };</script></head>
+<body class="bg-background font-body-md text-body-md text-text-primary flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<style>
+  #datePickerOverlay { z-index: 90 !important; }
+  #timeline, #roleTabs, #customRangeChips { scrollbar-width: none; -ms-overflow-style: none; }
+  #timeline::-webkit-scrollbar, #roleTabs::-webkit-scrollbar, #customRangeChips::-webkit-scrollbar { display: none; }
+  .audit-card { transition: box-shadow .18s ease, transform .18s ease; }
+  .audit-card:hover { box-shadow: 0 8px 24px -12px rgba(73,20,2,.25); }
+  .audit-skeleton { animation: auditPulse 1.4s ease-in-out infinite; }
+  @keyframes auditPulse { 0%,100% { opacity: .5; } 50% { opacity: 1; } }
+</style>
+
+<header class="fixed top-0 inset-x-0 z-50 bg-surface-bright/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(73,20,2,0.04)] pt-safe">
+  <div class="h-20 px-margin flex items-center justify-between gap-space-sm">
+    <div class="flex items-center gap-space-sm flex-1 min-w-0">
+      <button aria-label="رجوع" class="w-11 h-11 min-w-[44px] shrink-0 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container active:bg-surface-container-high transition-colors" onclick="history.back()" type="button">
+        <span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+      </button>
+      <div class="flex flex-col min-w-0 text-right">
+        <h1 class="font-title-lg text-title-lg text-primary truncate leading-tight">سجل العمليات</h1>
+        <p class="font-body-sm text-body-sm text-text-secondary truncate mt-0.5">مدرسة القديس أرسانيوس للألحان والتسبحة</p>
+      </div>
+    </div>
+    <div class="p-0.5 rounded-full ring-1 ring-border-focused/40 bg-surface-container-lowest flex items-center justify-center shadow-sm shrink-0">
+      <img alt="شعار مدرسة القديس أرسانيوس" class="w-8 h-8 rounded-full object-cover" onerror="this.style.display='none'" src="assets/logo.png">
+    </div>
+  </div>
+</header>
+
+<main class="flex flex-col relative w-full pt-20 bg-background min-h-screen">
+  <div class="flex flex-col w-full px-margin pb-12">
+
+    <!-- مركز الفلاتر -->
+    <section class="flex flex-col gap-space-sm mb-space-md mt-space-sm">
+      <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+        <!-- نطاق التاريخ -->
+        <div class="flex items-center gap-space-xs overflow-x-auto pb-1 no-scrollbar" id="customRangeChips">
+          <button class="date-chip px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shrink-0 shadow-sm transition-transform active:scale-95" id="chipToday" type="button">اليوم</button>
+          <button class="date-chip px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md shrink-0 transition-colors" id="chipWeek" type="button">هذا الأسبوع</button>
+          <button class="date-chip flex items-center gap-1 px-space-md py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md shrink-0 transition-colors" id="chipCustom" type="button">
+            <span class="material-symbols-outlined text-sm">calendar_month</span>
+            <span id="customLabel">نطاق مخصص</span>
+          </button>
+        </div>
+
+        <!-- البحث -->
+        <div class="relative w-full">
+          <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-text-secondary text-lg pointer-events-none">search</span>
+          <input aria-label="بحث في سجل العمليات" autocomplete="off" class="w-full bg-surface-bright rounded-lg pr-9 pl-4 py-2 font-body-sm text-body-sm text-on-surface placeholder:text-text-secondary focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-border-focused transition-all" id="searchInput" maxlength="80" placeholder="بحث بالاسم، الحدث، أو نوع الإجراء..." type="search">
+        </div>
+
+        <!-- شرائح الأدوار -->
+        <div class="flex items-center gap-1.5 overflow-x-auto pt-1 no-scrollbar" id="roleTabs">
+          <button class="role-tab flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shrink-0 font-semibold shadow-xs" data-role="" type="button">
+            <span>الكل</span>
+            <span class="count-badge bg-primary/20 text-on-primary-container px-1.5 py-0.5 rounded-full text-label-sm font-label-sm font-bold" id="countAll">0</span>
+          </button>
+          <button class="role-tab flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md shrink-0 transition-colors" data-role="student" type="button">
+            <span>طالب</span>
+            <span class="count-badge bg-surface-dim text-on-surface-variant px-1.5 py-0.5 rounded-full text-label-sm font-label-sm" id="countStudent">0</span>
+          </button>
+          <button class="role-tab flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md shrink-0 transition-colors" data-role="servant" type="button">
+            <span>خادم</span>
+            <span class="count-badge bg-surface-dim text-on-surface-variant px-1.5 py-0.5 rounded-full text-label-sm font-label-sm" id="countServant">0</span>
+          </button>
+          <button class="role-tab flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md shrink-0 transition-colors" data-role="admin" type="button">
+            <span>إداري</span>
+            <span class="count-badge bg-surface-dim text-on-surface-variant px-1.5 py-0.5 rounded-full text-label-sm font-label-sm" id="countAdmin">0</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- الخط الزمني -->
+    <section class="flex flex-col relative mb-space-lg">
+      <div class="absolute right-[21px] top-4 bottom-4 w-0.5 bg-surface-variant rounded-full pointer-events-none" id="timelineRail"></div>
+      <div class="flex flex-col gap-space-md" id="timeline">
+        <div class="relative flex items-start gap-space-sm pl-1 audit-skeleton">
+          <div class="shrink-0 w-11 flex justify-center pt-1"><div class="w-8 h-8 rounded-full bg-surface-container"></div></div>
+          <div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-2">
+            <div class="h-4 w-32 rounded bg-surface-container"></div>
+            <div class="h-3 w-full rounded bg-surface-container"></div>
+            <div class="h-3 w-2/3 rounded bg-surface-container"></div>
+          </div>
+        </div>
+        <div class="relative flex items-start gap-space-sm pl-1 audit-skeleton">
+          <div class="shrink-0 w-11 flex justify-center pt-1"><div class="w-8 h-8 rounded-full bg-surface-container"></div></div>
+          <div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-2">
+            <div class="h-4 w-28 rounded bg-surface-container"></div>
+            <div class="h-3 w-full rounded bg-surface-container"></div>
+            <div class="h-3 w-1/2 rounded bg-surface-container"></div>
+          </div>
+        </div>
+        <div class="relative flex items-start gap-space-sm pl-1 audit-skeleton">
+          <div class="shrink-0 w-11 flex justify-center pt-1"><div class="w-8 h-8 rounded-full bg-surface-container"></div></div>
+          <div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-2">
+            <div class="h-4 w-36 rounded bg-surface-container"></div>
+            <div class="h-3 w-full rounded bg-surface-container"></div>
+            <div class="h-3 w-3/4 rounded bg-surface-container"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex-col items-center gap-2 text-center" id="emptyState">
+        <span class="material-symbols-outlined text-outline text-[34px]">history_toggle_off</span>
+        <p class="font-title-md text-title-md text-primary">لا توجد عمليات في هذه الفترة</p>
+        <p class="font-body-sm text-body-sm text-text-secondary" id="emptyHint">جرّب توسيع النطاق الزمني أو تغيير البحث.</p>
+        <button class="mt-1 px-4 py-2 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors" id="emptyWeekBtn" type="button">عرض هذا الأسبوع</button>
+      </div>
+
+      <div class="hidden p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex-col items-center gap-2 text-center" id="errorState">
+        <span class="material-symbols-outlined text-semantic-error text-[34px]">cloud_off</span>
+        <p class="font-title-md text-title-md text-primary">تعذر تحميل سجل العمليات</p>
+        <p class="font-body-sm text-body-sm text-text-secondary" id="errorText">تحقق من الاتصال ثم أعد المحاولة.</p>
+        <button class="mt-1 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md" id="retryBtn" type="button">إعادة المحاولة</button>
+      </div>
+    </section>
+
+    <!-- الترقيم -->
+    <section class="flex flex-col gap-space-md pt-2">
+      <div class="flex items-center justify-between bg-surface-container-lowest px-space-md py-2.5 rounded-xl shadow-xs">
+        <button class="flex items-center gap-1 text-primary hover:text-secondary disabled:text-semantic-disabled font-label-md text-label-md transition-colors disabled:pointer-events-none" id="prevBtn" type="button">
+          <span class="material-symbols-outlined text-lg">arrow_forward</span>
+          <span>السابقة</span>
+        </button>
+        <div class="flex items-center gap-1.5 font-label-md text-label-md text-text-secondary">
+          <span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs" id="pageCurrent">1</span>
+          <span>من</span>
+          <span class="font-bold text-on-surface" id="pageTotal">1</span>
+        </div>
+        <button class="flex items-center gap-1 text-primary hover:text-secondary disabled:text-semantic-disabled font-label-md text-label-md transition-colors disabled:pointer-events-none" id="nextBtn" type="button">
+          <span>التالية</span>
+          <span class="material-symbols-outlined text-lg">arrow_back</span>
+        </button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- نافذة النطاق المخصص -->
+<div class="fixed inset-0 z-[80] hidden" id="rangeOverlay" role="presentation">
+  <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-range-close></div>
+  <div class="absolute inset-x-0 bottom-0 mx-auto w-full max-w-md rounded-t-3xl max-h-[88vh] bg-surface-container-lowest shadow-2xl flex flex-col overflow-hidden" role="dialog" aria-modal="true" aria-labelledby="rangeTitle">
+    <div class="shrink-0 p-4 border-b border-border-warm flex items-center justify-between bg-surface-bright">
+      <div class="flex items-center gap-2.5 min-w-0">
+        <div class="w-9 h-9 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm shrink-0">
+          <span class="material-symbols-outlined text-[20px]">date_range</span>
+        </div>
+        <div class="min-w-0">
+          <h3 class="font-title-lg text-title-lg font-bold text-primary truncate" id="rangeTitle">نطاق مخصص</h3>
+          <p class="font-label-sm text-label-sm text-text-secondary truncate">بتوقيت القاهرة</p>
+        </div>
+      </div>
+      <button aria-label="إغلاق" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-text-secondary hover:bg-surface-container-high transition-colors shrink-0" data-range-close type="button">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+    <div class="p-4 flex flex-col gap-3">
+      <p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">اختر بداية ونهاية الفترة لعرض العمليات المسجلة خلالها.</p>
+      <button class="w-full flex items-center justify-between gap-3 p-3 rounded-xl bg-surface-bright border border-border-warm hover:border-secondary transition-colors text-right" id="fromBtn" type="button">
+        <span class="flex items-center gap-2 text-text-secondary">
+          <span class="material-symbols-outlined text-[20px]">event</span>
+          <span class="font-label-md text-label-md">من تاريخ</span>
+        </span>
+        <span class="font-title-md text-title-md text-primary" id="fromValue">—</span>
+      </button>
+      <button class="w-full flex items-center justify-between gap-3 p-3 rounded-xl bg-surface-bright border border-border-warm hover:border-secondary transition-colors text-right" id="toBtn" type="button">
+        <span class="flex items-center gap-2 text-text-secondary">
+          <span class="material-symbols-outlined text-[20px]">event_available</span>
+          <span class="font-label-md text-label-md">إلى تاريخ</span>
+        </span>
+        <span class="font-title-md text-title-md text-primary" id="toValue">—</span>
+      </button>
+      <div class="grid grid-cols-2 gap-2 pt-1">
+        <button class="py-2.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors" data-range-close type="button">إلغاء</button>
+        <button class="py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md" id="applyRangeBtn" type="button">تطبيق النطاق</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script src="date-picker.js"></script>
+<script>
+  /* ===== شاشة «سجل العمليات» (FR-ADM-08 / T071) =====
+     GET /admin/audit?from=&to=&q=&role=&page= — 50 عملية/صفحة.
+     السجل للقراءة فقط: لا تعديل ولا حذف. */
+  const $ = function (id) { return document.getElementById(id); };
+
+  const CLASS_LABELS = {
+    nursery: "حضانة", g1_2: "أولى وتانية", g3_4: "تالتة ورابعة",
+    g5_6: "خامسة وستة", prep: "إعدادي", secondary: "ثانوي",
+    youth: "شباب", mothers: "أمهات",
+  };
+  const SUBJECT_LABELS = {
+    alhan: "الألحان", coptic: "القبطي", taks: "الطقس", mahfouzat: "المحفوظات",
+  };
+  const FIELD_LABELS = {
+    full_name: "الاسم", phone: "الهاتف", whatsapp: "واتساب",
+    parent_phone: "هاتف ولي الأمر", birth_date: "تاريخ الميلاد",
+    gender: "النوع", deacon_rank: "الرتبة", class_id: "الفصل",
+    status: "الحالة", password: "كلمة المرور", photo_url: "الصورة",
+  };
+  const SETTING_LABELS = {
+    qr_interval_sec: "مدة رمز QR", attendance_start: "بداية الحضور",
+    checkout_time: "وقت الانصراف", attendance_window_min: "نافذة الحضور",
+    penalty_late_10: "خصم تأخير 10 دقائق", penalty_late_20: "خصم تأخير 20 دقيقة",
+    penalty_late_30: "خصم تأخير 30 دقيقة", current_school_year: "العام الدراسي",
+    subscription_from: "بداية الاشتراك", subscription_to: "نهاية الاشتراك",
+  };
+
+  const state = {
+    mode: "today", from: "", to: "", role: "", q: "",
+    page: 1, perPage: 50, total: 0,
+    counts: { all: 0, student: 0, servant: 0, admin: 0 },
+    loading: false, seq: 0,
+  };
+  let draftFrom = null;
+  let draftTo = null;
+  let searchTimer = null;
+
+  function esc(value) {
+    return String(value == null ? "" : value).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function pad2(n) { return String(n).padStart(2, "0"); }
+  function strong(v) { return '<span class="font-semibold">' + esc(v) + "</span>"; }
+  function accent(v, cls) { return '<span class="font-bold ' + (cls || "text-primary") + '">' + esc(v) + "</span>"; }
+  function detailsOf(item) { return item && item.details && typeof item.details === "object" ? item.details : {}; }
+
+  function cairoDateParts(d) {
+    const parts = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Africa/Cairo", year: "numeric", month: "2-digit", day: "2-digit",
+    }).formatToParts(d || new Date());
+    const out = {};
+    parts.forEach(function (p) { if (p.type !== "literal") out[p.type] = p.value; });
+    return out;
+  }
+  function cairoToday() {
+    const p = cairoDateParts(new Date());
+    return p.year + "-" + p.month + "-" + p.day;
+  }
+  function addDays(iso, delta) {
+    const d = new Date(iso + "T00:00:00Z");
+    d.setUTCDate(d.getUTCDate() + delta);
+    return d.toISOString().slice(0, 10);
+  }
+  function weekStart(iso) {
+    const d = new Date(iso + "T00:00:00Z");
+    const dow = d.getUTCDay();
+    return addDays(iso, -((dow + 1) % 7));
+  }
+  function shortDate(iso) {
+    if (!iso) return "—";
+    const p = String(iso).slice(0, 10).split("-");
+    return Number(p[2]) + "/" + Number(p[1]);
+  }
+  function fullDate(iso) {
+    if (!iso) return "—";
+    const p = String(iso).slice(0, 10).split("-");
+    return p[2] + "/" + p[1] + "/" + p[0];
+  }
+  function timeLabel(iso) {
+    if (!iso) return "";
+    const parts = new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Africa/Cairo", hour: "2-digit", minute: "2-digit", hour12: false,
+    }).formatToParts(new Date(iso));
+    const out = {};
+    parts.forEach(function (p) { if (p.type !== "literal") out[p.type] = p.value; });
+    let h = Number(out.hour);
+    const period = h < 12 ? "ص" : "م";
+    h = h % 12 || 12;
+    return pad2(h) + ":" + out.minute + " " + period;
+  }
+  function minutesPhrase(n) {
+    if (n === 1) return "دقيقة";
+    if (n === 2) return "دقيقتين";
+    if (n >= 3 && n <= 10) return n + " دقائق";
+    return n + " دقيقة";
+  }
+  function hoursPhrase(n) {
+    if (n === 1) return "ساعة";
+    if (n === 2) return "ساعتين";
+    if (n >= 3 && n <= 10) return n + " ساعات";
+    return n + " ساعة";
+  }
+  function relativeLabel(iso) {
+    if (!iso) return "";
+    const diff = Math.floor((Date.now() - new Date(iso).getTime()) / 60000);
+    if (diff < 1) return "الآن";
+    if (diff < 60) return "منذ " + minutesPhrase(diff);
+    const today = cairoToday();
+    const parts = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Africa/Cairo", year: "numeric", month: "2-digit", day: "2-digit",
+    }).formatToParts(new Date(iso));
+    const o = {};
+    parts.forEach(function (p) { if (p.type !== "literal") o[p.type] = p.value; });
+    const dayKey = o.year + "-" + o.month + "-" + o.day;
+    if (dayKey === today) {
+      const hours = Math.floor(diff / 60);
+      return hours <= 1 ? "منذ ساعة" : "منذ " + hours + " ساعة";
+    }
+    if (dayKey === addDays(today, -1)) return "أمس";
+    return shortDate(dayKey);
+  }
+
+  function statusLabel(value) {
+    return { active: "مفعّل", suspended: "موقوف", pending: "قيد المراجعة", rejected: "مرفوض", done: "تم", in_progress: "جارٍ", none: "لم يبدأ", "1": "مفعّل", "0": "موقوف" }[String(value)] || String(value || "—");
+  }
+  function kindLabel(value) {
+    if (value == null || value === "") return "";
+    return { quiz: "اختبار", recitation: "تسميع", call: "مكالمة هاتفية", visit: "زيارة منزلية", chat: "محادثة", audio: "تسجيل صوتي", image: "صورة", pdf: "ملف PDF", bonus: "مكافأة", deduction: "خصم", grade: "درجة" }[String(value)] || String(value);
+  }
+  function monthLabel(value) {
+    const months = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
+    const p = String(value || "").split("-");
+    if (p.length === 2 && Number(p[1]) >= 1 && Number(p[1]) <= 12) {
+      return months[Number(p[1]) - 1] + " " + p[0];
+    }
+    return value || "";
+  }
+  function classLabel(code) { return CLASS_LABELS[code] || code || ""; }
+  function subjectLabel(code) { return SUBJECT_LABELS[code] || code || ""; }
+  function pointsLabel(v) {
+    const n = Number(v) || 0;
+    return (n > 0 ? "+" : "") + n + " نقطة";
+  }
+
+  function actionMeta(action) {
+    if (action === "grade_add" || action === "grade_update") return { tone: "success", icon: "check" };
+    if (action === "bonus_add") return { tone: "secondary", icon: "star" };
+    if (action === "deduction_add" || action === "ledger_delete") return { tone: "error", icon: "remove_circle" };
+    if (action === "ledger_update") return { tone: "warning", icon: "price_change" };
+    if (action === "attendance_scan" || action === "attendance_manual") return { tone: "outline", icon: "pin" };
+    if (action === "followup_note" || action === "followup_update") return { tone: "neutral", icon: "home" };
+    if (action === "content_add" || action === "content_delete") return { tone: "primary", icon: "folder" };
+    if (action.indexOf("assessment_") === 0) return { tone: "primary", icon: "quiz" };
+    if (action.indexOf("liturgy_") === 0) return { tone: "secondary", icon: "church" };
+    if (action === "wheel_spin") return { tone: "secondary", icon: "casino" };
+    if (action === "monthly_suspend") return { tone: "warning", icon: "shield" };
+    if (action.indexOf("join_request_") === 0) return { tone: "warning", icon: "person_add" };
+    if (action === "notification_create") return { tone: "warning", icon: "notifications" };
+    return { tone: "warning", icon: "shield" };
+  }
+  const TONES = {
+    success: { halo: "bg-semantic-success/15", dot: "bg-semantic-success" },
+    secondary: { halo: "bg-secondary/15", dot: "bg-secondary" },
+    warning: { halo: "bg-semantic-warning/15", dot: "bg-semantic-warning" },
+    error: { halo: "bg-error-container", dot: "bg-semantic-error" },
+    primary: { halo: "bg-primary/10", dot: "bg-primary" },
+    outline: { halo: "bg-surface-variant", dot: "bg-outline" },
+    neutral: { halo: "bg-surface-container-high", dot: "bg-text-secondary" },
+  };
+
+  function roleSubtitle(item) {
+    if (!item.actor_name) return "النظام — عملية تلقائية";
+    const labels = { admin: "إداري", servant: "خادم", student: "طالب" };
+    let text = labels[item.actor_role] || "مستخدم";
+    if (item.actor_class_name) text += " - " + item.actor_class_name;
+    return text;
+  }
+  function actorAvatar(item) {
+    if (!item.actor_name) {
+      return '<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0"><span class="material-symbols-outlined text-[16px]">smart_toy</span></div>';
+    }
+    const initial = String(item.actor_name).trim().charAt(0) || "م";
+    let cls = "bg-surface-container-high text-primary";
+    if (item.actor_role === "admin") cls = "bg-primary-container text-on-primary-container";
+    else if (item.actor_role === "servant") cls = "bg-secondary-fixed text-on-secondary-fixed";
+    return '<div class="w-7 h-7 rounded-full ' + cls + ' flex items-center justify-center font-title-md text-title-md shrink-0">' + esc(initial) + "</div>";
+  }
+
+  function sentenceHtml(item) {
+    const d = detailsOf(item);
+    const target = item.target_name || d.student_name || d.full_name || "";
+    const student = d.student_name || target || "الطالب";
+    const subject = d.subject_name ? " في مادة " + strong(d.subject_name) : "";
+    const klass = d.class_name ? " — " + strong(d.class_name) : "";
+
+    switch (item.action) {
+      case "grade_add":
+      case "grade_update": {
+        const score = d.score == null ? "" : accent(d.score + "/10", "text-semantic-success");
+        const oldScore = d.old_score == null ? "" : accent(d.old_score + "/10", "text-text-secondary");
+        const what = d.assessment_title
+          ? " في " + strong(d.assessment_title) +
+            (d.subject_name ? " — مادة " + strong(d.subject_name) : "")
+          : subject;
+        if (item.action === "grade_add") {
+          return "أدخل درجة " + score + " للطالب " + strong(student) + what + ".";
+        }
+        return "عدّل درجة الطالب " + strong(student) + what +
+          (oldScore ? " من " + oldScore + " إلى " + score : " إلى " + score) + ".";
+      }
+      case "bonus_add":
+        return "منح بونص " + accent(pointsLabel(d.amount), "text-secondary") +
+          " للطالب " + strong(student) + (subject ? subject : "") + ".";
+      case "deduction_add":
+        return "سجّل خصمًا " + accent(pointsLabel(-Math.abs(Number(d.amount) || 0)), "text-semantic-error") +
+          " للطالب " + strong(student) + ".";
+      case "ledger_update":
+        return "عدّل " + strong(kindLabel(d.kind)) + " الطالب " + strong(student) +
+          " من " + strong(pointsLabel(d.old_amount)) + " إلى " + strong(pointsLabel(d.new_amount)) + ".";
+      case "ledger_delete":
+        return "حذف " + strong(kindLabel(d.kind)) + " بقيمة " + strong(pointsLabel(d.amount)) +
+          " للطالب " + strong(student) + ".";
+      case "attendance_scan": {
+        const out = d.action === "check_out";
+        const how = d.source === "code" ? "بإدخال الكود البديل" : "بمسح رمز QR";
+        return "سجّل " + (out ? "انصرافًا" : "حضورًا") + " " + how +
+          (d.late_min > 0 && !out ? " متأخرًا " + d.late_min + " دقيقة" : "") + ".";
+      }
+      case "attendance_manual": {
+        const both = d.check_in_at && d.check_out_at;
+        const onlyOut = !d.check_in_at && d.check_out_at;
+        return "سجّل " + (both ? "حضورًا وانصرافًا" : onlyOut ? "انصرافًا" : "حضورًا") +
+          " يدويًا للطالب " + strong(student) + ".";
+      }
+      case "followup_note":
+        return "سجّل " + strong(kindLabel(d.kind) || "ملاحظة افتقاد") + " للطالب " + strong(student) + ".";
+      case "followup_update":
+        return "حدّث حالة افتقاد " + strong(student) + " إلى " + strong(statusLabel(d.status)) + ".";
+      case "subscription_status_set":
+        return "غيّر حالة اشتراك " + strong(target) + " إلى " + strong(statusLabel(d.status)) + ".";
+      case "subscription_period_set":
+        return "حدّد فترة الاشتراك من " + strong(d.from || "—") + " إلى " + strong(d.to || "—") + ".";
+      case "monthly_suspend":
+        return "أوقف النظام " + strong(d.count == null ? "—" : d.count) +
+          " من الحسابات تلقائيًا لانتهاء الاشتراك" +
+          (d.month ? " (شهر " + strong(monthLabel(d.month)) + ")" : "") + ".";
+      case "user_create":
+        return "أنشأ حسابًا جديدًا باسم " + strong(d.full_name || target) + ".";
+      case "user_update":
+        return "حدّث بيانات " + strong(target) + ".";
+      case "user_roles_set": {
+        const roles = (Array.isArray(d.roles) ? d.roles : []).map(function (r) {
+          return { admin: "إداري", servant: "خادم", student: "طالب" }[r] || r;
+        }).join("، ");
+        return "حدّد أدوار " + strong(target) + (roles ? ": " + esc(roles) : "") + ".";
+      }
+      case "user_assignments_set": {
+        const n = Array.isArray(d.assignments) ? d.assignments.length : 0;
+        return "حدّد تكليفات " + strong(target) + (n ? " (" + n + " تكليفًا)" : "") + ".";
+      }
+      case "user_permanent_set":
+        return "جعل اشتراك " + strong(target) + " " + (d.is_permanent ? "دائمًا" : "غير دائم") + ".";
+      case "settings_update": {
+        const n = Array.isArray(d.keys) ? d.keys.length : 0;
+        return "حدّث " + strong(n) + " إعدادًا من إعدادات النظام.";
+      }
+      case "notification_create":
+        return "أرسل إشعارًا بعنوان " + strong(d.title || target) +
+          (d.class_code ? " إلى فصل " + strong(classLabel(d.class_code)) : " إلى كل الفصول") + ".";
+      case "join_request_reject":
+        return "رفض طلب انضمام " + strong(target) + ".";
+      case "join_request_approve":
+        return "قبل طلب انضمام " + strong(target) + ".";
+      case "school_week_set":
+        return "حدّد أسبوع " + strong(target) + (d.is_holiday ? " كعطلة." : " كأسبوع دراسة.");
+      case "new_year":
+        return "بدأ عامًا دراسيًا جديدًا من " + strong(d.from || "—") + " إلى " + strong(d.to || "—") + ".";
+      case "backup_create":
+        return "أنشأ نسخة احتياطية" + (d.filename ? " (" + strong(d.filename) + ")" : "") + ".";
+      case "backup_restore":
+        return "استعاد نسخة احتياطية" + (d.filename ? " (" + strong(d.filename) + ")" : "") + ".";
+      case "sync_import": {
+        const tables = Object.keys(d.tables || {}).length;
+        return "استورد بيانات المزامنة" + (tables ? " (" + tables + " جدولًا)" : "") + ".";
+      }
+      case "content_add":
+        return "أضاف محتوى " + strong(kindLabel(d.kind)) + " بعنوان " + strong(d.title || target) +
+          subject + klass + ".";
+      case "content_delete":
+        return "حذف محتوى " + strong(kindLabel(d.kind)) + " بعنوان " + strong(d.title || target) +
+          subject + klass + ".";
+      case "assessment_create":
+        return "أنشأ " + strong(kindLabel(d.kind)) + " بعنوان " + strong(d.title || target) +
+          subject + klass + ".";
+      case "assessment_update":
+        return "عدّل " + strong(kindLabel(d.kind)) + " " + strong(d.title || target) + ".";
+      case "assessment_close":
+        return "أغلق " + strong(kindLabel(d.kind)) + " " + strong(d.title || target) + ".";
+      case "assessment_reopen":
+        return "أعاد فتح " + strong(kindLabel(d.kind)) + " " + strong(d.title || target) + ".";
+      case "assessment_delete":
+        return "حذف " + strong(kindLabel(d.kind)) + " " + strong(d.title || target) + ".";
+      case "liturgy_mark":
+        return "سجّل حضور قداس الجمعة للطالب " + strong(student) +
+          (d.quiet ? " (هادئ)." : " (غير هادئ).");
+      case "liturgy_update":
+        return "عدّل حالة قداس الطالب " + strong(student) +
+          (d.quiet ? " إلى هادئ." : " إلى غير هادئ.");
+      case "liturgy_delete":
+        return "حذف سجل قداس الطالب " + strong(student) + ".";
+      case "wheel_spin":
+        return "استخدم لفة عجلة للطالب " + strong(student) + ".";
+      default:
+        return strong(item.action_label || item.action) + (target ? " — " + strong(target) : "") + ".";
+    }
+  }
+
+  function calloutHtml(item) {
+    const d = detailsOf(item);
+    let text = "";
+    if (d.reason) text = d.reason;
+    else if (d.note) text = d.note;
+    else if (item.action === "settings_update" && Array.isArray(d.keys)) {
+      text = "المفاتيح: " + d.keys.map(function (k) { return SETTING_LABELS[k] || k; }).join("، ");
+    } else if (item.action === "user_assignments_set" && Array.isArray(d.assignments)) {
+      text = d.assignments.map(function (a) {
+        return classLabel(a.class_code) + " — " + subjectLabel(a.subject);
+      }).join("، ");
+    } else if (item.action === "user_update" && Array.isArray(d.fields)) {
+      text = "الحقول: " + d.fields.map(function (f) { return FIELD_LABELS[f] || f; }).join("، ");
+    }
+    if (!text) return "";
+    return '<div class="bg-surface-container-low rounded-lg p-2.5 mb-2.5 flex items-start gap-2">' +
+      '<span class="material-symbols-outlined text-secondary text-base shrink-0 mt-0.5">format_quote</span>' +
+      '<p class="font-body-sm text-body-sm text-text-secondary italic leading-relaxed">' + esc(text) + "</p></div>";
+  }
+
+  function tagsHtml(item) {
+    const d = detailsOf(item);
+    const tags = [];
+    if (item.action === "grade_add" || item.action === "grade_update") {
+      tags.push('<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm font-medium"><span class="material-symbols-outlined text-xs">history_edu</span>' + esc(kindLabel(d.kind)) + "</span>");
+      tags.push('<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container text-semantic-success font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-xs">verified</span>معتمد</span>');
+    } else if (item.action === "bonus_add") {
+      tags.push('<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-xs">military_tech</span>مكافأة</span>');
+    } else if (item.action === "deduction_add" || item.action === "ledger_update" || item.action === "ledger_delete") {
+      tags.push('<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-error-container text-on-error-container font-label-sm text-label-sm font-bold"><span class="material-symbols-outlined text-xs">remove_circle</span>' + esc(item.action_label) + "</span>");
+    } else if (item.action === "attendance_scan" || item.action === "attendance_manual") {
+      tags.push('<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-xs">pin</span>' + esc(item.action_label) + "</span>");
+    } else if (item.action === "followup_note" || item.action === "followup_update") {
+      tags.push('<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-xs">home</span>' + esc(kindLabel(d.kind) || "افتقاد") + "</span>");
+    } else if (item.action === "content_add" || item.action === "content_delete") {
+      tags.push('<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-primary/10 text-primary font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-xs">folder</span>محتوى</span>');
+    } else if (item.action.indexOf("assessment_") === 0) {
+      tags.push('<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-primary/10 text-primary font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-xs">quiz</span>تقييم</span>');
+    } else if (item.action.indexOf("liturgy_") === 0) {
+      tags.push('<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm"><span class="material-symbols-outlined text-xs">church</span>قداس</span>');
+    } else if (item.action === "wheel_spin") {
+      tags.push('<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-secondary-container/30 text-on-secondary-container font-label-sm text-label-sm"><span class="material-symbols-outlined text-xs">casino</span>عجلة</span>');
+    } else {
+      tags.push('<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-error-container text-on-error-container font-label-sm text-label-sm font-bold"><span class="material-symbols-outlined text-xs">admin_panel_settings</span>' + (item.actor_name ? "إجراء إداري" : "إجراء تلقائي") + "</span>");
+    }
+    tags.push('<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container text-text-secondary font-label-sm text-label-sm">#' + esc(item.id) + "</span>");
+    return '<div class="flex flex-wrap items-center gap-1.5">' + tags.join("") + "</div>";
+  }
+
+  function footerHtml(item) {
+    const d = detailsOf(item);
+    if (item.action === "attendance_scan") {
+      const out = d.action === "check_out";
+      const left = out
+        ? '<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-semantic-success font-medium"><span class="material-symbols-outlined text-sm">schedule</span>انصراف</span>'
+        : (Number(d.late_min) > 0
+          ? '<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-semantic-warning font-medium"><span class="material-symbols-outlined text-sm">schedule</span>متأخر ' + esc(d.late_min) + " دقيقة</span>"
+          : '<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-semantic-success font-medium"><span class="material-symbols-outlined text-sm">schedule</span>في الموعد' + (Number(d.points) ? " (+10 نقاط)" : "") + "</span>");
+      const right = d.source === "code" ? "كود بديل" : "رمز QR";
+      return '<div class="flex items-center justify-between pt-1">' + left +
+        '<span class="font-label-sm text-label-sm text-text-secondary">' + right + "</span></div>";
+    }
+    if (item.action === "attendance_manual") {
+      return '<div class="flex items-center justify-between pt-1">' +
+        '<span class="font-label-sm text-label-sm text-semantic-warning font-medium">' + (d.updated ? "تحديث سجل حضور" : "سجل حضور جديد") + "</span>" +
+        '<span class="font-label-sm text-label-sm text-text-secondary">' + esc(d.week_key || "") + "</span></div>";
+    }
+    return "";
+  }
+
+  function cardHtml(item) {
+    const meta = actionMeta(item.action);
+    const tone = TONES[meta.tone] || TONES.warning;
+    return '<div class="relative flex items-start gap-space-sm pl-1">' +
+      '<div class="relative shrink-0 w-11 flex justify-center items-center pt-1 z-10">' +
+        '<div class="w-8 h-8 rounded-full ' + tone.halo + ' flex items-center justify-center shadow-xs">' +
+          '<div class="w-3.5 h-3.5 rounded-full ' + tone.dot + ' flex items-center justify-center">' +
+            '<span class="material-symbols-outlined text-[10px] text-on-primary">' + meta.icon + "</span>" +
+          "</div>" +
+        "</div>" +
+      "</div>" +
+      '<div class="audit-card flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm">' +
+        '<div class="flex items-center justify-between gap-2 mb-2">' +
+          '<div class="flex items-center gap-2 min-w-0">' + actorAvatar(item) +
+            '<div class="flex flex-col min-w-0">' +
+              '<span class="font-title-md text-title-md text-primary truncate leading-tight">' + esc(item.actor_name || "النظام") + "</span>" +
+              '<span class="font-label-sm text-label-sm text-text-secondary truncate">' + esc(roleSubtitle(item)) + "</span>" +
+            "</div>" +
+          "</div>" +
+          '<div class="flex flex-col items-end shrink-0">' +
+            '<span class="font-label-sm text-label-sm text-text-secondary">' + esc(timeLabel(item.created_at)) + "</span>" +
+            '<span class="font-label-sm text-label-sm text-secondary font-medium">' + esc(relativeLabel(item.created_at)) + "</span>" +
+          "</div>" +
+        "</div>" +
+        '<p class="font-body-md text-body-md text-on-surface mb-3 leading-relaxed">' + sentenceHtml(item) + "</p>" +
+        calloutHtml(item) + tagsHtml(item) + footerHtml(item) +
+      "</div>" +
+    "</div>";
+  }
+
+  function paintChip(btn, active) {
+    btn.classList.toggle("bg-primary", active);
+    btn.classList.toggle("text-on-primary", active);
+    btn.classList.toggle("shadow-sm", active);
+    btn.classList.toggle("bg-surface-container", !active);
+    btn.classList.toggle("text-on-surface-variant", !active);
+  }
+  function updateChips() {
+    paintChip($("chipToday"), state.mode === "today");
+    paintChip($("chipWeek"), state.mode === "week");
+    paintChip($("chipCustom"), state.mode === "custom");
+    if (state.mode === "custom") {
+      $("customLabel").textContent = shortDate(state.from) + " إلى " + shortDate(state.to);
+    } else {
+      $("customLabel").textContent = "نطاق مخصص";
+    }
+    $("chipCustom").title = fullDate(state.from) + " — " + fullDate(state.to);
+  }
+
+  function paintRole(btn, active) {
+    btn.classList.toggle("bg-primary-container", active);
+    btn.classList.toggle("text-on-primary-container", active);
+    btn.classList.toggle("font-semibold", active);
+    btn.classList.toggle("shadow-xs", active);
+    btn.classList.toggle("bg-surface-container", !active);
+    btn.classList.toggle("text-on-surface-variant", !active);
+    const badge = btn.querySelector(".count-badge");
+    if (badge) {
+      badge.classList.toggle("bg-primary/20", active);
+      badge.classList.toggle("text-on-primary-container", active);
+      badge.classList.toggle("font-bold", active);
+      badge.classList.toggle("bg-surface-dim", !active);
+      badge.classList.toggle("text-on-surface-variant", !active);
+    }
+  }
+  function renderCounts() {
+    $("countAll").textContent = String(state.counts.all || 0);
+    $("countStudent").textContent = String(state.counts.student || 0);
+    $("countServant").textContent = String(state.counts.servant || 0);
+    $("countAdmin").textContent = String(state.counts.admin || 0);
+    document.querySelectorAll(".role-tab").forEach(function (btn) {
+      paintRole(btn, (btn.dataset.role || "") === state.role);
+    });
+  }
+
+  function showSkeleton() {
+    $("timeline").innerHTML =
+      '<div class="audit-skeleton relative flex items-start gap-space-sm pl-1"><div class="shrink-0 w-11 flex justify-center pt-1"><div class="w-8 h-8 rounded-full bg-surface-container"></div></div><div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-2"><div class="h-4 w-32 rounded bg-surface-container"></div><div class="h-3 w-full rounded bg-surface-container"></div><div class="h-3 w-2/3 rounded bg-surface-container"></div></div></div>' +
+      '<div class="audit-skeleton relative flex items-start gap-space-sm pl-1"><div class="shrink-0 w-11 flex justify-center pt-1"><div class="w-8 h-8 rounded-full bg-surface-container"></div></div><div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-2"><div class="h-4 w-28 rounded bg-surface-container"></div><div class="h-3 w-full rounded bg-surface-container"></div><div class="h-3 w-1/2 rounded bg-surface-container"></div></div></div>';
+  }
+
+  function emptyMessage() {
+    if (state.q) return "لا توجد نتائج مطابقة للبحث في هذه الفترة.";
+    if (state.role) return "لا توجد عمليات لهذا الدور في الفترة المحددة.";
+    return "جرّب توسيع النطاق الزمني أو تغيير البحث.";
+  }
+
+  function renderItems(items) {
+    const timeline = $("timeline");
+    timeline.innerHTML = items.map(cardHtml).join("");
+    const empty = items.length === 0;
+    $("emptyState").classList.toggle("hidden", !empty);
+    $("emptyState").classList.toggle("flex", empty);
+    $("timelineRail").classList.toggle("hidden", empty);
+    $("emptyHint").textContent = emptyMessage();
+    $("emptyWeekBtn").classList.toggle("hidden", !!state.q || !!state.role || state.mode === "week");
+    $("errorState").classList.add("hidden");
+    $("errorState").classList.remove("flex");
+  }
+
+  function renderPagination(pages) {
+    $("pageCurrent").textContent = String(state.page);
+    $("pageTotal").textContent = String(pages);
+    $("prevBtn").disabled = state.page <= 1;
+    $("nextBtn").disabled = state.page >= pages;
+  }
+
+  function showError(message) {
+    $("timeline").innerHTML = "";
+    $("timelineRail").classList.add("hidden");
+    $("emptyState").classList.add("hidden");
+    $("emptyState").classList.remove("flex");
+    $("errorText").textContent = message || "تحقق من الاتصال ثم أعد المحاولة.";
+    $("errorState").classList.remove("hidden");
+    $("errorState").classList.add("flex");
+  }
+
+  async function load() {
+    const seq = ++state.seq;
+    state.loading = true;
+    showSkeleton();
+    $("emptyState").classList.add("hidden");
+    $("emptyState").classList.remove("flex");
+    $("errorState").classList.add("hidden");
+    $("errorState").classList.remove("flex");
+    $("timelineRail").classList.remove("hidden");
+
+    const params = new URLSearchParams({ from: state.from, to: state.to, page: String(state.page) });
+    if (state.role) params.set("role", state.role);
+    if (state.q) params.set("q", state.q);
+
+    try {
+      const data = await api("/admin/audit?" + params.toString());
+      if (seq !== state.seq) return;
+      state.total = Number(data.total) || 0;
+      state.perPage = Number(data.per_page) || 50;
+      state.counts = data.counts || { all: 0, student: 0, servant: 0, admin: 0 };
+      const pages = Math.max(1, Math.ceil(state.total / state.perPage));
+      if (state.page > pages) {
+        state.page = pages;
+        state.loading = false;
+        return load();
+      }
+      renderCounts();
+      renderItems(data.items || []);
+      renderPagination(pages);
+    } catch (e) {
+      if (seq !== state.seq) return;
+      showError(e && e.message ? e.message : "");
+      renderPagination(Math.max(1, Math.ceil(state.total / state.perPage)));
+    } finally {
+      if (seq === state.seq) state.loading = false;
+    }
+  }
+
+  function applyPreset(mode) {
+    clearTimeout(searchTimer);
+    state.mode = mode;
+    if (mode === "today") {
+      const today = cairoToday();
+      state.from = today;
+      state.to = today;
+    } else if (mode === "week") {
+      const today = cairoToday();
+      state.from = weekStart(today);
+      state.to = today;
+    }
+    updateChips();
+    state.page = 1;
+    load();
+  }
+
+  function openRange() {
+    draftFrom = state.from || cairoToday();
+    draftTo = state.to || cairoToday();
+    $("fromValue").textContent = fullDate(draftFrom);
+    $("toValue").textContent = fullDate(draftTo);
+    $("rangeOverlay").classList.remove("hidden");
+  }
+  function closeRange() { $("rangeOverlay").classList.add("hidden"); }
+
+  function pickRangeDate(which) {
+    DatePicker.open({
+      value: which === "from" ? draftFrom : draftTo,
+      title: which === "from" ? "من تاريخ" : "إلى تاريخ",
+      onPick: function (iso) {
+        if (which === "from") {
+          draftFrom = iso;
+          $("fromValue").textContent = fullDate(iso);
+          if (draftTo && draftTo < iso) {
+            draftTo = iso;
+            $("toValue").textContent = fullDate(iso);
+          }
+        } else {
+          draftTo = iso;
+          $("toValue").textContent = fullDate(iso);
+          if (draftFrom && draftFrom > iso) {
+            draftFrom = iso;
+            $("fromValue").textContent = fullDate(iso);
+          }
+        }
+      },
+    });
+  }
+
+  function applyRange() {
+    clearTimeout(searchTimer);
+    if (!draftFrom || !draftTo) {
+      toast("يرجى اختيار تاريخ البداية والنهاية", "error");
+      return;
+    }
+    if (draftFrom > draftTo) {
+      toast("تاريخ البداية يجب أن يسبق تاريخ النهاية", "error");
+      return;
+    }
+    state.mode = "custom";
+    state.from = draftFrom;
+    state.to = draftTo;
+    state.page = 1;
+    closeRange();
+    updateChips();
+    load();
+  }
+
+  function init() {
+    const today = cairoToday();
+    state.from = today;
+    state.to = today;
+    updateChips();
+
+    $("chipToday").addEventListener("click", function () { applyPreset("today"); });
+    $("chipWeek").addEventListener("click", function () { applyPreset("week"); });
+    $("chipCustom").addEventListener("click", openRange);
+    $("emptyWeekBtn").addEventListener("click", function () { applyPreset("week"); });
+    $("retryBtn").addEventListener("click", load);
+
+    document.querySelectorAll("[data-range-close]").forEach(function (el) {
+      el.addEventListener("click", closeRange);
+    });
+    $("fromBtn").addEventListener("click", function () { pickRangeDate("from"); });
+    $("toBtn").addEventListener("click", function () { pickRangeDate("to"); });
+    $("applyRangeBtn").addEventListener("click", applyRange);
+
+    document.querySelectorAll(".role-tab").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const next = btn.dataset.role || "";
+        if (next === state.role) return;
+        clearTimeout(searchTimer);
+        state.role = next;
+        state.page = 1;
+        load();
+      });
+    });
+
+    $("searchInput").addEventListener("input", function (e) {
+      clearTimeout(searchTimer);
+      state.q = e.target.value.trim();
+      state.page = 1;
+      searchTimer = setTimeout(load, 350);
+    });
+    $("searchInput").addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        clearTimeout(searchTimer);
+        state.q = e.target.value.trim();
+        state.page = 1;
+        load();
+      }
+    });
+
+    $("prevBtn").addEventListener("click", function () {
+      if (state.page > 1) { state.page -= 1; load(); }
+    });
+    $("nextBtn").addEventListener("click", function () {
+      const pages = Math.max(1, Math.ceil(state.total / state.perPage));
+      if (state.page < pages) { state.page += 1; load(); }
+    });
+
+    load();
+  }
+
+  (async function () {
+    const me = await requireAuth(["admin"]);
+    if (!me) return;
+    init();
+  })();
+</script>
+</body>
+</html>

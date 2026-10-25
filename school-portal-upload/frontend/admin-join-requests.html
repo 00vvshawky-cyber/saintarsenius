@@ -1,0 +1,766 @@
+<!DOCTYPE html><html dir="rtl" lang="ar" style=""><head><meta charset="utf-8"><meta name="description" content="لوحة الفصل - مدرسة القديس أرسانيوس للألحان"><title>طلبات الانضمام - مدرسة القديس أرسانيوس للألحان</title><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#f2f0ed", "outline-variant": "#d9c1ba", "surface-container-highest": "#e4e2df", "tertiary": "#270600", "secondary-fixed": "#ffddb8", "on-secondary-container": "#754900", "on-secondary-fixed-variant": "#653e00", "secondary-fixed-dim": "#fdb965", "text-primary": "#2B1E1A", "on-primary-fixed": "#390b00", "on-tertiary-fixed-variant": "#763219", "error-container": "#ffdad6", "tertiary-fixed": "#ffdbcf", "on-error": "#ffffff", "on-primary": "#ffffff", "tertiary-container": "#69270d", "surface-container-high": "#eae8e4", "surface-bright": "#fbf9f5", "on-primary-container": "#ca775c", "surface-container": "#efeeea", "on-surface-variant": "#54433e", "on-error-container": "#93000a", "on-background": "#1b1c1a", "on-secondary-fixed": "#2a1700", "on-secondary": "#ffffff", "on-tertiary-fixed": "#390c00", "semantic-success": "#2E7D32", "surface": "#FFFFFF", "on-tertiary": "#ffffff", "secondary": "#855300", "on-primary-fixed-variant": "#74341e", "audio-scrubber-track": "#E2DACF", "background": "#fbf9f5", "primary-container": "#662914", "primary-fixed": "#ffdbd0", "primary-fixed-dim": "#ffb59d", "secondary-container": "#fdb965", "surface-container-low": "#f5f3f0", "text-secondary": "#6E6058", "inverse-primary": "#ffb59d", "on-surface": "#1b1c1a", "tertiary-fixed-dim": "#ffb59c", "inverse-surface": "#30312e", "outline": "#87736d", "surface-variant": "#e4e2df", "semantic-error": "#C62828", "surface-tint": "#924a33", "semantic-warning": "#E65100", "surface-subtle": "#F4EFEA", "surface-dim": "#dbdad6", "semantic-disabled": "#BDBDBD", "error": "#ba1a1a", "on-tertiary-container": "#ed8d6c", "surface-container-lowest": "#ffffff", "border-warm": "#E6DFD5", "border-focused": "#C88A36", "primary": "#270600" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-tablet": "1.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem", "space-xl": "2rem", "space-md": "1rem", "margin-tablet": "1.5rem", "margin-desktop": "2.5rem" }, "fontFamily": { "body-lg": ["Cairo"], "body-md": ["Cairo"], "body-sm": ["Cairo"], "label-lg": ["Cairo"], "label-md": ["Cairo"], "label-sm": ["Cairo"], "title-lg": ["Cairo"], "title-md": ["Cairo"], "display-lg": ["Noto Serif"], "headline-lg": ["Noto Serif"], "headline-md": ["Noto Serif"] }, "fontSize": { "body-lg": ["17px", { "lineHeight": "28px", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "400" }], "title-lg": ["18px", { "lineHeight": "28px", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-lg": ["26px", { "lineHeight": "36px", "fontWeight": "700" }], "display-lg": ["32px", { "lineHeight": "44px", "fontWeight": "700" }] } } } };</script></head>
+<body class="bg-background font-body-md text-text-primary min-h-screen selection:bg-secondary-fixed">
+<!-- Toast Notification -->
+<div class="fixed top-20 left-4 right-4 z-50 transform transition-all duration-300 opacity-0 -translate-y-28 pointer-events-none" id="toast-notification">
+<div class="bg-primary text-on-primary px-4 py-3 rounded-xl shadow-2xl flex items-center justify-between gap-3 border border-border-focused/30">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[22px] text-secondary-fixed" id="toast-icon">check_circle</span>
+<span class="font-body-sm text-[13px] font-medium" id="toast-text">تمت العملية بنجاح</span>
+</div>
+<button class="text-on-primary/70 hover:text-on-primary" onclick="dismissToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Header -->
+<header class="fixed top-0 w-full z-40 pt-safe bg-background/95 backdrop-blur-md border-b border-border-warm">
+<div class="h-16 px-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<button aria-label="الرجوع للخلف" class="w-10 h-10 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container active:scale-95 transition-all" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+</button>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<h1 class="font-title-lg text-[18px] text-primary font-bold tracking-tight">طلبات الانضمام</h1>
+<span class="bg-secondary/10 text-secondary text-[11px] font-bold px-2 py-0.5 rounded-full border border-secondary/20">جديد</span>
+</div>
+<p class="font-label-sm text-[11px] text-text-secondary leading-tight">مدرسة القديس أرسانيوس للألحان والتسبحة</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full border-2 border-border-focused p-0.5 shadow-sm bg-white overflow-hidden flex items-center justify-center">
+<img alt="شعار مدرسة القديس أرسانيوس" class="w-full h-full object-cover rounded-full" id="schoolLogo" onerror="this.style.display='none'" src="assets/logo.png">
+</div>
+</div>
+</div>
+</header>
+<!-- Main Container -->
+<main class="flex flex-col relative w-full pt-[72px] bg-background min-h-screen pb-safe">
+<!-- Top Summary Banner -->
+<section class="px-4 pt-2 pb-2">
+<div class="bg-gradient-to-br from-surface to-surface-container-low border border-border-warm rounded-2xl p-4 shadow-sm relative overflow-hidden">
+<div class="absolute -left-5 -bottom-5 opacity-[0.06] pointer-events-none text-primary">
+<span class="material-symbols-outlined text-[130px]">church</span>
+</div>
+<div class="flex items-start justify-between relative z-10">
+<div>
+<div class="inline-flex items-center gap-1.5 bg-amber-100/90 text-amber-900 border border-amber-300/60 px-2.5 py-0.5 rounded-full text-[12px] font-semibold mb-1">
+<span class="w-2 h-2 rounded-full bg-semantic-warning animate-ping">
+</span>
+<span id="banner-count-badge" class="">0 طلبات جديدة معلقة</span>
+</div>
+<h2 class="text-[15px] font-bold text-primary mt-1">كنيسة السيدة العذراء مريم ببشتيل</h2>
+<p class="text-[12px] text-text-secondary mt-0.5">اضغط على بطاقة أي طالب لعرض وتعديل كامل البيانات .</p>
+</div>
+<div class="w-11 h-11 rounded-xl bg-primary-container text-white flex items-center justify-center flex-shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">how_to_reg</span>
+</div>
+</div>
+<!-- Metrics Strip -->
+<div class="grid grid-cols-3 gap-2 mt-3 relative z-10" id="metricsStrip">
+</div>
+</div>
+</section>
+<!-- Search & Segmented Filter -->
+<section class="px-4 py-1.5 flex flex-col gap-2.5">
+<!-- Search Input -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-11 pr-10 pl-10 rounded-xl bg-surface border border-border-warm text-text-primary placeholder:text-outline text-[13px] font-medium shadow-sm focus:border-border-focused focus:ring-1 focus:ring-border-focused focus:outline-none transition-all" id="student-search-input" oninput="handleSearch(this.value)" placeholder="ابحث باسم الطالب..." type="search">
+<button class="absolute left-3 top-1/2 -translate-y-1/2 text-outline hover:text-primary hidden" id="clear-search-btn" onclick="clearSearch()">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<!-- Segmented Tabs -->
+<div class="flex items-center gap-1.5 bg-surface-container p-1 rounded-xl" id="filterTabs">
+<button class="flex-1 py-2 rounded-lg text-[12px] font-bold bg-surface-container-lowest text-primary shadow-sm" onclick="setFilter('all')" type="button">الكل (<span id="tab-all-count">0</span>)</button>
+<button class="flex-1 py-2 rounded-lg text-[12px] font-bold text-text-secondary" onclick="setFilter('male')" type="button">ذكور (<span id="tab-male-count">0</span>)</button>
+<button class="flex-1 py-2 rounded-lg text-[12px] font-bold text-text-secondary" onclick="setFilter('female')" type="button">إناث (<span id="tab-female-count">0</span>)</button>
+</div>
+</section>
+<!-- Requests Stream (View 1) -->
+<section class="px-4 py-2 flex flex-col gap-3" id="requests-list-container">
+</section>
+<!-- Empty State (All reviewed) -->
+<section class="hidden px-4 py-10 flex flex-col items-center text-center" id="empty-state">
+<div class="w-20 h-20 rounded-full bg-secondary-fixed/40 text-secondary flex items-center justify-center mb-4 shadow-inner border border-secondary/20">
+<span class="material-symbols-outlined text-[42px]">verified</span>
+</div>
+<h3 class="font-headline-md text-[20px] text-primary font-bold">تمت مراجعة جميع طلبات الانضمام</h3>
+<p class="text-[13px] text-text-secondary max-w-xs mt-1.5 leading-relaxed">
+بركة صلوات القديس أرسانيوس معلم أولاد الملوك تكون معكم. لا توجد طلبات معلقة حالياً.
+</p>
+<button class="mt-5 px-5 py-2.5 rounded-xl bg-surface-container-high border border-border-warm font-label-md text-[13px] text-primary font-bold hover:bg-surface-container shadow-sm active:scale-95 transition-all" onclick="loadRequests()">
+تحديث الطلبات
+</button>
+</section>
+</main>
+<!-- Detailed Student Sheet / View 2 (Expandable Modal) -->
+<div class="fixed inset-0 bg-primary/60 backdrop-blur-sm z-50 transition-opacity duration-300 flex items-end sm:items-center sm:justify-center opacity-0 pointer-events-none" id="student-detail-modal">
+<div class="w-full sm:max-w-lg bg-surface rounded-t-3xl sm:rounded-2xl max-h-[92vh] overflow-y-auto transform sm:translate-y-0 sm:scale-95 transition-all duration-300 ease-out shadow-2xl flex flex-col border border-border-warm" id="student-sheet-content">
+<!-- Sticky Modal Top Header -->
+<div class="sticky top-0 bg-surface/95 backdrop-blur px-4 pt-3 pb-2.5 border-b border-border-warm z-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+<div>
+<h3 class="font-bold text-[16px] text-primary" id="sheet-header-title">ملف بيانات الطالب المسجلة</h3>
+<p class="text-[11px] text-text-secondary">يمكن تعديل أي حقل قبل اتخاذ قرار القبول</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container text-text-secondary hover:text-primary flex items-center justify-center" onclick="closeStudentSheet()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Sheet Scrollable Body -->
+<div class="p-4 space-y-4">
+<!-- Student Photo & Stage Badge -->
+<div class="flex flex-col items-center justify-center pt-1 pb-2">
+<div class="relative group">
+<img alt="صورة الطالب" class="w-24 h-24 rounded-full object-cover border-4 border-border-focused/40 shadow-md bg-surface-container" id="detail-photo" src="assets/logo.png">
+<button class="absolute bottom-0 left-0 w-8 h-8 rounded-full bg-primary text-white border-2 border-white flex items-center justify-center shadow hover:bg-primary-container transition-all" onclick="triggerEditField('صورة الطالب', 'photo')">
+<span class="material-symbols-outlined text-[15px]">photo_camera</span>
+</button>
+<span class="absolute top-0 right-0 w-7 h-7 rounded-full bg-secondary text-white border-2 border-white flex items-center justify-center font-bold text-[12px]">✝</span>
+</div>
+<span class="mt-2 text-[12px] font-bold px-3 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300" id="detail-stage-pill">—</span>
+</div>
+<!-- Registration Fields List (With Pencil Edit Buttons) -->
+<div class="bg-surface-container-low rounded-2xl p-3 border border-border-warm divide-y divide-border-warm/60">
+<!-- Full Name -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+<div>
+<span class="block text-[11px] text-text-secondary">اسم الطالب بالكامل</span>
+<span class="block text-[14px] font-bold text-text-primary" id="detail-name">—</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg text-secondary hover:bg-surface-container flex items-center justify-center" onclick="triggerEditField('الاسم بالكامل', 'name')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<!-- Student Phone -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">smartphone</span>
+</div>
+<div>
+<span class="block text-[11px] text-text-secondary">رقم هاتف الطالب</span>
+<span class="block text-[13.5px] font-semibold text-text-primary text-left" dir="ltr" id="detail-student-phone">—</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg text-secondary hover:bg-surface-container flex items-center justify-center" onclick="triggerEditField('رقم هاتف الطالب', 'student-phone')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<!-- WhatsApp Number -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</div>
+<div>
+<span class="block text-[11px] text-text-secondary">رقم الواتساب للتواصل</span>
+<span class="block text-[13.5px] font-semibold text-text-primary text-left" dir="ltr" id="detail-whatsapp">—</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg text-secondary hover:bg-surface-container flex items-center justify-center" onclick="triggerEditField('رقم الواتساب', 'whatsapp')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<!-- Parent Phone -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">family_restroom</span>
+</div>
+<div>
+<span class="block text-[11px] text-text-secondary">رقم ولي الأمر (الأب / الأم)</span>
+<span class="block text-[13.5px] font-semibold text-text-primary text-left" dir="ltr" id="detail-parent-phone">—</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg text-secondary hover:bg-surface-container flex items-center justify-center" onclick="triggerEditField('رقم ولي الأمر', 'parent-phone')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<!-- Birth Date & Age -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">cake</span>
+</div>
+<div>
+<span class="block text-[11px] text-text-secondary">تاريخ الميلاد والسن</span>
+<span class="block text-[13.5px] font-semibold text-text-primary" id="detail-birth">—</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg text-secondary hover:bg-surface-container flex items-center justify-center" onclick="triggerEditField('تاريخ الميلاد والسن', 'birth')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<!-- Gender -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">male</span>
+</div>
+<div>
+<span class="block text-[11px] text-text-secondary">النوع</span>
+<span class="block text-[13.5px] font-semibold text-text-primary" id="detail-gender">—</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg text-secondary hover:bg-surface-container flex items-center justify-center" onclick="triggerEditField('النوع', 'gender')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<!-- Deacon Rank -->
+<div class="py-2.5 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-secondary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">military_tech</span>
+</div>
+<div>
+<span class="block text-[11px] text-text-secondary">الرتبة الكنسية للطالب</span>
+<span class="block text-[14px] font-bold text-secondary" id="detail-rank">—</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg text-secondary hover:bg-surface-container flex items-center justify-center" onclick="triggerEditField('الرتبة الكنسية', 'rank')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<!-- Assigned Class -->
+<div class="py-2.5 flex items-center justify-between gap-3 bg-amber-50/60 -mx-3 px-3 rounded-xl border border-amber-200/60">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-secondary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">school</span>
+</div>
+<div>
+<span class="block text-[11px] text-amber-900 font-medium">الفصل المخصص بالمدرسة</span>
+<span class="block text-[14px] font-bold text-primary" id="detail-class">—</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg text-secondary hover:bg-white flex items-center justify-center" onclick="triggerEditField('الفصل المخصص', 'class')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<!-- Note Field for Admin / Servant -->
+<div class="bg-surface-container-low rounded-2xl p-3 border border-border-warm">
+<label class="block text-[11px] font-bold text-text-secondary mb-1.5" for="admin-note">ملاحظة إدارية (اختياري)</label>
+<textarea class="w-full bg-surface rounded-lg p-2.5 text-[12.5px] text-text-primary border border-border-warm focus:outline-none focus:border-border-focused resize-none" id="admin-note" placeholder="مثال: تم التواصل مع ولي الأمر — بانتظار تأكيد الفصل" rows="2"></textarea>
+</div>
+<!-- Sticky Bottom Action Decision Buttons (Within Detailed View) -->
+<div class="sticky bottom-0 bg-surface/98 backdrop-blur border-t border-border-warm p-4 z-20">
+<div class="grid grid-cols-2 gap-3">
+<!-- Accept Button (Green Accent #2E7D32) -->
+<button class="h-12 rounded-xl bg-semantic-success hover:bg-emerald-800 text-white font-bold text-[14.5px] flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-all" onclick="openConfirmationModal('accept')">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+<span class="">قبول وانضمام</span>
+</button>
+<!-- Reject Button (Red Accent #C62828) -->
+<button class="h-12 rounded-xl bg-semantic-error hover:rose-800 text-white font-bold text-[14.5px] flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-all" onclick="openConfirmationModal('reject')">
+<span class="material-symbols-outlined text-[20px]">person_cancel</span>
+<span class="">رفض الطلب</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Confirmation Dialog / Modal -->
+<div class="fixed inset-0 bg-primary/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-200 flex items-center justify-center p-4" id="confirm-dialog-backdrop">
+<div class="w-full max-w-sm bg-surface rounded-2xl p-5 border border-border-warm shadow-2xl transform scale-95 transition-all duration-200" id="confirm-dialog-box">
+<!-- Icon Header -->
+<div class="w-14 h-14 rounded-full mx-auto flex items-center justify-center mb-3" id="confirm-icon-wrap">
+<span class="material-symbols-outlined text-[30px]" id="confirm-icon">help_outline</span>
+</div>
+<h4 class="text-center font-bold text-[17px] text-primary" id="confirm-title">تأكيد الإجراء</h4>
+<p class="text-center text-[13px] text-text-secondary mt-1.5 leading-relaxed" id="confirm-desc">
+هل أنت متأكد من تنفيذ هذا القرار على طلب انضمام الطالب؟
+</p>
+<!-- Reason text box for rejection -->
+<div class="hidden mt-3" id="rejection-reason-box">
+<label class="block text-[11.5px] font-bold text-text-secondary mb-1">سبب الرفض (يُسجَّل في سجل العمليات):</label>
+<select class="w-full text-[12px] bg-surface-container rounded-lg p-2 border border-border-warm text-text-primary focus:outline-none" id="rejection-reason-select">
+<option>السن غير مطابق للفصول الحالية</option>
+<option>اكتمال العدد في الفصل المطلوب</option>
+<option>البيانات المدخلة غير صحيحة</option>
+<option>سبب إداري آخر</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-2.5 mt-5">
+<button class="h-11 rounded-xl text-white font-bold text-[13.5px] flex items-center justify-center gap-1 shadow-sm active:scale-95 transition-all" id="confirm-execute-btn" onclick="executeConfirmedDecision()">
+تأكيد
+</button>
+<button class="h-11 rounded-xl bg-surface-container text-text-secondary hover:text-text-primary font-bold text-[13px] active:scale-95 transition-all" onclick="closeConfirmationModal()">
+تراجع
+</button>
+</div>
+</div>
+</div>
+<!-- In-line Edit Small Prompt Modal for Fields -->
+<div class="fixed inset-0 bg-primary/50 backdrop-blur-xs z-50 transition-opacity duration-200 flex items-center justify-center p-4 opacity-0 pointer-events-none" id="edit-field-modal">
+<div class="w-full max-w-xs bg-surface rounded-2xl p-4 border border-border-warm shadow-xl">
+<h4 class="font-bold text-[15px] text-primary mb-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">edit</span>
+<span id="edit-modal-title" class="">تعديل البيان</span>
+</h4>
+<p class="text-[11.5px] text-text-secondary mb-3">أدخل القيمة المحدثة للبيان قبل حفظ الملف</p>
+<div id="dynamic-field-container">
+<input id="generic-input" type="text" value="" class="w-full h-11 px-3 bg-surface-container rounded-lg text-[13px] text-text-primary border border-border-warm focus:outline-none focus:border-border-focused" dir="rtl">
+</div>
+<div class="grid grid-cols-2 gap-2 mt-4">
+<button class="h-10 rounded-lg bg-primary text-white font-bold text-[12.5px]" onclick="saveFieldEdit()">حفظ التعديل</button>
+<button class="h-10 rounded-lg bg-surface-container text-text-secondary font-bold text-[12.5px]" onclick="closeFieldEditModal()">إلغاء</button>
+</div>
+</div>
+</div>
+<script src="app.js"></script>
+<script src="deacon-ranks.js"></script>
+<script>
+  /* ===== شاشة «طلبات الانضمام» للمدير (T081 / FR-ADM-01 · FR-AUTH-02) =====
+     • GET  /admin/join-requests            → الطلبات المعلّقة
+     • GET  /admin/join-requests/{id}       → تفاصيل الطلب
+     • PATCH /admin/users/{id}              → تعديل أي حقل + إعادة تعيين كلمة المرور
+     • POST /admin/join-requests/{id}/approve | /reject → القبول أو الرفض */
+  const $ = (id) => document.getElementById(id);
+
+  const RANK_LABELS = window.RANK_LABELS;
+  const RANK_SHORT = window.RANK_LABELS;
+  const STAGES = {
+    nursery: 'حضانة', g1_2: 'ابتدائي', g3_4: 'ابتدائي', g5_6: 'ابتدائي',
+    prep: 'إعدادي', secondary: 'ثانوي', youth: 'شباب', mothers: 'أمهات',
+  };
+  const MONTHS = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+
+  let REQUESTS = [];
+  let CLASSES = [];
+  let ACTIVE = null;      /* الطلب المفتوح في الورقة */
+  let FILTER = 'all';
+  let SEARCH = '';
+  let EDIT_FIELD = null;
+  let DECISION = null;    /* accept | reject */
+  let toastTimer = null;
+
+  function toDigits(value) {
+    return String(value == null ? '' : value);
+  }
+
+  function esc(text) {
+    return String(text == null ? '' : text)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function fmtPhone(phone) {
+    if (!phone) return '—';
+    const p = String(phone).replace(/[^0-9]/g, '');
+    if (p.length === 11) return p.slice(0, 4) + ' ' + p.slice(4, 7) + ' ' + p.slice(7);
+    return phone;
+  }
+
+  function ageOf(birth) {
+    if (!birth) return null;
+    const b = new Date(birth + 'T00:00:00');
+    if (isNaN(b)) return null;
+    const now = new Date();
+    let age = now.getFullYear() - b.getFullYear();
+    const m = now.getMonth() - b.getMonth();
+    if (m < 0 || (m === 0 && now.getDate() < b.getDate())) age -= 1;
+    return age;
+  }
+
+  function birthLabel(birth) {
+    if (!birth) return '—';
+    const b = new Date(birth + 'T00:00:00');
+    if (isNaN(b)) return '—';
+    const age = ageOf(birth);
+    const text = b.getDate() + ' ' + MONTHS[b.getMonth()] + ' ' + b.getFullYear();
+    return age === null ? text : text + ' (' + toDigits(age) + ' سنة)';
+  }
+
+  function timeAgo(iso) {
+    if (!iso) return '';
+    const d = new Date(iso.includes('T') ? iso : iso.replace(' ', 'T') + 'Z');
+    if (isNaN(d)) return '';
+    const diff = Date.now() - d.getTime();
+    const mins = Math.floor(diff / 60000);
+    if (mins < 1) return 'الآن';
+    if (mins < 60) return 'منذ ' + toDigits(mins) + ' دقيقة';
+    const hours = Math.floor(mins / 60);
+    if (hours < 24) return 'اليوم، ' + toDigits(hours) + ' ساعة';
+    const days = Math.floor(hours / 24);
+    if (days === 1) return 'أمس';
+    if (days < 7) return 'منذ ' + toDigits(days) + ' أيام';
+    return d.toLocaleDateString('ar-EG-u-nu-latn', { day: 'numeric', month: 'long', timeZone: 'Africa/Cairo' });
+  }
+
+  /* ---------- القائمة ---------- */
+  function visibleRequests() {
+    return REQUESTS.filter(function (r) {
+      if (SEARCH && r.full_name.toLowerCase().indexOf(SEARCH) === -1) return false;
+      if (FILTER === 'male') return r.gender === 'male';
+      if (FILTER === 'female') return r.gender === 'female';
+      return true;
+    });
+  }
+
+  function renderList() {
+    const list = $('requests-list-container');
+    const empty = $('empty-state');
+    const items = visibleRequests();
+
+    $('banner-count-badge').textContent = toDigits(REQUESTS.length) + ' طلبات جديدة معلقة';
+    $('tab-all-count').textContent = toDigits(REQUESTS.length);
+    $('tab-male-count').textContent = toDigits(REQUESTS.filter(function (r) { return r.gender === 'male'; }).length);
+    $('tab-female-count').textContent = toDigits(REQUESTS.filter(function (r) { return r.gender === 'female'; }).length);
+
+    const stages = {};
+    items.forEach(function (r) {
+      const s = STAGES[r.class_code] || '—';
+      stages[s] = (stages[s] || 0) + 1;
+    });
+    const stageKeys = Object.keys(stages);
+    $('metricsStrip').innerHTML = stageKeys.length
+      ? stageKeys.map(function (s) {
+          return '<div class="bg-surface-container-lowest/70 rounded-xl px-2 py-2 text-center border border-border-warm/60">' +
+            '<p class="text-[15px] font-bold text-primary">' + toDigits(stages[s]) + '</p>' +
+            '<p class="text-[10px] text-text-secondary">' + esc(s) + '</p></div>';
+        }).join('')
+      : '';
+
+    if (!items.length) {
+      list.innerHTML = '';
+      empty.classList.remove('hidden');
+      return;
+    }
+    empty.classList.add('hidden');
+
+    list.innerHTML = items.map(function (r) {
+      const stage = STAGES[r.class_code] || '—';
+      const rank = RANK_SHORT[r.deacon_rank] || (r.gender === 'female' ? '—' : 'لم أرسم بعد');
+      return '<article class="request-card bg-surface rounded-2xl p-3.5 border border-border-warm shadow-sm hover:border-border-focused/60 transition-all cursor-pointer relative group" data-id="' + r.id + '" onclick="openStudentSheet(' + r.id + ')">' +
+        '<div class="flex items-start justify-between gap-2.5">' +
+          '<div class="flex items-center gap-3">' +
+            '<div class="relative">' +
+              '<img alt="' + esc(r.full_name) + '" class="w-13 h-13 rounded-full object-cover border-2 border-border-focused/40 bg-surface-container w-[52px] h-[52px]" src="' + esc(r.photo_url || 'assets/logo.png') + '">' +
+              '<span class="absolute -bottom-1 -left-1 w-5 h-5 rounded-full bg-secondary text-white flex items-center justify-center text-[10px] font-bold border border-white">✝</span>' +
+            '</div>' +
+            '<div>' +
+              '<div class="flex items-center gap-1.5">' +
+                '<h3 class="text-[15.5px] font-bold text-text-primary group-hover:text-primary transition-colors">' + esc(r.full_name) + '</h3>' +
+                '<span class="text-[10px] bg-secondary-fixed/50 text-secondary font-bold px-1.5 py-0.5 rounded">' + esc(rank) + '</span>' +
+              '</div>' +
+              '<div class="flex items-center gap-1 text-[11.5px] text-text-secondary mt-0.5">' +
+                '<span class="material-symbols-outlined text-[13px] text-secondary">class</span>' +
+                '<span class="">المقترح: <strong class="text-text-primary font-semibold">' + esc(r.class_name || r.class_code || '—') + '</strong></span>' +
+              '</div>' +
+              '<div class="flex items-center gap-1 text-[11px] text-text-secondary mt-0.5">' +
+                '<span class="material-symbols-outlined text-[12px]">schedule</span>' +
+                '<span class="">' + esc(timeAgo(r.created_at)) + '</span>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="flex flex-col items-end gap-2">' +
+            '<span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-amber-50 text-amber-800 border border-amber-200">' + esc(stage) + '</span>' +
+            '<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">' +
+              '<span class="material-symbols-outlined text-[18px]">chevron_left</span>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="mt-3 pt-2.5 border-t border-border-warm flex items-center justify-between text-[11.5px] text-text-secondary">' +
+          '<span class="flex items-center gap-1">' +
+            '<span class="material-symbols-outlined text-[14px] text-secondary">cake</span>' +
+            '<span class="">' + esc(birthLabel(r.birth_date)) + '</span>' +
+          '</span>' +
+          '<span class="text-secondary font-bold flex items-center gap-0.5">عرض وتعديل التفاصيل' +
+            '<span class="material-symbols-outlined text-[13px]">arrow_back</span>' +
+          '</span>' +
+        '</div>' +
+      '</article>';
+    }).join('');
+  }
+
+  function handleSearch(value) {
+    SEARCH = String(value || '').trim().toLowerCase();
+    $('clear-search-btn').classList.toggle('hidden', !SEARCH);
+    renderList();
+  }
+
+  function clearSearch() {
+    SEARCH = '';
+    $('student-search-input').value = '';
+    $('clear-search-btn').classList.add('hidden');
+    renderList();
+  }
+
+  function setFilter(filter) {
+    FILTER = filter;
+    const buttons = $('filterTabs').querySelectorAll('button');
+    buttons.forEach(function (b) {
+      const on = b.getAttribute('onclick').indexOf("'" + filter + "'") !== -1;
+      b.className = on
+        ? 'flex-1 py-2 rounded-lg text-[12px] font-bold bg-surface-container-lowest text-primary shadow-sm'
+        : 'flex-1 py-2 rounded-lg text-[12px] font-bold text-text-secondary';
+    });
+    renderList();
+  }
+
+  /* ---------- الورقة (تفاصيل الطلب) ---------- */
+  function openStudentSheet(id) {
+    const r = REQUESTS.find(function (x) { return String(x.id) === String(id); });
+    if (!r) return;
+    ACTIVE = r;
+    $('sheet-header-title').textContent = 'ملف بيانات ' + r.full_name;
+    $('detail-photo').src = r.photo_url || 'assets/logo.png';
+    $('detail-photo').alt = r.full_name;
+    $('detail-stage-pill').textContent = STAGES[r.class_code] || '—';
+    $('detail-name').textContent = r.full_name;
+    $('detail-student-phone').textContent = fmtPhone(r.phone);
+    $('detail-whatsapp').textContent = fmtPhone(r.whatsapp);
+    $('detail-parent-phone').textContent = fmtPhone(r.parent_phone);
+    $('detail-birth').textContent = birthLabel(r.birth_date);
+    $('detail-gender').textContent = r.gender === 'female' ? 'أنثى' : 'ذكر (طالب)';
+    $('detail-rank').textContent = r.gender === 'female' ? '—' : (RANK_LABELS[r.deacon_rank] || 'لم أرسم بعد');
+    $('detail-class').textContent = r.class_name || r.class_code || '—';
+    $('admin-note').value = '';
+
+    const modal = $('student-detail-modal');
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100');
+  }
+
+  function closeStudentSheet() {
+    const modal = $('student-detail-modal');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.classList.remove('opacity-100');
+  }
+
+  /* ---------- التعديل السريع ---------- */
+  function triggerEditField(label, field) {
+    EDIT_FIELD = field;
+    $('edit-modal-title').textContent = 'تعديل ' + label;
+    const input = $('generic-input');
+    const r = ACTIVE || {};
+    const values = {
+      'name': r.full_name,
+      'student-phone': r.phone,
+      'whatsapp': r.whatsapp,
+      'parent-phone': r.parent_phone,
+      'birth': r.birth_date,
+      'gender': r.gender === 'female' ? 'female' : 'male',
+      'rank': r.deacon_rank || 'none',
+      'class': r.class_code,
+      'photo': '',
+    };
+    input.value = values[field] || '';
+    input.setAttribute('dir', field.indexOf('phone') !== -1 ? 'ltr' : 'rtl');
+
+    if (field === 'gender' || field === 'rank' || field === 'class') {
+      const options = field === 'gender'
+        ? [['male', 'ذكر (طالب)'], ['female', 'أنثى']]
+        : (field === 'rank'
+          ? Object.keys(RANK_LABELS).map(function (k) { return [k, RANK_LABELS[k]]; })
+          : CLASSES.map(function (c) { return [c.code, c.name_ar]; }));
+      const select = document.createElement('select');
+      select.id = 'generic-select';
+      select.className = 'w-full h-11 px-3 bg-surface-container rounded-lg text-[13px] text-text-primary border border-border-warm focus:outline-none focus:border-border-focused';
+      select.innerHTML = options.map(function (o) {
+        return '<option value="' + esc(o[0]) + '">' + esc(o[1]) + '</option>';
+      }).join('');
+      if (input.value) select.value = input.value;
+      $('dynamic-field-container').innerHTML = '';
+      $('dynamic-field-container').appendChild(select);
+    } else {
+      $('dynamic-field-container').innerHTML = '';
+      $('dynamic-field-container').appendChild(input);
+    }
+
+    const modal = $('edit-field-modal');
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100');
+  }
+
+  function closeFieldEditModal() {
+    const modal = $('edit-field-modal');
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.classList.remove('opacity-100');
+    EDIT_FIELD = null;
+  }
+
+  async function saveFieldEdit() {
+    if (!ACTIVE || !EDIT_FIELD) return;
+    const select = $('generic-select');
+    const value = select ? select.value : $('generic-input').value.trim();
+    const field = EDIT_FIELD;
+
+    const payload = {};
+    if (field === 'name') payload.full_name = value;
+    else if (field === 'student-phone') payload.phone = value.replace(/[^0-9]/g, '');
+    else if (field === 'whatsapp') payload.whatsapp = value.replace(/[^0-9]/g, '');
+    else if (field === 'parent-phone') payload.parent_phone = value.replace(/[^0-9]/g, '');
+    else if (field === 'birth') payload.birth_date = value;
+    else if (field === 'gender') payload.gender = value;
+    else if (field === 'rank') payload.deacon_rank = value;
+    else if (field === 'class') payload.class_code = value;
+    else if (field === 'photo') {
+      showToast('لتغيير الصورة: ارفع صورة عبر نموذج الانضمام ثم احفظ');
+      closeFieldEditModal();
+      return;
+    }
+
+    try {
+      const res = await api('/admin/users/' + encodeURIComponent(ACTIVE.id), {
+        method: 'PATCH', body: payload,
+      });
+      Object.assign(ACTIVE, payload);
+      if (field === 'class') {
+        const cls = CLASSES.find(function (c) { return c.code === value; });
+        if (cls) { ACTIVE.class_name = cls.name_ar; }
+      }
+      closeFieldEditModal();
+      renderList();
+      openStudentSheet(ACTIVE.id);
+      showToast('تم حفظ التعديل بنجاح');
+    } catch (e) {
+      toast(e && e.message ? e.message : 'تعذر حفظ التعديل', 'error');
+    }
+  }
+
+  /* ---------- إعادة تعيين كلمة المرور ---------- */
+  async function resetInitialPassword() {
+    if (!ACTIVE) return;
+    try {
+      const res = await api('/admin/users/' + encodeURIComponent(ACTIVE.id), {
+        method: 'PATCH', body: { reset_password: true },
+      });
+      const data = res.data || res || {};
+      if (data.password) {
+        $('detail-password').textContent = data.password + ' (مؤقتة — تُعرض مرة واحدة)';
+        showToast('تم تعيين كلمة مرور جديدة: ' + data.password);
+      }
+    } catch (e) {
+      toast(e && e.message ? e.message : 'تعذر إعادة التعيين', 'error');
+    }
+  }
+
+  /* ---------- القرار: قبول / رفض ---------- */
+  function openConfirmationModal(decision) {
+    DECISION = decision;
+    const accept = decision === 'accept';
+    $('confirm-title').textContent = accept ? 'تأكيد القبول والانضمام' : 'تأكيد رفض الطلب';
+    $('confirm-desc').textContent = accept
+      ? 'سيتم تفعيل حساب الطالب والسماح له بالدخول إلى التطبيق. هل تريد المتابعة؟'
+      : 'سيتم رفض الطلب وحذف حساب الطالب وكل بياناته نهائيًا من التطبيق — لا يمكن التراجع. هل تريد المتابعة؟';
+    $('confirm-icon').textContent = accept ? 'how_to_reg' : 'person_cancel';
+    $('confirm-icon-wrap').className = 'w-14 h-14 rounded-full mx-auto flex items-center justify-center mb-3 ' +
+      (accept ? 'bg-semantic-success/15 text-semantic-success' : 'bg-error-container text-semantic-error');
+    $('confirm-execute-btn').className = 'h-11 rounded-xl text-white font-bold text-[13.5px] flex items-center justify-center gap-1 shadow-sm active:scale-95 transition-all ' +
+      (accept ? 'bg-semantic-success' : 'bg-semantic-error');
+    $('rejection-reason-box').classList.toggle('hidden', accept);
+
+    const backdrop = $('confirm-dialog-backdrop');
+    backdrop.classList.remove('opacity-0', 'pointer-events-none');
+    const box = $('confirm-dialog-box');
+    setTimeout(function () {
+      box.classList.remove('scale-95');
+      box.classList.add('scale-100');
+    }, 10);
+  }
+
+  function closeConfirmationModal() {
+    const backdrop = $('confirm-dialog-backdrop');
+    backdrop.classList.add('opacity-0', 'pointer-events-none');
+    const box = $('confirm-dialog-box');
+    box.classList.add('scale-95');
+    box.classList.remove('scale-100');
+    DECISION = null;
+  }
+
+  async function executeConfirmedDecision() {
+    if (!DECISION || !ACTIVE) return;
+    const id = ACTIVE.id;
+    try {
+      if (DECISION === 'accept') {
+        await api('/admin/join-requests/' + encodeURIComponent(id) + '/approve', { method: 'POST' });
+        closeConfirmationModal();
+        closeStudentSheet();
+        showToast('تم قبول طلب انضمام ' + ACTIVE.full_name + ' وتفعيل حسابه');
+      } else {
+        const reason = $('rejection-reason-select').value;
+        await api('/admin/join-requests/' + encodeURIComponent(id) + '/reject', {
+          method: 'POST', body: { reason: reason },
+        });
+        closeConfirmationModal();
+        closeStudentSheet();
+        showToast('تم رفض الطلب وحذف حساب ' + ACTIVE.full_name + ' نهائيًا');
+      }
+      await loadRequests();
+    } catch (e) {
+      toast(e && e.message ? e.message : 'تعذر تنفيذ القرار', 'error');
+    }
+  }
+
+  /* ---------- التنبيه ---------- */
+  function showToast(text) {
+    const el = $('toast-notification');
+    const txt = $('toast-text');
+    if (!el || !txt) return;
+    if (toastTimer) { clearTimeout(toastTimer); toastTimer = null; }
+    txt.textContent = text;
+    el.classList.remove('opacity-0', '-translate-y-28', 'pointer-events-none');
+    el.classList.add('translate-y-0');
+    toastTimer = setTimeout(function () {
+      el.classList.add('opacity-0', '-translate-y-28', 'pointer-events-none');
+      el.classList.remove('translate-y-0');
+      toastTimer = null;
+    }, 3200);
+  }
+
+  function dismissToast() {
+    const el = $('toast-notification');
+    el.classList.add('opacity-0', '-translate-y-28', 'pointer-events-none');
+    el.classList.remove('translate-y-0');
+  }
+
+  /* ---------- تحميل البيانات ---------- */
+  async function loadRequests() {
+    try {
+      const res = await api('/admin/join-requests');
+      REQUESTS = res.data || res || [];
+    } catch (e) {
+      REQUESTS = [];
+      toast('تعذر تحميل الطلبات', 'error');
+    }
+    renderList();
+  }
+
+  async function loadClasses() {
+    try {
+      const res = await api('/admin/subscriptions');
+      const data = res.data || res || {};
+      CLASSES = (data.classes || []).map(function (c) { return { code: c.class_code, name_ar: c.class_name || c.class_code }; });
+    } catch (e) { CLASSES = []; }
+  }
+
+  /* ---------- الإقلاع ---------- */
+  async function boot() {
+    const me = await requireAuth(['admin']);
+    if (!me) return;
+    await loadClasses();
+    await loadRequests();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+
+</script>
+</body>
+</html>

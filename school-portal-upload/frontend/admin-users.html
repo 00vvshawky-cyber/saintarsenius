@@ -1,0 +1,1307 @@
+<!DOCTYPE html><html dir="rtl" lang="ar" style=""><head><meta charset="utf-8"><meta name="description" content="لوحة الفصل - مدرسة القديس أرسانيوس للألحان"><title>إدارة البيانات - مدرسة القديس أرسانيوس للألحان</title><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-on-surface": "#f2f0ed", "outline-variant": "#d9c1ba", "surface-container-highest": "#e4e2df", "tertiary": "#270600", "secondary-fixed": "#ffddb8", "on-secondary-container": "#754900", "on-secondary-fixed-variant": "#653e00", "secondary-fixed-dim": "#fdb965", "text-primary": "#2B1E1A", "on-primary-fixed": "#390b00", "on-tertiary-fixed-variant": "#763219", "error-container": "#ffdad6", "tertiary-fixed": "#ffdbcf", "on-error": "#ffffff", "on-primary": "#ffffff", "tertiary-container": "#69270d", "surface-container-high": "#eae8e4", "surface-bright": "#fbf9f5", "on-primary-container": "#ca775c", "surface-container": "#efeeea", "on-surface-variant": "#54433e", "on-error-container": "#93000a", "on-background": "#1b1c1a", "on-secondary-fixed": "#2a1700", "on-secondary": "#ffffff", "on-tertiary-fixed": "#390c00", "semantic-success": "#2E7D32", "surface": "#FFFFFF", "on-tertiary": "#ffffff", "secondary": "#855300", "on-primary-fixed-variant": "#74341e", "audio-scrubber-track": "#E2DACF", "background": "#fbf9f5", "primary-container": "#662914", "primary-fixed": "#ffdbd0", "primary-fixed-dim": "#ffb59d", "secondary-container": "#fdb965", "surface-container-low": "#f5f3f0", "text-secondary": "#6E6058", "inverse-primary": "#ffb59d", "on-surface": "#1b1c1a", "tertiary-fixed-dim": "#ffb59c", "inverse-surface": "#30312e", "outline": "#87736d", "surface-variant": "#e4e2df", "semantic-error": "#C62828", "surface-tint": "#924a33", "semantic-warning": "#E65100", "surface-subtle": "#F4EFEA", "surface-dim": "#dbdad6", "semantic-disabled": "#BDBDBD", "error": "#ba1a1a", "on-tertiary-container": "#ed8d6c", "surface-container-lowest": "#ffffff", "border-warm": "#E6DFD5", "border-focused": "#C88A36", "primary": "#270600" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-tablet": "1.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1rem", "space-xl": "2rem", "space-md": "1rem", "margin-tablet": "1.5rem", "margin-desktop": "2.5rem" }, "fontFamily": { "body-lg": ["Cairo"], "body-md": ["Cairo"], "body-sm": ["Cairo"], "label-lg": ["Cairo"], "label-md": ["Cairo"], "label-sm": ["Cairo"], "title-lg": ["Cairo"], "title-md": ["Cairo"], "display-lg": ["Noto Serif"], "headline-lg": ["Noto Serif"], "headline-md": ["Noto Serif"] }, "fontSize": { "body-lg": ["17px", { "lineHeight": "28px", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "400" }], "title-lg": ["18px", { "lineHeight": "28px", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-lg": ["26px", { "lineHeight": "36px", "fontWeight": "700" }], "display-lg": ["32px", { "lineHeight": "44px", "fontWeight": "700" }] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-background flex flex-col min-h-screen">
+<style>
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration{display:none !important;}
+</style>
+<header class="fixed top-0 w-full z-40 bg-background/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(73,20,2,0.05)] pt-safe">
+<div class="h-16 px-margin flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<button aria-label="رجوع" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface hover:text-primary transition-colors focus:outline-none focus:ring-1 focus:ring-border-focused" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+</button>
+<h1 class="font-title-lg text-title-lg text-primary tracking-tight">إدارة البيانات</h1>
+</div>
+<div class="flex items-center gap-space-sm">
+<img alt="شعار مدرسة القديس أرسانيوس" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_6px_rgba(73,20,2,0.1)]" id="headerAvatar" src="assets/logo.png">
+</div>
+</div>
+</header>
+<main class="flex flex-col relative w-full px-margin pt-16 pb-safe bg-background flex-1">
+<div class="flex flex-col w-full pb-10 space-y-space-md">
+<!-- Dynamic Feedback Notification Toast -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-primary text-on-primary px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm transition-all duration-300 hidden" id="save-toast">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">check_circle</span>
+<span class="font-body-sm text-body-sm" id="save-toast-text">تم الحفظ</span>
+</div>
+<!-- 1. Search Bar & Global Summary Bar -->
+<section class="flex flex-col gap-space-sm pt-space-xs">
+<div class="relative w-full bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex items-center px-space-sm py-1.5 focus-within:ring-1 focus-within:ring-secondary">
+<span class="material-symbols-outlined text-outline text-[22px] ms-1">search</span>
+<input aria-label="ابحث باسم الطالب أو الطالب" class="w-full bg-transparent px-space-sm py-1 font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" id="search-input" placeholder="ابحث بالاسم أو رقم الهاتف..." type="search">
+<button aria-label="مسح البحث" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-primary active:scale-95 transition-transform" id="clear-search-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-1 rounded-full text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">menu_book</span>
+<span class=""><span id="count-label">إجمالي السجلات</span>: <strong class="font-title-md text-primary" id="total-count">0</strong> طالب وخادم</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="w-2 h-2 rounded-full bg-semantic-success animate-pulse">
+</span>
+<span class="">سجل محدّث مباشرة</span>
+</div>
+</div>
+</section>
+<!-- 1.5 Classes Browser (تصفح فصول المعهد) -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-3" id="classes-browser-section">
+<div class="flex items-center justify-between pb-1 border-b border-border-warm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">auto_stories</span>
+<h2 class="font-title-md text-title-md text-primary font-bold">تصفح فصول المعهد</h2>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary bg-surface-container-high px-2.5 py-0.5 rounded-full">8 فصول دراسية</span>
+</div>
+<div class="grid grid-cols-4 gap-2" id="official-classes-grid"></div>
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-text-secondary font-label-sm text-label-sm">
+<span>عرض منتسبي فصل:</span>
+<button class="font-bold text-primary hover:underline" id="reset-class-filter" type="button">كل الفصول</button>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold" id="class-members-count">—</span>
+</div>
+<div class="grid grid-cols-2 p-1 bg-surface-container rounded-xl gap-1" id="nav-members-tabs">
+<button class="py-2 px-3 rounded-lg font-title-md text-title-md flex items-center justify-center gap-2 transition-all" id="tab-students-btn" onclick="switchMembersTab('students')" type="button">
+<span class="material-symbols-outlined text-[19px] text-secondary">school</span>
+<span>الطلاب</span>
+<span class="font-label-sm text-label-sm px-1.5 bg-secondary-container text-on-secondary-container rounded-full" id="tab-students-count">0</span>
+</button>
+<button class="py-2 px-3 rounded-lg font-title-md text-title-md flex items-center justify-center gap-2 transition-all" id="tab-servants-btn" onclick="switchMembersTab('servants')" type="button">
+<span class="material-symbols-outlined text-[19px] text-outline">diversity_3</span>
+<span>الخدام</span>
+<span class="font-label-sm text-label-sm px-1.5 bg-surface-container-high text-on-surface-variant rounded-full" id="tab-servants-count">0</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Search Results (تظهر أثناء البحث أو قبل اختيار مستخدم) -->
+<div class="flex flex-col gap-1.5 max-h-[320px] overflow-y-auto" id="searchResults"></div>
+<!-- 2. Active Profile Master Container -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md" id="profile-card">
+<!-- Role Multiple Selection Chips -->
+<div class="flex flex-col gap-space-xs pb-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-text-secondary">الأدوار المنسوبة في المعهد:</span>
+</div>
+<div class="flex items-center gap-space-sm pt-1 flex-wrap" id="role-selector-container">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" id="role-btn-student" type="button">
+<span class="material-symbols-outlined text-[17px]">school</span>
+<span class="">طالب</span>
+<span class="material-symbols-outlined text-[15px] hidden role-check">check</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" id="role-btn-servant" type="button">
+<span class="material-symbols-outlined text-[17px]">diversity_3</span>
+<span class="">خادم معتمد</span>
+<span class="material-symbols-outlined text-[15px] hidden role-check">check</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" id="role-btn-admin" type="button">
+<span class="material-symbols-outlined text-[17px]">admin_panel_settings</span>
+<span class="">إداري</span>
+<span class="material-symbols-outlined text-[15px] hidden role-check">check</span>
+</button>
+</div>
+</div>
+<!-- Profile Header -->
+<div class="flex items-center gap-space-md p-space-sm bg-surface-container-low rounded-xl">
+<div class="relative w-16 h-16 flex-shrink-0">
+<img alt="شعار مدرسة القديس أرسانيوس" class="w-16 h-16 rounded-full object-cover shadow-md bg-surface-container" data-alt="شعار المدرسة" id="profile-avatar" src="assets/logo.png">
+<button aria-label="تغيير الصورة الشخصية" class="absolute -bottom-1 -left-1 w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md active:scale-90 transition-transform" id="avatar-btn" type="button">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+</button>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-title-lg text-title-lg text-primary truncate leading-snug" id="profile-name">—</h2>
+</div>
+<div class="flex items-center gap-space-xs mt-1 flex-wrap">
+<span class="inline-flex items-center gap-1 bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold" id="profile-rank-badge">
+<span class="material-symbols-outlined text-[14px]">church</span>
+<span id="profile-rank-text">—</span>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full font-label-sm text-label-sm" id="profile-status-badge">—</span>
+</div>
+</div>
+</div>
+<!-- Editable Fields Matrix -->
+<div class="flex flex-col gap-2" id="fields-matrix">
+<!-- Field: full name -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-bright hover:bg-surface-container-low transition-colors" data-row="full_name">
+<div class="flex flex-col min-w-0 pr-1 flex-1">
+<span class="font-label-sm text-label-sm text-text-secondary">الاسم بالكامل ثلاثي</span>
+<span class="font-title-md text-title-md text-text-primary truncate" data-value="full_name">—</span>
+</div>
+<button aria-label="تعديل الاسم" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container transition-all" data-edit="full_name" type="button">
+<span class="material-symbols-outlined text-[19px]">edit</span>
+</button>
+</div>
+<!-- Field: student phone -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-bright hover:bg-surface-container-low transition-colors" data-row="phone">
+<div class="flex flex-col min-w-0 pr-1 flex-1">
+<span class="font-label-sm text-label-sm text-text-secondary">رقم هاتف الطالب المعتمد</span>
+<span class="font-body-lg text-body-lg text-text-primary font-mono dir-ltr text-right" dir="ltr" data-value="phone">—</span>
+</div>
+<button aria-label="تعديل رقم الهاتف" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container transition-all" data-edit="phone" type="button">
+<span class="material-symbols-outlined text-[19px]">edit</span>
+</button>
+</div>
+<!-- Field: whatsapp -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-bright hover:bg-surface-container-low transition-colors" data-row="whatsapp">
+<div class="flex flex-col min-w-0 pr-1 flex-1">
+<span class="font-label-sm text-label-sm text-text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-semantic-success">chat</span>
+ رقم الواتساب الخاص
+</span>
+<span class="font-body-lg text-body-lg text-text-primary font-mono dir-ltr text-right" dir="ltr" data-value="whatsapp">—</span>
+</div>
+<button aria-label="تعديل رقم الواتساب" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container transition-all" data-edit="whatsapp" type="button">
+<span class="material-symbols-outlined text-[19px]">edit</span>
+</button>
+</div>
+<!-- Field: parent phone -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-bright hover:bg-surface-container-low transition-colors" data-row="parent_phone">
+<div class="flex flex-col min-w-0 pr-1 flex-1">
+<span class="font-label-sm text-label-sm text-text-secondary">رقم ولي الأمر</span>
+<span class="font-body-lg text-body-lg text-text-primary font-mono dir-ltr text-right" dir="ltr" data-value="parent_phone">—</span>
+</div>
+<button aria-label="تعديل بيانات ولي الأمر" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container transition-all" data-edit="parent_phone" type="button">
+<span class="material-symbols-outlined text-[19px]">edit</span>
+</button>
+</div>
+<!-- Field: birth date -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-bright hover:bg-surface-container-low transition-colors" data-row="birth_date">
+<div class="flex flex-col min-w-0 pr-1 flex-1">
+<span class="font-label-sm text-label-sm text-text-secondary">تاريخ الميلاد والسن</span>
+<div class="flex items-center gap-2">
+<span class="font-body-lg text-body-lg text-text-primary" data-value="birth_date">—</span>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant font-semibold" id="profile-age">—</span>
+</div>
+</div>
+<button aria-label="تعديل تاريخ الميلاد" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container transition-all" data-edit="birth_date" type="button">
+<span class="material-symbols-outlined text-[19px]">calendar_today</span>
+</button>
+</div>
+<!-- Field: gender -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-bright hover:bg-surface-container-low transition-colors" data-row="gender">
+<div class="flex flex-col min-w-0 pr-1 flex-1">
+<span class="font-label-sm text-label-sm text-text-secondary">النوع</span>
+<span class="font-body-lg text-body-lg text-text-primary" data-value="gender">—</span>
+</div>
+<button aria-label="تعديل النوع" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container transition-all" data-edit="gender" type="button">
+<span class="material-symbols-outlined text-[19px]">wc</span>
+</button>
+</div>
+<!-- Field: deacon rank -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-bright hover:bg-surface-container-low transition-colors" data-row="deacon_rank">
+<div class="flex flex-col min-w-0 pr-1 flex-1">
+<span class="font-label-sm text-label-sm text-text-secondary">الرتبة الدياكونية الحالية</span>
+<span class="font-title-md text-title-md text-primary font-bold" data-value="deacon_rank">—</span>
+</div>
+<button aria-label="ترقية أو تعديل الرتبة" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container transition-all" data-edit="deacon_rank" type="button">
+<span class="material-symbols-outlined text-[19px]">edit</span>
+</button>
+</div>
+<!-- Field: class -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-bright hover:bg-surface-container-low transition-colors" data-row="class_code">
+<div class="flex flex-col min-w-0 pr-1 flex-1">
+<span class="font-label-sm text-label-sm text-text-secondary">الفصل الدراسي المخصص بالمعهد</span>
+<span class="font-title-md text-title-md text-text-primary" data-value="class_code">—</span>
+</div>
+<button aria-label="تغيير الفصل" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container transition-all" data-edit="class_code" type="button">
+<span class="material-symbols-outlined text-[19px]">arrow_drop_down_circle</span>
+</button>
+</div>
+</div>
+<!-- Password Management Collapsible Section -->
+<div class="pt-space-xs">
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" id="toggle-pw-btn" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">lock_reset</span>
+<span class="font-title-md text-title-md text-primary">تغيير كلمة المرور وتأمين الحساب</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="pw-chevron" style="transform: rotate(0deg);">expand_more</span>
+</button>
+<div class="flex-col gap-space-sm mt-2 p-space-sm bg-surface-bright rounded-lg hidden" id="password-box">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-text-secondary" for="new-password">كلمة المرور الجديدة (8 أحرف على الأقل)</label>
+<div class="relative flex items-center bg-surface-container-lowest rounded-lg px-space-sm py-1.5 shadow-sm">
+<input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none" id="new-password" placeholder="••••••••" type="password">
+<button aria-label="إظهار كلمة المرور" class="text-outline hover:text-primary" id="pw-eye" type="button">
+<span class="material-symbols-outlined text-[18px]" id="pw-visibility-icon">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex justify-end gap-space-xs pt-space-xs">
+<button class="px-3 py-1 font-label-sm text-label-sm rounded bg-surface-container text-on-surface-variant" id="pw-cancel" type="button">إلغاء</button>
+<button class="px-3 py-1 font-label-sm text-label-sm rounded bg-primary text-on-primary shadow-sm" id="pw-confirm" type="button">تأكيد التحديث</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Classes & Subjects Assignments -->
+<section class="flex flex-col gap-space-sm hidden" id="servant-section">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">history_edu</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">الفصول والمواد المكلف بخدمتها</h2>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-0.5">إدارة التكليفات الكنسية والمناهج الموكلة للخادم</p>
+</div>
+<button class="flex items-center gap-1 bg-surface-container-lowest text-secondary px-3 py-1.5 rounded-lg shadow-sm font-label-md text-label-md hover:bg-surface-container transition-all active:scale-95 border border-border-warm hover:border-border-focused" id="add-class-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">إضافة فصل</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm" id="classes-container"></div>
+<div class="p-3 rounded-xl bg-surface-container text-text-secondary font-body-sm text-body-sm hidden" id="no-assignments">لا توجد تكليفات بعد — اضغط «إضافة فصل» لبدء الإسناد.</div>
+</section>
+<!-- 4. Action Buttons -->
+<section class="flex flex-col gap-space-sm pt-space-sm pb-space-lg">
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary py-3.5 px-space-lg rounded-lg shadow-md font-title-lg text-title-lg flex items-center justify-center gap-space-sm active:scale-[0.98] transition-all" id="save-changes-btn" type="button">
+<span class="material-symbols-outlined text-[22px]">save</span>
+<span class="">حفظ كافة التعديلات</span>
+</button>
+<button class="w-full bg-surface-container hover:bg-surface-container-high text-text-primary py-2.5 px-space-lg rounded-lg font-title-md text-title-md flex items-center justify-center gap-1 active:scale-[0.98] transition-all" id="cancel-changes-btn" type="button">
+<span class="">إلغاء التعديلات والرجوع</span>
+</button>
+<div class="flex flex-col gap-1.5 mt-2 pt-4 border-t border-border-warm">
+<span class="font-label-sm text-label-sm text-text-secondary">منطقة الخطر</span>
+<button class="w-full bg-error-container hover:opacity-90 text-on-error-container py-2.5 px-space-lg rounded-lg font-title-md text-title-md flex items-center justify-center gap-1.5 active:scale-[0.98] transition-all" id="delete-account-btn" type="button">
+<span class="material-symbols-outlined text-[20px] text-semantic-error">delete_forever</span>
+<span>حذف الحساب نهائيًا</span>
+</button>
+<p class="font-label-sm text-label-sm text-text-secondary leading-relaxed">يحذف الحساب وكل بياناته من التطبيق نهائيًا ولا يمكن التراجع.</p>
+</div>
+</section>
+</div>
+<!-- Modal: Add Class & Assign Subjects (two steps) -->
+<div aria-modal="true" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center hidden" id="class-modal-overlay" role="dialog">
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-sm transition-opacity" id="class-modal-backdrop"></div>
+<div class="relative w-full sm:max-w-md bg-background rounded-t-2xl sm:rounded-2xl shadow-2xl flex flex-col max-h-[88vh] overflow-hidden z-10 border-t sm:border border-border-warm pb-safe">
+<div class="flex flex-col items-center pt-2.5 px-4 pb-2 border-b border-border-warm bg-surface-container-lowest">
+<div class="w-10 h-1 rounded-full bg-outline-variant mb-2.5 sm:hidden"></div>
+<div class="w-full flex items-center justify-between">
+<div class="flex items-center gap-2">
+<button aria-label="الرجوع للخطوة السابقة" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container transition-all" id="modal-back-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]" id="modal-header-icon">menu_book</span>
+<h3 class="font-title-lg text-title-lg text-primary" id="modal-title">إضافة تكليف فصل جديد</h3>
+</div>
+</div>
+<button aria-label="إغلاق النافذة" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container active:scale-95 transition-all" id="modal-close" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="w-full flex items-center justify-between pt-2 text-label-sm text-text-secondary">
+<span id="step-indicator-text">الخطوة 1 من 2: اختيار المرحلة والفصل</span>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary transition-all" id="step-dot-1"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant transition-all" id="step-dot-2"></span>
+</div>
+</div>
+</div>
+<div class="p-4 overflow-y-auto space-y-2.5 flex-1 hidden" id="modal-step-1">
+<p class="font-body-sm text-body-sm text-text-secondary mb-2">اختر أحد الفصول الكنسية الرسمية بالمعهد لإسناد التكليف:</p>
+<div class="grid grid-cols-1 gap-2" id="class-cards-list"></div>
+</div>
+<div class="p-4 overflow-y-auto space-y-3 flex-1 hidden" id="modal-step-2">
+<div class="bg-surface-container-low p-3 rounded-xl border border-border-warm flex items-center gap-3">
+<span class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center" id="selected-class-icon-container">
+<span class="material-symbols-outlined text-[22px]" id="selected-class-icon">child_care</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-secondary">الفصل المحدد:</span>
+<span class="font-title-md text-title-md text-primary font-bold" id="selected-class-name">—</span>
+</div>
+</div>
+<div class="pt-1">
+<p class="font-body-sm text-body-sm text-text-secondary mb-2">حدد المواد التعليمية التي سيتولى الخادم تدريسها في هذا الفصل (مادة أو أكثر):</p>
+<div class="grid grid-cols-1 gap-2.5" id="subject-cards-list"></div>
+</div>
+</div>
+<div class="p-4 border-t border-border-warm bg-surface-container-lowest flex gap-2 hidden" id="modal-footer-step-2">
+<button class="w-1/3 py-2.5 px-3 rounded-lg font-title-md text-title-md text-text-secondary bg-surface-container hover:bg-surface-container-high transition-colors text-center" id="modal-prev-btn" type="button">السابق</button>
+<button class="w-2/3 py-2.5 px-4 rounded-lg font-title-md text-title-md text-on-primary bg-primary hover:bg-primary-container shadow-md flex items-center justify-center gap-1.5 active:scale-[0.98] transition-all" id="confirm-assignment-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span class="">تأكيد وإضافة التكليف</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Modal: Delete account (permanent) -->
+<div aria-modal="true" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center hidden" id="delete-modal-overlay" role="dialog">
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-sm" id="delete-modal-backdrop"></div>
+<div class="relative w-full sm:max-w-md bg-background rounded-t-2xl sm:rounded-2xl shadow-2xl flex flex-col max-h-[88vh] overflow-hidden z-10 border-t sm:border border-border-warm pb-safe">
+<div class="flex items-center gap-2 p-4 border-b border-border-warm bg-error-container/40">
+<span class="material-symbols-outlined text-semantic-error text-[26px]">delete_forever</span>
+<div class="flex flex-col">
+<h3 class="font-title-lg text-title-lg text-primary font-bold">حذف الحساب نهائيًا</h3>
+<span class="font-label-sm text-label-sm text-text-secondary">هذا الإجراء لا يمكن التراجع عنه</span>
+</div>
+<button aria-label="إغلاق" class="ms-auto w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-primary hover:bg-surface-container transition-all" id="delete-modal-close" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-3">
+<p class="font-body-sm text-body-sm text-text-primary leading-relaxed" id="delete-modal-text">—</p>
+<div class="p-3 rounded-xl bg-error-container text-on-error-container font-body-sm text-body-sm leading-relaxed">
+سيُحذف الحساب وكل سجلاته (النقاط، الحضور، الدرجات، الافتقاد، التكليفات، الإشعارات) نهائيًا من قاعدة البيانات.
+</div>
+<label class="flex items-start gap-2 font-body-sm text-body-sm text-text-primary cursor-pointer">
+<input class="mt-0.5 w-4 h-4 shrink-0 accent-[#ba1a1a]" id="delete-ack" type="checkbox">
+<span>أفهم أن هذا الحذف نهائي ولا يمكن استرجاع الحساب أو بياناته.</span>
+</label>
+</div>
+<div class="p-4 border-t border-border-warm bg-surface-container-lowest flex gap-2">
+<button class="w-1/3 py-2.5 px-3 rounded-lg font-title-md text-title-md text-text-secondary bg-surface-container hover:bg-surface-container-high transition-colors" id="delete-cancel" type="button">إلغاء</button>
+<button class="w-2/3 py-2.5 px-4 rounded-lg font-title-md text-title-md text-white bg-semantic-error hover:opacity-90 shadow-md flex items-center justify-center gap-1.5 active:scale-[0.98] transition-all disabled:opacity-40 disabled:cursor-not-allowed" disabled id="delete-confirm" type="button">
+<span class="material-symbols-outlined text-[20px]">delete_forever</span>
+<span>حذف نهائيًا</span>
+</button>
+</div>
+</div>
+</div>
+<input accept="image/*" class="hidden" id="avatar-file" type="file">
+</main>
+<script src="date-picker.js"></script>
+<script src="photo-crop.js"></script>
+<script src="photo-cropper.js"></script>
+<script src="app.js"></script>
+<script src="deacon-ranks.js"></script>
+<script>
+  /* ===== شاشة «إدارة البيانات» (T089 / FR-ADM-05) =====
+     • GET  /admin/users?q=            → البحث (اسم/هاتف/واتساب/ولي أمر/مفتاح دخول)
+     • GET  /admin/users/{id}          → الملف الكامل (حقول + أدوار + تكليفات)
+     • PATCH /admin/users/{id}         → تعديل أي حقل (حتى كلمة المرور/الصورة)
+     • PUT  /admin/users/{id}/roles    → الأدوار
+     • PUT  /admin/users/{id}/assignments → تكليفات الفصل/المادة
+     • GET  /servant/classes           → الفصول + المواد (المدير يرى الكل) */
+  const $ = (id) => document.getElementById(id);
+
+  const ROLE_LABELS = { student: 'طالب', servant: 'خادم معتمد', admin: 'إداري' };
+  const ROLE_STYLES = {
+    student: ['bg-primary-container', 'text-on-primary-container', 'ring-1', 'ring-primary-container'],
+    servant: ['bg-secondary', 'text-on-secondary', 'ring-1', 'ring-secondary'],
+    admin: ['bg-primary', 'text-on-primary', 'shadow-sm'],
+  };
+  const RANK_LABELS = window.RANK_LABELS;
+  const RANK_ORDER = ['none', 'epsaltos', 'anagnostis', 'epidiakon', 'diakon', 'archdiakon'];
+  const STATUS_LABELS = { active: 'حساب نشط', pending: 'قيد المراجعة', rejected: 'مرفوض', suspended: 'موقوف' };
+  const GENDER_LABELS = { male: 'ذكر', female: 'أنثى' };
+  const SUBJECT_ICONS = { alhan: 'music_note', coptic: 'translate', taks: 'auto_stories', mahfouzat: 'bookmark' };
+  const SUBJECT_DESCRIPTIONS = {
+    alhan: 'ألحان القداس والمناسبات والطقوس',
+    coptic: 'قواعد القراءة والنطق والنصوص',
+    taks: 'طقوس الأسرار والصلوات والخدمات',
+    mahfouzat: 'صلوات السواعي والمزامير والقطع',
+  };
+  const CLASS_ICONS = {
+    nursery: 'child_care', g1_2: 'backpack', g3_4: 'groups_2', g5_6: 'menu_book',
+    prep: 'groups', secondary: 'history_edu', youth: 'account_balance', mothers: 'family_restroom',
+  };
+  const CLASS_DESCRIPTIONS = {
+    nursery: 'مرحلة الطفولة المبكرة والتمهيدي',
+    g1_2: 'صفوف التأسيس الابتدائي',
+    g3_4: 'المرحلة المتوسطة الابتدائية',
+    g5_6: 'المرحلة الابتدائية العليا والإتقان',
+    prep: 'الصفوف الإعدادية الأولى والثانية والثالثة',
+    secondary: 'مرحلة الشباب والدراسات الدياكونية',
+    youth: 'خدام وشباب المعهد والخريجين',
+    mothers: 'فصل تعليم السيدات والأمهات',
+  };
+
+  let CLASSES = [];
+  let USERS = [];
+  let CURRENT = null;
+  let DRAFT = {};
+  let DRAFT_ROLES = [];
+  let DRAFT_ASSIGNMENTS = [];
+  let ASSIGN_DIRTY = false;
+  let MODAL_CLASS = null;
+  let SELECTED_SUBJECTS = {};
+  let ALL_USERS = [];
+  let SELECTED_CLASS = '';
+  let MEMBER_TAB = 'students';
+  let resultsOpen = true;
+
+  const MONTHS = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
+
+  function esc(text) {
+    return String(text == null ? '' : text)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function digits(value) {
+    return String(value == null ? '' : value);
+  }
+
+  function fmtDate(iso) {
+    if (!iso) return '—';
+    const parts = String(iso).slice(0, 10).split('-');
+    if (parts.length !== 3) return '—';
+    const d = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+    if (isNaN(d.getTime())) return '—';
+    return Number(parts[2]) + ' ' + MONTHS[Number(parts[1]) - 1] + ' ' + parts[0];
+  }
+
+  function ageOf(iso) {
+    if (!iso) return null;
+    const parts = String(iso).slice(0, 10).split('-');
+    if (parts.length !== 3) return null;
+    const birth = new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+    if (isNaN(birth.getTime())) return null;
+    const now = new Date();
+    let age = now.getFullYear() - birth.getFullYear();
+    const m = now.getMonth() - birth.getMonth();
+    if (m < 0 || (m === 0 && now.getDate() < birth.getDate())) age -= 1;
+    return age >= 0 ? age : null;
+  }
+
+  function initials(name) {
+    const parts = String(name || '').trim().split(/\s+/).filter(Boolean);
+    if (!parts.length) return '؟';
+    return parts.slice(0, 2).map((p) => p.charAt(0)).join('');
+  }
+
+  /* صورة مصغّرة: صورة الطالب/الخادم إن وُجدت، وإلا الحروف الأولى */
+  function miniAvatar(u) {
+    if (u && u.photo_url) {
+      return '<img alt="' + esc(u.full_name || 'صورة المستخدم') + '" class="w-9 h-9 rounded-full object-cover bg-surface-container shrink-0" src="' + esc(u.photo_url) + '">';
+    }
+    return '<span class="w-9 h-9 rounded-full bg-surface-container text-primary flex items-center justify-center font-bold text-[13px] shrink-0">' + esc(initials(u && u.full_name)) + '</span>';
+  }
+
+  function toast(message, kind) {
+    const el = $('save-toast');
+    const txt = $('save-toast-text');
+    if (!el || !txt) return;
+    txt.textContent = message;
+    const icon = el.querySelector('.material-symbols-outlined');
+    if (icon) {
+      icon.textContent = kind === 'error' ? 'error' : 'check_circle';
+      icon.classList.toggle('text-secondary-fixed', kind !== 'error');
+      icon.classList.toggle('text-error-container', kind === 'error');
+    }
+    el.classList.remove('hidden');
+    if (toast.timer) clearTimeout(toast.timer);
+    toast.timer = setTimeout(() => el.classList.add('hidden'), 2800);
+  }
+
+  /* ---------- تحميل الفصول والمواد ---------- */
+  async function loadClasses() {
+    try {
+      const res = await api('/servant/classes');
+      CLASSES = res.data || res || [];
+    } catch (e) { CLASSES = []; }
+    if (!Array.isArray(CLASSES)) CLASSES = [];
+  }
+
+  function classByCode(code) {
+    return CLASSES.find((c) => c.code === code) || null;
+  }
+
+  function className(code) {
+    const c = classByCode(code);
+    return c ? c.name_ar : (code || '—');
+  }
+
+  /* ---------- تصفح الفصول والعدادات ---------- */
+  async function loadAllUsers() {
+    try {
+      const res = await api('/admin/users');
+      ALL_USERS = res.data || res || [];
+    } catch (e) { ALL_USERS = []; }
+    if (!Array.isArray(ALL_USERS)) ALL_USERS = [];
+    $('total-count').textContent = digits(ALL_USERS.length);
+  }
+
+  function memberCounts(code) {
+    const list = code ? ALL_USERS.filter(function (u) { return u.class_code === code; }) : ALL_USERS;
+    return {
+      students: list.filter(function (u) { return (u.roles || []).indexOf('student') !== -1; }).length,
+      servants: list.filter(function (u) { return (u.roles || []).indexOf('servant') !== -1; }).length,
+    };
+  }
+
+  function renderClassBrowser() {
+    const grid = $('official-classes-grid');
+    if (!grid) return;
+    grid.innerHTML = CLASSES.map(function (c) {
+      const active = SELECTED_CLASS === c.code;
+      return '<button type="button" onclick="selectNavClass(\'' + esc(c.code) + '\')" class="nav-class-chip flex flex-col items-center justify-center p-2 rounded-xl border transition-all active:scale-95 group shadow-sm ' +
+        (active
+          ? 'border-secondary bg-surface-container-low text-primary ring-1 ring-secondary'
+          : 'border-border-warm bg-surface-bright text-text-primary hover:bg-surface-container-low') +
+        '" data-class="' + esc(c.code) + '">' +
+        '<span class="material-symbols-outlined text-[20px] text-secondary mb-1">' + (CLASS_ICONS[c.code] || 'school') + '</span>' +
+        '<span class="font-label-sm text-label-sm ' + (active ? 'font-bold' : 'font-semibold') + ' text-center leading-tight">' + esc(c.name_ar) + '</span>' +
+        '</button>';
+    }).join('');
+    renderMemberTabs();
+  }
+
+  function renderMemberTabs() {
+    const on = 'py-2 px-3 rounded-lg font-title-md text-title-md flex items-center justify-center gap-2 transition-all bg-surface-container-lowest text-primary shadow-sm font-bold';
+    const off = 'py-2 px-3 rounded-lg font-title-md text-title-md flex items-center justify-center gap-2 transition-all text-text-secondary hover:text-primary';
+    const sb = $('tab-students-btn');
+    const vb = $('tab-servants-btn');
+    if (sb) sb.className = MEMBER_TAB === 'students' ? on : off;
+    if (vb) vb.className = MEMBER_TAB === 'servants' ? on : off;
+  }
+
+  function renderMemberSummary() {
+    const m = memberCounts(SELECTED_CLASS);
+    $('tab-students-count').textContent = digits(m.students);
+    $('tab-servants-count').textContent = digits(m.servants);
+    $('class-members-count').textContent = digits(m.students) + ' طالب • ' + digits(m.servants) + ' خادم';
+    const label = $('reset-class-filter');
+    if (label) label.textContent = SELECTED_CLASS ? className(SELECTED_CLASS) : 'كل الفصول';
+  }
+
+  function switchMembersTab(tab) {
+    MEMBER_TAB = tab === 'servants' ? 'servants' : 'students';
+    resultsOpen = true;
+    renderMemberTabs();
+    runSearch($('search-input').value || '');
+  }
+
+  function selectNavClass(code) {
+    SELECTED_CLASS = code || '';
+    resultsOpen = true;
+    renderClassBrowser();
+    runSearch($('search-input').value || '');
+  }
+
+  function resetClassFilter() {
+    SELECTED_CLASS = '';
+    resultsOpen = true;
+    renderClassBrowser();
+    runSearch($('search-input').value || '');
+  }
+
+  /* ---------- البحث ---------- */
+  async function runSearch(query) {
+    const q = (query || '').trim();
+    const seq = ++searchSeq;
+    const params = [];
+    if (SELECTED_CLASS) params.push('class_code=' + encodeURIComponent(SELECTED_CLASS));
+    if (q) params.push('q=' + encodeURIComponent(q));
+    if (!q) params.push('role=' + (MEMBER_TAB === 'students' ? 'student' : 'servant'));
+    let list = [];
+    try {
+      const res = await api('/admin/users' + (params.length ? '?' + params.join('&') : ''));
+      list = res.data || res || [];
+    } catch (e) {
+      if (seq === searchSeq) toast(e && e.message ? e.message : 'تعذر تحميل السجلات', 'error');
+    }
+    if (seq !== searchSeq) return;
+    USERS = Array.isArray(list) ? list : [];
+    renderResults(q);
+    renderMemberSummary();
+    const label = $('count-label');
+    if (label) label.textContent = q ? 'نتائج البحث' : 'إجمالي السجلات';
+  }
+
+  function renderResults(query) {
+    const box = $('searchResults');
+    const show = resultsOpen || !CURRENT;
+    if (!show) { box.innerHTML = ''; return; }
+
+    if (!USERS.length) {
+      box.innerHTML = '<div class="p-3 rounded-xl bg-surface-container-low text-center font-body-sm text-body-sm text-text-secondary">لا توجد نتائج مطابقة.</div>';
+      return;
+    }
+
+    const rows = USERS.slice(0, 25).map(function (u) {
+      const active = CURRENT && CURRENT.id === u.id;
+      const roleChips = (u.roles || []).map(function (r) {
+        return '<span class="px-1.5 py-0.5 rounded bg-surface-container text-text-secondary font-label-sm text-label-sm">' + esc(ROLE_LABELS[r] || r) + '</span>';
+      }).join(' ');
+      return '<button type="button" data-pick="' + u.id + '" class="w-full text-right flex items-center gap-2.5 p-2.5 rounded-xl border ' +
+        (active ? 'border-primary bg-surface-container-low' : 'border-border-warm bg-surface-container-lowest hover:bg-surface-container-low') +
+        ' transition-all">' +
+        miniAvatar(u) +
+        '<span class="flex flex-col min-w-0 flex-1">' +
+          '<span class="font-title-md text-title-md text-text-primary truncate">' + esc(u.full_name) + '</span>' +
+          '<span class="font-label-sm text-label-sm text-text-secondary truncate">' + esc(u.class_name || className(u.class_code) || 'بدون فصل') +
+            (u.phone ? ' · ' + esc(u.phone) : '') + '</span>' +
+        '</span>' +
+        '<span class="flex flex-col items-end gap-1 shrink-0">' + roleChips +
+          (u.status !== 'active' ? '<span class="font-label-sm text-label-sm text-semantic-error">' + esc(STATUS_LABELS[u.status] || u.status) + '</span>' : '') +
+        '</span>' +
+        '</button>';
+    }).join('');
+
+    box.innerHTML = rows + (USERS.length > 25
+      ? '<div class="text-center font-label-sm text-label-sm text-text-secondary pt-1">تظهر أول 25 نتيجة من ' + digits(USERS.length) + ' — استخدم البحث للتضييق.</div>'
+      : '');
+  }
+
+  /* ---------- عرض الملف ---------- */
+  async function selectUser(userId) {
+    try {
+      const res = await api('/admin/users/' + encodeURIComponent(userId));
+      CURRENT = res.data || res;
+    } catch (e) {
+      toast(e && e.message ? e.message : 'تعذر تحميل السجل', 'error');
+      return;
+    }
+    DRAFT = {};
+    DRAFT_ROLES = (CURRENT.roles || []).slice();
+    DRAFT_ASSIGNMENTS = (CURRENT.assignments || []).map(function (a) {
+      return { class_code: a.class_code, subject: a.subject };
+    });
+    ASSIGN_DIRTY = false;
+    renderProfile();
+    resultsOpen = false;
+    renderResults(($('search-input').value || '').trim());
+  }
+
+  function renderProfile() {
+    if (!CURRENT) return;
+    const u = CURRENT;
+    closeAllEditors();
+
+    $('profile-name').textContent = u.full_name || '—';
+    $('profile-rank-text').textContent = RANK_LABELS[u.deacon_rank] || 'لم أرسم بعد';
+    $('profile-status-badge').textContent = STATUS_LABELS[u.status] || u.status || '—';
+    /* صورة البطاقة = صورة الطالب/الخادم كما وضعها، وشعار المدرسة ثابت في هيدر الشاشة */
+    $('profile-avatar').src = u.photo_url || 'assets/logo.png';
+    $('headerAvatar').src = 'assets/logo.png';
+
+    setField('full_name', u.full_name || '—');
+    setField('phone', u.phone || '—');
+    setField('whatsapp', u.whatsapp || '—');
+    setField('parent_phone', u.parent_phone || '—');
+    setField('birth_date', fmtDate(u.birth_date));
+    setField('gender', GENDER_LABELS[u.gender] || '—');
+    setField('deacon_rank', RANK_LABELS[u.deacon_rank] || 'لم أرسم بعد');
+    setField('class_code', u.class_name || className(u.class_code) || '—');
+
+    const age = ageOf(u.birth_date);
+    $('profile-age').textContent = age == null ? '—' : digits(age) + ' سنة';
+
+    renderRoles();
+    renderAssignments();
+  }
+
+  function setField(name, text) {
+    const el = document.querySelector('[data-value="' + name + '"]');
+    if (el) el.textContent = text;
+  }
+
+  function renderRoles() {
+    ['student', 'servant', 'admin'].forEach(function (role) {
+      const btn = $('role-btn-' + role);
+      if (!btn) return;
+      const on = DRAFT_ROLES.indexOf(role) !== -1;
+      btn.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md transition-all ' +
+        (on ? ROLE_STYLES[role].join(' ') : 'bg-surface-container text-on-surface-variant hover:bg-surface-container-high');
+      const check = btn.querySelector('.role-check');
+      if (check) check.classList.toggle('hidden', !on);
+    });
+    const multi = $('role-btn-multi');
+    if (multi) {
+      multi.classList.toggle('opacity-50', DRAFT_ROLES.length < 2);
+      multi.classList.toggle('bg-secondary-container', DRAFT_ROLES.length > 1);
+      multi.classList.toggle('text-on-secondary-container', DRAFT_ROLES.length > 1);
+    }
+    const servantSection = $('servant-section');
+    if (servantSection) servantSection.classList.toggle('hidden', DRAFT_ROLES.indexOf('servant') === -1);
+  }
+
+  /* ---------- تعديل الحقول ---------- */
+  function openInlineEditor(field) {
+    if (!CURRENT) return;
+    const effectiveGender = 'gender' in DRAFT ? DRAFT.gender : CURRENT.gender;
+    const effectiveClass = 'class_code' in DRAFT ? DRAFT.class_code : CURRENT.class_code;
+    if (field === 'deacon_rank' && (effectiveGender === 'female' || effectiveClass === 'nursery')) {
+      toast(effectiveClass === 'nursery'
+        ? 'فصل الحضانة مقفل على رتبة «لم أرسم بعد»'
+        : 'الرتبة الدياكونية للذكور فقط', 'error');
+      return;
+    }
+    const row = document.querySelector('[data-row="' + field + '"]');
+    if (!row) return;
+    if (row.querySelector('.inline-editor')) return;
+
+    const valueEl = row.querySelector('[data-value="' + field + '"]');
+    const editBtn = row.querySelector('[data-edit]');
+    if (!valueEl || !editBtn) return;
+
+    let editor;
+    if (field === 'gender') {
+      editor = '<select class="inline-editor h-9 rounded-lg bg-surface-container px-2 font-body-sm text-body-sm text-text-primary focus:outline-none">' +
+        '<option value="male">ذكر</option><option value="female">أنثى</option></select>';
+    } else if (field === 'deacon_rank') {
+      editor = '<select class="inline-editor h-9 rounded-lg bg-surface-container px-2 font-body-sm text-body-sm text-text-primary focus:outline-none">' +
+        RANK_ORDER.map(function (r) {
+          return '<option value="' + r + '">' + esc(RANK_LABELS[r]) + '</option>';
+        }).join('') + '</select>';
+    } else if (field === 'class_code') {
+      editor = '<select class="inline-editor h-9 rounded-lg bg-surface-container px-2 font-body-sm text-body-sm text-text-primary focus:outline-none">' +
+        CLASSES.map(function (c) {
+          return '<option value="' + esc(c.code) + '">' + esc(c.name_ar) + '</option>';
+        }).join('') + '</select>';
+    } else {
+      editor = '<input class="inline-editor h-9 rounded-lg bg-surface-container px-2 font-body-sm text-body-sm text-text-primary focus:outline-none" dir="ltr" type="' +
+        (field === 'birth_date' ? 'text' : (field === 'phone' || field === 'whatsapp' || field === 'parent_phone' ? 'tel' : 'text')) + '">';
+    }
+
+    valueEl.classList.add('hidden');
+    editBtn.classList.add('hidden');
+    const wrap = document.createElement('div');
+    wrap.className = 'flex items-center gap-1';
+    wrap.innerHTML = editor +
+      '<button type="button" class="w-8 h-8 rounded-lg flex items-center justify-center text-semantic-success hover:bg-surface-container" data-apply="' + field + '"><span class="material-symbols-outlined text-[18px]">check</span></button>' +
+      '<button type="button" class="w-8 h-8 rounded-lg flex items-center justify-center text-text-secondary hover:bg-surface-container" data-cancel="' + field + '"><span class="material-symbols-outlined text-[18px]">close</span></button>';
+    row.appendChild(wrap);
+
+    const input = wrap.querySelector('.inline-editor');
+    if (field === 'birth_date') {
+      input.value = CURRENT.birth_date || '';
+      input.readOnly = true;
+      input.addEventListener('click', function () {
+        DatePicker.open({
+          value: CURRENT.birth_date || null,
+          title: 'تاريخ الميلاد',
+          allowFuture: false,
+          onPick: function (iso) { input.value = iso; },
+        });
+      });
+    } else if (field === 'class_code') {
+      input.value = CURRENT.class_code || '';
+    } else if (field === 'gender') {
+      input.value = CURRENT.gender || 'male';
+    } else if (field === 'deacon_rank') {
+      input.value = CURRENT.deacon_rank || 'none';
+    } else {
+      input.value = CURRENT[field] || '';
+    }
+    if (field === 'phone' || field === 'whatsapp' || field === 'parent_phone') {
+      input.maxLength = 11;
+    }
+    input.focus();
+
+    wrap.querySelector('[data-apply]').addEventListener('click', function () {
+      applyField(field, input.value);
+    });
+    wrap.querySelector('[data-cancel]').addEventListener('click', function () {
+      closeInlineEditor(field);
+    });
+    input.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Enter' && field !== 'birth_date') { ev.preventDefault(); applyField(field, input.value); }
+      if (ev.key === 'Escape') closeInlineEditor(field);
+    });
+  }
+
+  function closeAllEditors() {
+    document.querySelectorAll('.inline-editor').forEach(function (el) {
+      const wrap = el.parentElement;
+      if (wrap && wrap.parentElement) wrap.remove();
+    });
+    document.querySelectorAll('[data-value]').forEach(function (el) { el.classList.remove('hidden'); });
+    document.querySelectorAll('[data-edit]').forEach(function (el) { el.classList.remove('hidden'); });
+  }
+
+  function closeInlineEditor(field) {
+    const row = document.querySelector('[data-row="' + field + '"]');
+    if (!row) return;
+    const wrap = row.querySelector('div.flex.items-center.gap-1');
+    if (wrap && wrap.querySelector('.inline-editor')) wrap.remove();
+    const valueEl = row.querySelector('[data-value="' + field + '"]');
+    const editBtn = row.querySelector('[data-edit]');
+    if (valueEl) valueEl.classList.remove('hidden');
+    if (editBtn) editBtn.classList.remove('hidden');
+  }
+
+  function applyField(field, rawValue) {
+    const value = String(rawValue == null ? '' : rawValue).trim();
+    if (field === 'full_name' && !value) { toast('الاسم مطلوب', 'error'); return; }
+    if (field === 'phone' && value && !/^01[0-9]{9}$/.test(value)) { toast('رقم الهاتف يجب أن يكون 11 رقمًا يبدأ بـ 01', 'error'); return; }
+    if ((field === 'whatsapp' || field === 'parent_phone') && value && !/^01[0-9]{9}$/.test(value)) { toast('الرقم يجب أن يكون 11 رقمًا يبدأ بـ 01', 'error'); return; }
+    if (field === 'birth_date' && value && !/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(value)) { toast('تاريخ غير صحيح', 'error'); return; }
+    if (field === 'class_code' && value === 'mothers' && (('gender' in DRAFT ? DRAFT.gender : CURRENT.gender) !== 'female')) {
+      toast('فصل الأمهات مخصص للسيدات فقط', 'error');
+      return;
+    }
+    if (field === 'gender' && value === 'male' && (('class_code' in DRAFT ? DRAFT.class_code : CURRENT.class_code) === 'mothers')) {
+      toast('لا يمكن تحويل طالبة في فصل الأمهات إلى ذكر', 'error');
+      return;
+    }
+
+    DRAFT[field] = value === '' ? null : value;
+    closeInlineEditor(field);
+
+    if (field === 'full_name') setField('full_name', value);
+    if (field === 'phone') setField('phone', value || '—');
+    if (field === 'whatsapp') setField('whatsapp', value || '—');
+    if (field === 'parent_phone') setField('parent_phone', value || '—');
+    if (field === 'birth_date') {
+      setField('birth_date', fmtDate(value));
+      const age = ageOf(value);
+      $('profile-age').textContent = age == null ? '—' : digits(age) + ' سنة';
+    }
+    if (field === 'gender') setField('gender', GENDER_LABELS[value] || '—');
+    if (field === 'deacon_rank') {
+      setField('deacon_rank', RANK_LABELS[value] || '—');
+      $('profile-rank-text').textContent = RANK_LABELS[value] || '—';
+    }
+    if (field === 'class_code') setField('class_code', className(value));
+    toast('تم تحديث الحقل — اضغط «حفظ كافة التعديلات» للحفظ');
+  }
+
+  /* ---------- الأدوار ---------- */
+  function toggleRole(role) {
+    const idx = DRAFT_ROLES.indexOf(role);
+    if (idx === -1) {
+      DRAFT_ROLES.push(role);
+    } else {
+      if (DRAFT_ROLES.length === 1) { toast('يجب أن يبقى للمستخدم دور واحد على الأقل', 'error'); return; }
+      DRAFT_ROLES.splice(idx, 1);
+    }
+    DRAFT_ROLES = ['student', 'servant', 'admin'].filter(function (r) { return DRAFT_ROLES.indexOf(r) !== -1; });
+    renderRoles();
+  }
+
+  /* ---------- التكليفات ---------- */
+  function renderAssignments() {
+    const box = $('classes-container');
+    const empty = $('no-assignments');
+    if (!box) return;
+
+    const byClass = {};
+    DRAFT_ASSIGNMENTS.forEach(function (a) {
+      if (!byClass[a.class_code]) byClass[a.class_code] = [];
+      byClass[a.class_code].push(a.subject);
+    });
+    const codes = Object.keys(byClass);
+    if (empty) empty.classList.toggle('hidden', codes.length > 0);
+
+    box.innerHTML = codes.map(function (code) {
+      const subs = byClass[code];
+      const countText = subs.length === 1 ? 'مادة تعليمية واحدة'
+        : (subs.length === 2 ? 'مادتان تعليميتان' : digits(subs.length) + ' مواد تعليمية مفعلة');
+      const chips = subs.map(function (s) {
+        const cls = classByCode(code);
+        const subject = cls ? (cls.subjects || []).find(function (x) { return x.code === s; }) : null;
+        return '<div class="flex items-center gap-1 bg-surface-container-high text-primary px-2.5 py-1 rounded-full font-label-sm text-label-sm">' +
+          '<span class="material-symbols-outlined text-[16px] text-secondary">' + (SUBJECT_ICONS[s] || 'menu_book') + '</span>' +
+          '<span class="font-semibold">' + esc(subject ? subject.name_ar : s) + '</span>' +
+          '<span class="material-symbols-outlined text-[15px] text-semantic-success">check</span>' +
+        '</div>';
+      }).join('');
+
+      return '<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">' +
+        '<div class="flex items-center justify-between">' +
+          '<div class="flex items-center gap-2">' +
+            '<span class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-bold">' +
+              '<span class="material-symbols-outlined text-[20px]">' + (CLASS_ICONS[code] || 'school') + '</span>' +
+            '</span>' +
+            '<div>' +
+              '<h3 class="font-title-md text-title-md text-primary">' + esc(className(code)) + '</h3>' +
+              '<span class="font-label-sm text-label-sm text-text-secondary">' + countText + '</span>' +
+            '</div>' +
+          '</div>' +
+          '<button type="button" data-del-class="' + esc(code) + '" aria-label="حذف تكليف الفصل" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error-container/40 transition-colors">' +
+            '<span class="material-symbols-outlined text-[20px]">delete</span>' +
+          '</button>' +
+        '</div>' +
+        '<div class="flex flex-wrap items-center gap-space-xs pt-1">' + chips + '</div>' +
+      '</div>';
+    }).join('');
+
+    box.querySelectorAll('[data-del-class]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const code = btn.getAttribute('data-del-class');
+        DRAFT_ASSIGNMENTS = DRAFT_ASSIGNMENTS.filter(function (a) { return a.class_code !== code; });
+        ASSIGN_DIRTY = true;
+        renderAssignments();
+        toast('تم حذف تكليف ' + className(code) + ' — اضغط «حفظ» للتثبيت');
+      });
+    });
+  }
+
+  /* ---------- نافذة إضافة فصل ---------- */
+  function openClassModal() {
+    MODAL_CLASS = null;
+    SELECTED_SUBJECTS = {};
+    showStep1();
+    $('class-modal-overlay').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeClassModal() {
+    $('class-modal-overlay').classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  function showStep1() {
+    $('modal-step-1').classList.remove('hidden');
+    $('modal-step-2').classList.add('hidden');
+    $('modal-footer-step-2').classList.add('hidden');
+    $('modal-back-btn').classList.add('hidden');
+    $('modal-title').textContent = 'إضافة تكليف فصل جديد';
+    $('modal-header-icon').textContent = 'school';
+    $('step-indicator-text').textContent = 'الخطوة 1 من 2: اختيار المرحلة والفصل';
+    $('step-dot-1').className = 'w-2.5 h-2.5 rounded-full bg-secondary transition-all';
+    $('step-dot-2').className = 'w-2.5 h-2.5 rounded-full bg-outline-variant transition-all';
+  }
+
+  function renderClassChoices() {
+    const taken = {};
+    DRAFT_ASSIGNMENTS.forEach(function (a) { taken[a.class_code] = true; });
+    $('class-cards-list').innerHTML = CLASSES.map(function (c) {
+      const used = !!taken[c.code];
+      return '<button type="button" data-class="' + esc(c.code) + '" class="w-full p-3 bg-surface-container-lowest hover:bg-surface-container-low active:bg-surface-container border border-border-warm rounded-xl flex items-center justify-between text-right transition-all group' +
+        (used ? ' opacity-60' : '') + '">' +
+        '<div class="flex items-center gap-3">' +
+          '<span class="w-10 h-10 rounded-xl bg-surface-container-high text-secondary flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary transition-colors">' +
+            '<span class="material-symbols-outlined text-[22px]">' + (CLASS_ICONS[c.code] || 'school') + '</span>' +
+          '</span>' +
+          '<div class="flex flex-col">' +
+            '<span class="font-title-md text-title-md text-text-primary group-hover:text-primary">' + esc(c.name_ar) + '</span>' +
+            '<span class="font-label-sm text-label-sm text-text-secondary">' + (used ? 'مُسند بالفعل — اختره لإضافة مواد أخرى' : esc(CLASS_DESCRIPTIONS[c.code] || 'إسناد تكليف لهذا الفصل')) + '</span>' +
+          '</div>' +
+        '</div>' +
+        '<span class="material-symbols-outlined text-outline group-hover:text-primary">arrow_back_ios</span>' +
+        '</button>';
+    }).join('');
+
+    $('class-cards-list').querySelectorAll('[data-class]').forEach(function (btn) {
+      btn.addEventListener('click', function () { selectClass(btn.getAttribute('data-class')); });
+    });
+  }
+
+  function selectClass(code) {
+    const cls = classByCode(code);
+    if (!cls) return;
+    MODAL_CLASS = cls;
+    SELECTED_SUBJECTS = {};
+    (cls.subjects || []).forEach(function (s) { SELECTED_SUBJECTS[s.code] = false; });
+
+    $('modal-step-1').classList.add('hidden');
+    $('modal-step-2').classList.remove('hidden');
+    $('modal-footer-step-2').classList.remove('hidden');
+    $('modal-back-btn').classList.remove('hidden');
+    $('modal-title').textContent = 'تحديد مواد ' + cls.name_ar;
+    $('modal-header-icon').textContent = 'menu_book';
+    $('step-indicator-text').textContent = 'الخطوة 2 من 2: تحديد المواد المسندة';
+    $('step-dot-1').className = 'w-2.5 h-2.5 rounded-full bg-outline-variant transition-all';
+    $('step-dot-2').className = 'w-2.5 h-2.5 rounded-full bg-secondary transition-all';
+    $('selected-class-name').textContent = cls.name_ar;
+    $('selected-class-icon').textContent = CLASS_ICONS[cls.code] || 'school';
+    renderSubjectChoices();
+  }
+
+  function renderSubjectChoices() {
+    const cls = MODAL_CLASS;
+    if (!cls) return;
+    const subjects = cls.subjects || [];
+    $('subject-cards-list').innerHTML = subjects.map(function (s) {
+      const on = !!SELECTED_SUBJECTS[s.code];
+      return '<div data-subject="' + esc(s.code) + '" class="p-3 border-2 rounded-xl flex items-center justify-between cursor-pointer hover:bg-surface-container-low transition-all ' +
+        (on ? 'border-border-focused bg-surface-container-low' : 'border-transparent bg-surface-container-lowest') + '">' +
+        '<div class="flex items-center gap-3">' +
+          '<span class="w-9 h-9 rounded-lg bg-secondary-container/30 text-secondary flex items-center justify-center">' +
+            '<span class="material-symbols-outlined text-[20px]">' + (SUBJECT_ICONS[s.code] || 'menu_book') + '</span>' +
+          '</span>' +
+          '<div class="flex flex-col">' +
+            '<span class="font-title-md text-title-md text-text-primary">' + esc(s.name_ar) + '</span>' +
+            '<span class="font-label-sm text-label-sm text-text-secondary">' + esc(SUBJECT_DESCRIPTIONS[s.code] || '') + '</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="w-6 h-6 rounded-md border-2 flex items-center justify-center transition-colors ' +
+          (on ? 'bg-secondary border-secondary' : 'border-outline-variant') + '">' +
+          '<span class="material-symbols-outlined text-[18px] text-on-primary ' + (on ? '' : 'hidden') + '">check</span>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+
+    $('subject-cards-list').querySelectorAll('[data-subject]').forEach(function (row) {
+      row.addEventListener('click', function () {
+        const code = row.getAttribute('data-subject');
+        SELECTED_SUBJECTS[code] = !SELECTED_SUBJECTS[code];
+        renderSubjectChoices();
+      });
+    });
+  }
+
+  function confirmAssignment() {
+    if (!MODAL_CLASS) return;
+    const chosen = Object.keys(SELECTED_SUBJECTS).filter(function (k) { return SELECTED_SUBJECTS[k]; });
+    if (!chosen.length) { toast('برجاء اختيار مادة واحدة على الأقل', 'error'); return; }
+
+    // استبدال تكليفات هذا الفصل بالاختيار الحالي
+    DRAFT_ASSIGNMENTS = DRAFT_ASSIGNMENTS.filter(function (a) { return a.class_code !== MODAL_CLASS.code; });
+    chosen.forEach(function (subject) {
+      DRAFT_ASSIGNMENTS.push({ class_code: MODAL_CLASS.code, subject: subject });
+    });
+    ASSIGN_DIRTY = true;
+    closeClassModal();
+    renderAssignments();
+    toast('تمت إضافة تكليف ' + MODAL_CLASS.name_ar + ' — اضغط «حفظ» للتثبيت');
+  }
+
+  /* ---------- كلمة المرور ---------- */
+  function togglePasswordBox() {
+    const box = $('password-box');
+    const chevron = $('pw-chevron');
+    if (!box) return;
+    const hidden = box.classList.contains('hidden');
+    box.classList.toggle('hidden', !hidden);
+    box.classList.toggle('flex', hidden);
+    if (chevron) chevron.style.transform = hidden ? 'rotate(180deg)' : 'rotate(0deg)';
+  }
+
+  async function confirmPassword() {
+    const input = $('new-password');
+    const value = input ? input.value : '';
+    if (!CURRENT) return;
+    if (!value || value.length < 8) { toast('كلمة المرور يجب ألا تقل عن 8 أحرف', 'error'); return; }
+    try {
+      await api('/admin/users/' + CURRENT.id, { method: 'PATCH', body: { password: value } });
+      input.value = '';
+      togglePasswordBox();
+      toast('تم تحديث كلمة المرور للحساب بنجاح');
+    } catch (e) {
+      toast(e && e.message ? e.message : 'تعذر تحديث كلمة المرور', 'error');
+    }
+  }
+
+  /* ---------- حفظ الكل ---------- */
+  async function saveAll() {
+    if (!CURRENT) { toast('اختر مستخدمًا أولًا', 'error'); return; }
+    const fields = Object.keys(DRAFT);
+    const rolesChanged = DRAFT_ROLES.slice().sort().join(',') !== (CURRENT.roles || []).slice().sort().join(',');
+    if (!fields.length && !rolesChanged && !ASSIGN_DIRTY) {
+      toast('لا توجد تعديلات لحفظها');
+      return;
+    }
+    const btn = $('save-changes-btn');
+    if (btn) btn.disabled = true;
+    try {
+      if (fields.length) {
+        await api('/admin/users/' + CURRENT.id, { method: 'PATCH', body: DRAFT });
+      }
+
+      if (rolesChanged) {
+        await api('/admin/users/' + CURRENT.id + '/roles', { method: 'PUT', body: { roles: DRAFT_ROLES } });
+      }
+
+      if (ASSIGN_DIRTY) {
+        await api('/admin/users/' + CURRENT.id + '/assignments', {
+          method: 'PUT',
+          body: { assignments: DRAFT_ASSIGNMENTS },
+        });
+      }
+
+      await selectUser(CURRENT.id);
+      await loadAllUsers();
+      renderClassBrowser();
+      await runSearch($('search-input').value || '');
+      toast('تم حفظ كافة التعديلات في السجل الكنسي بنجاح');
+    } catch (e) {
+      toast(e && e.message ? e.message : 'تعذر حفظ التعديلات', 'error');
+    } finally {
+      if (btn) btn.disabled = false;
+    }
+  }
+
+  function cancelAll() {
+    if (CURRENT && (Object.keys(DRAFT).length || ASSIGN_DIRTY)) {
+      DRAFT = {};
+      ASSIGN_DIRTY = false;
+      selectUser(CURRENT.id);
+      toast('تم التراجع عن التعديلات غير المحفوظة');
+      return;
+    }
+    history.back();
+  }
+
+  /* ---------- الصورة ---------- */
+  function pickPhoto() {
+    if (!CURRENT || typeof PhotoCropper === 'undefined') return;
+    PhotoCropper.pick({
+      onSaved: async function (dataUrl) {
+        try {
+          await api('/admin/users/' + CURRENT.id, { method: 'PATCH', body: { photo_url: dataUrl } });
+          CURRENT.photo_url = dataUrl;
+          USERS = USERS.map(function (u) { return u.id === CURRENT.id ? Object.assign({}, u, { photo_url: dataUrl }) : u; });
+          $('profile-avatar').src = dataUrl;
+          $('headerAvatar').src = 'assets/logo.png';
+          renderResults(($('search-input').value || '').trim());
+          toast('تم تحديث الصورة الشخصية');
+        } catch (e) {
+          toast(e && e.message ? e.message : 'تعذر حفظ الصورة', 'error');
+        }
+      },
+    });
+  }
+
+  /* ---------- حذف الحساب نهائيًا ---------- */
+  function setDeleteEnabled(on) {
+    const btn = $('delete-confirm');
+    if (!btn) return;
+    btn.disabled = !on;
+  }
+
+  function openDeleteModal() {
+    if (!CURRENT) {
+      toast('اختر حسابًا أولًا من القائمة', 'error');
+      return;
+    }
+    $('delete-modal-text').textContent =
+      'أنت على وشك حذف حساب «' + (CURRENT.full_name || '') + '» نهائيًا من التطبيق.';
+    $('delete-ack').checked = false;
+    setDeleteEnabled(false);
+    $('delete-modal-overlay').classList.remove('hidden');
+  }
+
+  function closeDeleteModal() {
+    $('delete-modal-overlay').classList.add('hidden');
+  }
+
+  async function confirmDelete() {
+    if (!CURRENT) return;
+    const id = CURRENT.id;
+    const name = CURRENT.full_name || '';
+    const btn = $('delete-confirm');
+    if (btn) btn.disabled = true;
+    try {
+      await api('/admin/users/' + id, { method: 'DELETE' });
+      closeDeleteModal();
+      CURRENT = null;
+      DRAFT = {};
+      ASSIGN_DIRTY = false;
+      MODAL_CLASS = null;
+      SELECTED_SUBJECTS = {};
+
+      await loadAllUsers();
+      renderClassBrowser();
+      await runSearch($('search-input').value || '');
+
+      /* لو الفلتر الحالي فضل فاضي بعد الحذف نرجع لعرض كل الطلاب */
+      if (!USERS.length && ALL_USERS.length) {
+        SELECTED_CLASS = '';
+        MEMBER_TAB = 'students';
+        $('search-input').value = '';
+        renderClassBrowser();
+        await runSearch('');
+      }
+
+      if (USERS.length) {
+        await selectUser(USERS[0].id);
+        resultsOpen = true;
+        renderResults(($('search-input').value || '').trim());
+      } else {
+        location.reload();
+        return;
+      }
+      toast('تم حذف حساب «' + name + '» نهائيًا');
+    } catch (e) {
+      if (btn) btn.disabled = false;
+      toast(e && e.message ? e.message : 'تعذر حذف الحساب', 'error');
+    }
+  }
+
+  /* ---------- الإقلاع ---------- */
+  async function boot() {
+    const me = await requireAuth(['admin']);
+    if (!me) return;
+
+    await loadClasses();
+    await loadAllUsers();
+    renderClassBrowser();
+    await runSearch('');
+
+    $('search-input').addEventListener('input', function () {
+      const q = this.value || '';
+      resultsOpen = true;
+      $('clear-search-btn').classList.toggle('opacity-40', !q.trim());
+      if (searchTimer) clearTimeout(searchTimer);
+      searchTimer = setTimeout(function () { runSearch(q); }, 250);
+    });
+    $('search-input').addEventListener('focus', function () {
+      if (!USERS.length) return;
+      resultsOpen = true;
+      renderResults(($('search-input').value || '').trim());
+    });
+    $('clear-search-btn').addEventListener('click', function () {
+      $('search-input').value = '';
+      resultsOpen = true;
+      runSearch('');
+      $('search-input').focus();
+    });
+    $('reset-class-filter').addEventListener('click', resetClassFilter);
+
+    document.querySelectorAll('[data-edit]').forEach(function (btn) {
+      btn.addEventListener('click', function () { openInlineEditor(btn.getAttribute('data-edit')); });
+    });
+
+    ['student', 'servant', 'admin'].forEach(function (role) {
+      const btn = $('role-btn-' + role);
+      if (btn) btn.addEventListener('click', function () { toggleRole(role); });
+    });
+
+    $('toggle-pw-btn').addEventListener('click', togglePasswordBox);
+    $('pw-cancel').addEventListener('click', togglePasswordBox);
+    $('pw-confirm').addEventListener('click', confirmPassword);
+    $('pw-eye').addEventListener('click', function () {
+      const input = $('new-password');
+      const icon = $('pw-visibility-icon');
+      if (!input) return;
+      input.type = input.type === 'password' ? 'text' : 'password';
+      if (icon) icon.textContent = input.type === 'password' ? 'visibility' : 'visibility_off';
+    });
+
+    $('add-class-btn').addEventListener('click', function () {
+      renderClassChoices();
+      openClassModal();
+    });
+    $('modal-close').addEventListener('click', closeClassModal);
+    $('class-modal-backdrop').addEventListener('click', closeClassModal);
+    $('modal-back-btn').addEventListener('click', showStep1);
+    $('modal-prev-btn').addEventListener('click', showStep1);
+    $('confirm-assignment-btn').addEventListener('click', confirmAssignment);
+
+    $('save-changes-btn').addEventListener('click', saveAll);
+    $('cancel-changes-btn').addEventListener('click', cancelAll);
+    $('avatar-btn').addEventListener('click', pickPhoto);
+    $('delete-account-btn').addEventListener('click', openDeleteModal);
+    $('delete-ack').addEventListener('change', function () { setDeleteEnabled(this.checked); });
+    $('delete-cancel').addEventListener('click', closeDeleteModal);
+    $('delete-modal-close').addEventListener('click', closeDeleteModal);
+    $('delete-modal-backdrop').addEventListener('click', closeDeleteModal);
+    $('delete-confirm').addEventListener('click', confirmDelete);
+
+    // اختيار مستخدم من النتائج (تفويض)
+    $('searchResults').addEventListener('click', function (ev) {
+      const target = ev.target.closest('[data-pick]');
+      if (target) selectUser(target.getAttribute('data-pick'));
+    });
+
+    if (USERS.length) {
+      await selectUser(USERS[0].id);
+      resultsOpen = true;
+      renderResults(($('search-input').value || '').trim());
+    }
+  }
+
+  let searchTimer = null;
+  let searchSeq = 0;
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+</script>
+</body>
+</html>

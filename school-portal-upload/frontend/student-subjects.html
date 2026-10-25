@@ -1,0 +1,367 @@
+<!DOCTYPE html><html dir="rtl" lang="ar" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>المواد الدراسية - مدرسة القديس أرسانيوس</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#783117",
+            "on-tertiary-fixed": "#390c00",
+            "inverse-on-surface": "#f2f0ed",
+            "secondary-fixed-dim": "#feb960",
+            "on-tertiary-container": "#ed8d6c",
+            "text-primary": "#2B1E1A",
+            "secondary-fixed": "#ffddb8",
+            "on-tertiary": "#ffffff",
+            "surface": "#FFFFFF",
+            "surface-dim": "#dbdad6",
+            "on-secondary-fixed-variant": "#653e00",
+            "surface-bright": "#fbf9f5",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed": "#ffdbcf",
+            "secondary": "#855300",
+            "surface-container-low": "#f5f3ef",
+            "on-primary-fixed-variant": "#74341e",
+            "on-secondary-fixed": "#2a1700",
+            "on-primary": "#ffffff",
+            "inverse-surface": "#30312e",
+            "inverse-primary": "#ffb59d",
+            "primary": "#270600",
+            "outline-variant": "#d9c1ba",
+            "error-container": "#ffdad6",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#4a1300",
+            "tertiary": "#270600",
+            "outline": "#87736d",
+            "on-surface": "#1b1c1a",
+            "surface-container": "#efeeea",
+            "primary-fixed": "#ffdbd0",
+            "tertiary-fixed-dim": "#ffb59c",
+            "surface-container-high": "#e9e8e4",
+            "on-background": "#1b1c1a",
+            "on-primary-container": "#ca775c",
+            "primary-fixed-dim": "#ffb59d",
+            "semantic-error": "#C62828",
+            "on-primary-fixed": "#390c00",
+            "secondary-container": "#feb960",
+            "semantic-warning": "#E65100",
+            "primary-container": "#662914",
+            "surface-subtle": "#F4EFEA",
+            "surface-variant": "#e4e2df",
+            "on-error": "#ffffff",
+            "border-warm": "#E6DFD5",
+            "on-secondary-container": "#754900",
+            "on-secondary": "#ffffff",
+            "surface-tint": "#924a33",
+            "text-secondary": "#6E6058",
+            "on-surface-variant": "#54433e",
+            "semantic-disabled": "#BDBDBD",
+            "semantic-success": "#2E7D32",
+            "background": "#fbf9f5",
+            "surface-container-highest": "#e4e2df",
+            "audio-scrubber-track": "#E2DACF",
+            "error": "#ba1a1a",
+            "border-focused": "#C88A36"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "label-lg": ["Cairo", "sans-serif"],
+            "headline-lg": ["Noto Serif", "serif"],
+            "label-md": ["Cairo", "sans-serif"],
+            "title-lg": ["Cairo", "sans-serif"],
+            "display-lg": ["Noto Serif", "serif"],
+            "body-sm": ["Cairo", "sans-serif"],
+            "label-sm": ["Cairo", "sans-serif"],
+            "headline-md": ["Noto Serif", "serif"],
+            "body-lg": ["Cairo", "sans-serif"],
+            "title-md": ["Cairo", "sans-serif"],
+            "body-md": ["Cairo", "sans-serif"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings: 'FILL' 1;
+    }
+    .tab-active {
+      background-color: #270600;
+      color: #ffffff;
+    }
+    .tab-inactive {
+      background-color: #F4EFEA;
+      color: #6E6058;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary min-h-screen antialiased flex justify-center selection:bg-secondary selection:text-surface">
+<!-- Mobile Container Wrapper -->
+<main class="w-full max-w-md min-h-screen bg-background flex flex-col relative pb-12 shadow-sm border-x border-border-warm">
+<!-- Top App Bar / Header -->
+<header class="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-border-warm px-4 py-3.5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<!-- Back Navigation Button -->
+<button aria-label="الرجوع" class="w-9 h-9 rounded-full flex items-center justify-center text-text-primary hover:bg-surface-subtle active:scale-95 transition-all" onclick="window.history.length &gt; 1 ? window.history.back() : window.scrollTo({top: 0, behavior: 'smooth'})" type="button">
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</button>
+<div>
+<h1 class="text-text-primary font-title-lg text-lg leading-tight tracking-tight">المواد الدراسية</h1>
+<p class="text-text-secondary font-label-sm text-[11px] leading-tight mt-0.5">مدرسة القديس أرسانيوس للألحان والتسبحة</p>
+</div>
+</div>
+<!-- School Logo -->
+<div class="relative flex items-center justify-center">
+<img alt="شعار مدرسة القديس أرسانيوس" class="w-11 h-11 rounded-full border-2 border-border-focused/40 object-cover shadow-sm bg-surface ring-2 ring-border-warm/50" id="schoolLogo" onerror="this.style.display='none'" src="assets/logo.png">
+</div>
+</header>
+<!-- Main Content Area -->
+<div class="flex-1 px-4 pt-4 flex flex-col gap-6">
+<!-- SECTION: 2x2 Grid of Primary Subjects -->
+<section aria-labelledby="subjects-grid-heading">
+<div class="flex items-center justify-between mb-3 px-1">
+
+
+</div>
+<!-- Exactly 4 Cards 2x2 Grid - All Completely Harmonized -->
+<div class="grid grid-cols-2 gap-3.5" id="subjectsGrid"></div></section>
+<!-- SECTION: Subject Detail View -->
+<section class="bg-surface rounded-xl border border-border-warm p-4 shadow-sm flex flex-col gap-4" id="subject-detail-container">
+<!-- Subject Header Details -->
+<div class="flex items-start justify-between gap-3 border-b border-border-warm pb-3.5"><div class="flex items-start gap-3 w-full">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm" id="active-subject-icon-box">
+<span class="material-symbols-outlined text-[28px]" id="active-subject-icon">menu_book</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<h3 class="text-text-primary font-headline-md text-lg font-bold leading-tight truncate" id="active-subject-title">…</h3>
+<span class="bg-secondary-fixed text-on-secondary-fixed text-[11px] font-label-sm font-semibold px-2 py-0.5 rounded-full shrink-0" id="activeSubjectClass">الفصل الحالي</span>
+</div>
+
+<div class="flex items-center gap-2 mt-2 pt-2 border-t border-border-warm/60 text-text-secondary font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[15px] text-border-focused">person</span>
+<span class="">المسؤول:</span>
+<span class="font-bold text-text-primary" id="active-subject-teacher">—</span>
+</div>
+</div>
+</div></div>
+<!-- Interactive State Toggle (Content List vs Empty State Preview) -->
+<!-- VIEW A: Content Items List -->
+<div class="flex-col gap-2.5 flex" id="view-content"></div>
+<!-- VIEW B: Empty State Demo (Initially Hidden) -->
+<div class="flex-col items-center justify-center py-10 px-4 text-center rounded-lg border border-dashed border-border-warm bg-surface-subtle/50 hidden" id="view-empty">
+<div class="w-16 h-16 rounded-full bg-surface border border-border-warm flex items-center justify-center text-text-secondary mb-3 shadow-xs">
+<span class="material-symbols-outlined text-[32px] text-outline">folder_open</span>
+</div>
+<h4 class="text-text-primary font-title-md text-base font-bold mb-1">لا يوجد محتوى بعد</h4>
+<p class="text-text-secondary font-body-sm text-xs max-w-xs leading-relaxed">
+            سيتم إضافة الدروس والتسجيلات قريباً بواسطة الخادم المسؤول
+          </p>
+<div class="mt-4 flex items-center gap-1.5 text-border-focused text-[11px] font-label-sm bg-surface px-3 py-1.5 rounded-full border border-border-warm">
+<span class="material-symbols-outlined text-[14px]">notifications_active</span>
+            سيصلك إشعار فور رفع المنهج الجديد
+          </div>
+</div>
+<!-- Bottom Action Button within Subject View -->
+<button class="w-full h-10 mt-1 rounded-lg bg-surface-subtle border border-border-warm text-text-primary font-label-md text-xs font-bold hover:bg-surface-variant flex items-center justify-center gap-2 transition-all active:scale-[0.99]" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"><span class="material-symbols-outlined text-[16px] text-border-focused">arrow_upward</span>
+<span class="font-semibold text-text-primary">الرجوع إلى شبكة المواد الدراسية</span></button>
+</section>
+</div>
+</main>
+<script src="app.js"></script>
+<script>
+  /* ===== المواد الدراسية — ربط كامل بالباك إند =====
+     • GET /student/subjects                → المواد الأربع + عدد محتويات كل مادة + المسؤول
+     • GET /student/subjects/{code}/content → محتوى فصل الطالب (مرتّبًا من الأحدث)
+     يحافظ على قالب التصميم كما هو. */
+  const $ = (id) => document.getElementById(id);
+
+  /* خريطة التصميم: أيقونة كل مادة (من التصميم) */
+  const SUBJECT_META = {
+    alhan:     { icon: 'music_note' },
+    coptic:    { icon: 'menu_book' },
+    taks:      { icon: 'church' },
+    mahfouzat: { icon: 'history_edu' },
+  };
+
+  /* أنواع المحتوى (FR-CNT-02: audio | image | pdf) بأيقونات التصميم */
+  const KIND_META = {
+    audio: { icon: 'graphic_eq',     badgeIcon: 'mic',         label: 'تسجيل صوتي', action: 'play_arrow' },
+    pdf:   { icon: 'picture_as_pdf', badgeIcon: 'description', label: 'ملف PDF',    action: 'download' },
+    image: { icon: 'smart_display', badgeIcon: 'image',       label: 'صورة',       action: 'open_in_new' },
+  };
+
+  const MONTHS_AR = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+
+  function toDigits(value) {
+    return String(value == null ? '' : value);
+  }
+
+  function fmtDate(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    if (isNaN(d)) return '';
+    return toDigits(d.getDate()) + ' ' + MONTHS_AR[d.getMonth()] + ' ' + toDigits(d.getFullYear());
+  }
+
+  function openContent(url) {
+    if (!url) return;
+    window.open(url, '_blank', 'noopener');
+  }
+
+  let SUBJECTS = [];
+
+  /* ---------- بطاقة مادة (قالب التصميم كما هو) ---------- */
+  function subjectCard(subject) {
+    const meta = SUBJECT_META[subject.code] || { icon: 'apps' };
+    const count = subject.count || 0;
+    const countLine = count
+      ? toDigits(count) + (count === 1 ? ' عنصر' : count === 2 ? ' عنصران' : ' عناصر')
+      : 'لا يوجد محتوى';
+    const el = document.createElement('div');
+    el.className = 'group cursor-pointer rounded-xl bg-surface border border-border-warm p-4 shadow-sm hover:border-border-focused hover:shadow-md transition-all flex flex-col justify-between relative active:scale-[0.98]';
+    el.setAttribute('data-subject', subject.code);
+    el.innerHTML =
+      '<div>' +
+        '<div class="flex items-center justify-between mb-3">' +
+          '<div class="w-11 h-11 rounded-xl bg-surface-subtle border border-border-warm flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-surface transition-all shadow-xs">' +
+            '<span class="material-symbols-outlined text-[24px]">' + meta.icon + '</span>' +
+          '</div>' +
+          '<span class="material-symbols-outlined text-outline text-[18px] transition-transform group-hover:-translate-x-1">arrow_back</span>' +
+        '</div>' +
+        '<h3 class="text-text-primary font-title-md text-[16px] font-bold mb-1 leading-snug">' + subject.name_ar + '</h3>' +
+        '<p class="text-text-secondary font-label-md text-xs font-normal">' + countLine + '</p>' +
+      '</div>';
+    el.addEventListener('click', function () { selectSubject(subject.code); });
+    return el;
+  }
+
+  /* ---------- عنصر محتوى (قالب التصميم كما هو) ---------- */
+  function contentItem(item) {
+    const meta = KIND_META[item.kind] || KIND_META.pdf;
+    const el = document.createElement('article');
+    el.className = 'bg-surface rounded-lg border border-border-warm p-3 flex items-center justify-between hover:border-border-focused transition-colors group';
+    el.innerHTML =
+      '<div class="flex items-center gap-3 min-w-0">' +
+        '<div class="w-10 h-10 rounded-lg bg-surface-subtle text-primary border border-border-warm flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-surface transition-colors">' +
+          '<span class="material-symbols-outlined text-[22px]">' + meta.icon + '</span>' +
+        '</div>' +
+        '<div class="min-w-0">' +
+          '<h4 class="text-text-primary font-title-md text-[14px] font-bold truncate">' + item.title + '</h4>' +
+          '<div class="flex items-center gap-2 mt-0.5">' +
+            '<span class="inline-flex items-center gap-1 text-[11px] font-label-sm bg-surface-container-low text-text-secondary px-2 py-0.5 rounded">' +
+              '<span class="material-symbols-outlined text-[12px] text-border-focused">' + meta.badgeIcon + '</span>' +
+              meta.label +
+            '</span>' +
+            '<span class="text-text-secondary text-[11px] font-label-sm">' + fmtDate(item.created_at) + '</span>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+      '<button aria-label="فتح المحتوى" class="w-8 h-8 rounded-full border border-border-warm flex items-center justify-center text-text-primary hover:bg-surface-subtle hover:border-border-focused shrink-0 mr-2 transition-all" type="button">' +
+        '<span class="material-symbols-outlined text-[18px]">' + meta.action + '</span>' +
+      '</button>';
+    const btn = el.querySelector('button');
+    btn.addEventListener('click', function () { openContent(item.url); });
+    return el;
+  }
+
+  /* ---------- تحميل المواد ---------- */
+  async function loadSubjects() {
+    const res = await api('/student/subjects');
+    SUBJECTS = res.data || res;
+    const grid = $('subjectsGrid');
+    grid.innerHTML = '';
+    SUBJECTS.forEach(function (s) { grid.appendChild(subjectCard(s)); });
+
+    // الفصل الحالي للطالب
+    try {
+      const home = await api('/student/home');
+      const d = home.data || home;
+      $('activeSubjectClass').textContent = d.class_name || 'الفصل الحالي';
+    } catch (e) { /* غير حرج */ }
+
+    if (SUBJECTS.length) await selectSubject(SUBJECTS[0].code);
+  }
+
+  /* ---------- اختيار مادة وعرض محتواها ---------- */
+  async function selectSubject(code) {
+    const subject = SUBJECTS.find(function (s) { return s.code === code; });
+    if (!subject) return;
+    const meta = SUBJECT_META[code] || { icon: 'apps' };
+    $('active-subject-title').textContent = 'مادة ' + subject.name_ar;
+    $('active-subject-icon').textContent = meta.icon;
+    $('active-subject-teacher').textContent = subject.teacher || '—';
+
+    let items = [];
+    try {
+      const res = await api('/student/subjects/' + encodeURIComponent(code) + '/content');
+      items = res.data || res;
+    } catch (e) {
+      toast((e && e.message) || 'تعذر تحميل المحتوى');
+    }
+
+    const list = $('view-content');
+    const empty = $('view-empty');
+    list.innerHTML = '';
+    items.forEach(function (it) { list.appendChild(contentItem(it)); });
+
+    if (items.length) {
+      list.classList.remove('hidden'); list.classList.add('flex');
+      empty.classList.add('hidden'); empty.classList.remove('flex');
+    } else {
+      list.classList.add('hidden'); list.classList.remove('flex');
+      empty.classList.remove('hidden'); empty.classList.add('flex');
+    }
+
+    // إبراز البطاقة المختارة
+    Array.prototype.forEach.call(document.querySelectorAll('[data-subject]'), function (el) {
+      const on = el.getAttribute('data-subject') === code;
+      el.classList.toggle('border-border-focused', on);
+      el.classList.toggle('bg-surface-subtle', on);
+    });
+
+    $('subject-detail-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  /* ---------- الربط ---------- */
+  async function boot() {
+    const me = await requireAuth(['student']);
+    if (!me) return;
+    try {
+      await loadSubjects();
+    } catch (e) {
+      toast((e && e.message) || 'تعذر تحميل المواد');
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+</script>
+
+
+</body></html>

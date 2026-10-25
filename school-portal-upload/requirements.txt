@@ -1,0 +1,6 @@
+flask
+waitress
+pytest
+qrcode
+Pillow
+python-dotenv

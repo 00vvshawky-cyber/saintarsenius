@@ -1,0 +1,533 @@
+<!DOCTYPE html><html dir="rtl" lang="ar" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>التسميعات والاختبارات - مدرسة القديس أرسانيوس</title>
+<!-- Google Fonts: Cairo & Noto Serif -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;family=Noto+Serif:wght@400;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-variant": "#e4e2df",
+            "on-primary-container": "#ca775c",
+            "semantic-warning": "#E65100",
+            "semantic-success": "#2E7D32",
+            "surface-dim": "#dbdad6",
+            "surface-tint": "#914b32",
+            "on-surface-variant": "#54433e",
+            "surface-container-high": "#eae8e4",
+            "on-tertiary-fixed": "#390c00",
+            "on-tertiary-fixed-variant": "#763219",
+            "on-secondary-fixed-variant": "#653e00",
+            "text-secondary": "#6E6058",
+            "on-secondary-container": "#754900",
+            "inverse-primary": "#ffb59d",
+            "on-secondary-fixed": "#2a1700",
+            "on-tertiary-container": "#ed8d6c",
+            "semantic-disabled": "#BDBDBD",
+            "on-background": "#1b1c1a",
+            "on-primary": "#ffffff",
+            "secondary-fixed-dim": "#fdb965",
+            "primary-fixed": "#ffdbd0",
+            "outline-variant": "#d9c1ba",
+            "tertiary-fixed-dim": "#ffb59c",
+            "error-container": "#ffdad6",
+            "primary-container": "#662914",
+            "surface-container-lowest": "#ffffff",
+            "inverse-on-surface": "#f2f1ed",
+            "text-primary": "#2B1E1A",
+            "tertiary-fixed": "#ffdbcf",
+            "semantic-error": "#C62828",
+            "surface-bright": "#fbf9f5",
+            "border-focused": "#C88A36",
+            "on-secondary": "#ffffff",
+            "surface-subtle": "#F4EFEA",
+            "surface-container": "#efeeea",
+            "tertiary-container": "#69270d",
+            "tertiary": "#270600",
+            "on-tertiary": "#ffffff",
+            "background": "#fbf9f5",
+            "on-surface": "#1b1c1a",
+            "primary-fixed-dim": "#ffb59d",
+            "inverse-surface": "#30312e",
+            "surface-container-highest": "#e4e2de",
+            "surface": "#FFFFFF",
+            "on-primary-fixed": "#390c00",
+            "on-error": "#ffffff",
+            "audio-scrubber-track": "#E2DACF",
+            "outline": "#87736d",
+            "on-error-container": "#93000a",
+            "secondary-container": "#feb960",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#74341e",
+            "secondary": "#855300",
+            "secondary-fixed": "#ffddb8",
+            "primary": "#270600",
+            "surface-container-low": "#f5f3ef",
+            "border-warm": "#E6DFD5"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            "display-lg": ["Noto Serif", "serif"],
+            "body-sm": ["Cairo", "sans-serif"],
+            "body-md": ["Cairo", "sans-serif"],
+            "title-lg": ["Cairo", "sans-serif"],
+            "title-md": ["Cairo", "sans-serif"],
+            "body-lg": ["Cairo", "sans-serif"],
+            "label-md": ["Cairo", "sans-serif"],
+            "headline-md": ["Noto Serif", "serif"],
+            "headline-lg": ["Noto Serif", "serif"],
+            "label-sm": ["Cairo", "sans-serif"],
+            "label-lg": ["Cairo", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .coptic-cross-pattern {
+      background-color: #fbf9f5;
+      background-image: radial-gradient(#d9c1ba 0.75px, transparent 0.75px), radial-gradient(#d9c1ba 0.75px, #fbf9f5 0.75px);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary min-h-screen font-body-md antialiased selection:bg-border-focused selection:text-white coptic-cross-pattern">
+<div class="max-w-2xl mx-auto min-h-screen flex flex-col bg-surface shadow-xl border-x border-border-warm">
+<!-- Top Universal Header -->
+<header class="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-border-warm px-4 py-3.5 transition-all">
+<div class="flex items-center justify-between gap-3"><!-- Back Button + Page Titles (RTL Right / Start) -->
+<div class="flex items-center gap-3 min-w-0">
+  <button class="flex items-center justify-center size-10 rounded-full hover:bg-surface-subtle border border-border-warm text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-border-focused shrink-0" id="global-back-btn" onclick="handleGlobalBack()" title="رجوع">
+    <span class="material-symbols-outlined text-2xl font-bold">arrow_forward</span>
+  </button>
+  <div class="flex flex-col min-w-0">
+    <h1 class="text-primary font-title-lg text-lg leading-tight truncate font-bold">التسميعات والاختبارات</h1>
+    <p class="text-text-secondary text-xs truncate">مدرسة القديس أرسانيوس للطلاب والألحان</p>
+  </div>
+</div>
+<!-- School Emblem Avatar (RTL Left / End) -->
+<div class="relative flex items-center justify-center shrink-0">
+  <div class="size-11 rounded-full overflow-hidden border-2 border-border-focused shadow-sm bg-surface-subtle">
+    <img class="w-full h-full object-cover" alt="شعار مدرسة القديس أرسانيوس" id="schoolLogo" onerror="this.style.display='none'" src="assets/logo.png">
+  </div>
+</div></div>
+</header>
+<!-- MAIN VIEW: Grid of 4 Subjects -->
+<main class="flex-1 flex flex-col p-4 sm:p-6 transition-all duration-300" id="subjects-hub-view">
+<!-- Weekly Deadline Alert Banner -->
+<div class="rounded-xl border border-border-focused/40 bg-gradient-to-r from-[#FFF9F2] via-surface-subtle to-[#FFF4EB] p-4.5 mb-6 shadow-sm relative overflow-hidden">
+<div class="absolute -left-6 -bottom-6 w-24 h-24 bg-border-focused/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="relative flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl shrink-0">event</span>
+<div class="min-w-0">
+<p class="text-primary font-title-md font-bold text-sm" id="deadlineTitle"></p>
+<p class="text-text-secondary text-xs mt-0.5" id="deadlineSub"></p>
+</div>
+</div>
+</div>
+<!-- Section Title -->
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="text-primary font-title-lg font-bold text-xl">المواد الدراسية</h2>
+<p class="text-text-secondary text-xs mt-0.5">اختر المادة لعرض التسميعات والاختبارات الخاصة بها</p>
+</div>
+
+</div>
+<!-- 2x2 Grid of Subjects -->
+<div class="grid grid-cols-2 gap-3.5 sm:gap-4 flex-1 content-start" id="subjectsGrid"></div>
+<!-- Footer Quick Status -->
+<div class="mt-5 flex items-center justify-center gap-2 flex-wrap" id="quickStatus"></div>
+</main>
+<!-- DETAIL VIEW: Subject Specific Tasks (Initially Hidden) -->
+<section class="flex-1 flex-col p-4 sm:p-6 transition-all duration-300 hidden" id="subject-detail-view">
+<!-- Back Navigation Action Bar -->
+<div class="flex items-center justify-between mb-5">
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-subtle hover:bg-surface border border-border-warm text-primary font-bold text-sm shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-border-focused group" onclick="returnToHub()">
+<span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<span class="">العودة لكل المواد</span>
+</button>
+<span class="text-xs font-bold px-3 py-1 rounded-full bg-border-focused/15 text-secondary border border-border-focused/30" id="detail-task-count-pill">3 مهام في هذا الأسبوع</span>
+</div>
+<!-- Subject Detail Header Banner -->
+<div class="rounded-2xl border border-border-warm bg-surface-subtle p-4 sm:p-5 mb-5 flex items-center gap-4">
+<div class="size-14 rounded-xl bg-primary text-white flex items-center justify-center shrink-0 shadow-md" id="detail-icon-container">
+<span class="material-symbols-outlined text-3xl" id="detail-icon">music_note</span>
+</div>
+<div class="flex-1 min-w-0">
+<h2 class="text-primary font-title-lg text-xl font-bold truncate" id="detail-title">تسميعات الألحان الكنسية</h2>
+<p class="text-text-secondary text-xs sm:text-sm mt-0.5" id="detail-desc">تسليم التسجيلات الصوتية ومتابعة الملاحظات الطقسية والنغمية</p>
+</div>
+</div>
+<!-- Filter / Status Segmented Tabs -->
+<div class="flex items-center gap-2 mb-4 overflow-x-auto pb-1 text-xs font-bold">
+<button class="px-3.5 py-1.5 rounded-lg bg-primary text-white shadow-xs" id="filterAll" type="button">الكل</button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-subtle hover:bg-surface text-text-secondary border border-border-warm" id="filterOpen" type="button">المتاحة فقط</button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-subtle hover:bg-surface text-text-secondary border border-border-warm" id="filterClosed" type="button">المكتملة والمغلقة</button>
+</div>
+<!-- Tasks Dynamic Container -->
+<div class="space-y-3.5 flex-1" id="tasks-list"></div>
+</section>
+</div>
+<!-- JavaScript for dynamic tab switching & realistic interaction -->
+<script src="app.js"></script>
+<script>
+  /* ===== التسميعات والاختبارات — ربط كامل بالباك إند =====
+     • GET /student/subjects    → المواد الأربع
+     • GET /student/assessments → عناصر التقييم (نوع، موعد، درجة، رابط البدء)
+     يحافظ على قالب التصميم كما هو. */
+  const $ = (id) => document.getElementById(id);
+
+  /* خريطة التصميم: أيقونة/لون/عنوان كل مادة (من التصميم) + ربطها بكود الباك إند */
+  const SUBJECT_META = {
+    alhan: {
+      icon: 'music_note', variant: 'primary',
+      cardDesc: 'مردات وتسابيح كنسية',
+      title: 'تسميعات الألحان الكنسية',
+      desc: 'تسليم التسجيلات الصوتية ومتابعة الملاحظات الطقسية والنغمية'
+    },
+    coptic: {
+      icon: 'translate', variant: 'secondary',
+      cardDesc: 'قواعد النطق ومفردات الكنيسة',
+      title: 'اختبارات اللغة القبطية',
+      desc: 'تمارين قواعد اللغة القبطية، النطق، الصرف وتفكيك المفردات الكنسية'
+    },
+    taks: {
+      icon: 'church', variant: 'primary',
+      cardDesc: 'اختبارات الصلوات، الطقوس، وحركات الطلاب',
+      title: 'اختبارات الطقس الكنسي',
+      desc: 'دراسة نظام الصلوات الطقسية، أعياد الكنيسة ومصطلحات خدمة الطالب'
+    },
+    mahfouzat: {
+      icon: 'menu_book', variant: 'secondary',
+      cardDesc: 'مزامير الأجبية والصلوات والقطع المحفوظة',
+      title: 'تسميعات المحفوظات الكنسية',
+      desc: 'حفظ المزامير، قطع صلوات السواعي، وتأملات الآباء المقررة'
+    },
+  };
+
+  /* أنواع العناصر: quiz = اختبار · recitation = تسميع */
+  const KIND_LABEL = {
+    quiz: { button: 'ابدأ الاختبار', sub: 'اختبار إلكتروني مباشر', icon: 'quiz' },
+    recitation: { button: 'ابدأ التسميع', sub: 'تسميع صوتي مباشر', icon: 'mic' },
+  };
+
+  let SUBJECTS = [];
+  let ITEMS = [];
+  let currentSubjectKey = null;
+  let currentFilter = 'all';
+
+  function toDigits(value) {
+    return String(value == null ? '' : value);
+  }
+
+  /* الموعد بتوقيت القاهرة (يعرفه الخادم) */
+  function fmtDeadline(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    if (isNaN(d)) return '';
+    try {
+      const day = d.toLocaleDateString('ar-EG-u-nu-latn', { weekday: 'long', timeZone: 'Africa/Cairo' });
+      const time = d.toLocaleTimeString('ar-EG-u-nu-latn', { hour: 'numeric', minute: '2-digit', hour12: true, timeZone: 'Africa/Cairo' });
+      return day + ' ' + time;
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function fmtWeek(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    if (isNaN(d)) return '';
+    try {
+      return d.toLocaleDateString('ar-EG-u-nu-latn', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Africa/Cairo' });
+    } catch (e) { return ''; }
+  }
+
+  function plural(n, one, two, many) {
+    if (n === 1) return one;
+    if (n === 2) return two;
+    return many;
+  }
+
+  function itemsOf(code) {
+    return ITEMS.filter(function (i) { return i.subject_code === code; });
+  }
+
+  /* ---------- بطاقة مادة (قالب التصميم كما هو) ---------- */
+  function subjectCard(subject) {
+    const meta = SUBJECT_META[subject.code] || { icon: 'apps', variant: 'primary' };
+    const count = itemsOf(subject.code).length;
+    const openCount = itemsOf(subject.code).filter(function (i) { return i.is_open; }).length;
+    const iconBox = meta.variant === 'primary'
+      ? 'bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white'
+      : 'bg-secondary/15 text-secondary group-hover:bg-secondary group-hover:text-white';
+    const el = document.createElement('button');
+    el.type = 'button';
+    el.className = 'group relative flex flex-col text-right p-4 sm:p-5 rounded-2xl border border-border-warm bg-surface-subtle hover:bg-surface hover:border-border-focused hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-border-focused';
+    el.setAttribute('data-subject', subject.code);
+    el.innerHTML =
+      '<div class="flex items-center justify-between w-full mb-3">' +
+        '<div class="size-12 rounded-xl ' + iconBox + ' flex items-center justify-center transition-colors shadow-sm">' +
+          '<span class="material-symbols-outlined text-2xl">' + meta.icon + '</span>' +
+        '</div>' +
+      '</div>' +
+      '<h3 class="text-primary font-title-md font-bold text-base sm:text-lg mb-1 group-hover:text-secondary transition-colors">' + subject.name_ar + '</h3>' +
+      (meta.cardDesc ? '<p class="text-text-secondary text-xs leading-normal">' + meta.cardDesc + '</p>' : '') +
+      '<div class="mt-auto pt-3 border-t border-border-warm/70 flex items-center justify-between w-full text-xs font-bold text-secondary">' +
+        '<span class="">دخول المهام' +
+          (count ? ' (' + toDigits(count) + ')' : '') +
+        '</span>' +
+        '<span class="material-symbols-outlined text-base group-hover:-translate-x-1 transition-transform">arrow_back</span>' +
+      '</div>';
+    el.addEventListener('click', function () { openSubjectView(subject.code); });
+    return el;
+  }
+
+  /* ---------- عنصر مهمة (قالب التصميم كما هو) ---------- */
+  function taskCard(item) {
+    const isClosed = !item.is_open;
+    const kind = KIND_LABEL[item.kind] || KIND_LABEL.quiz;
+    const card = document.createElement('div');
+    card.className = 'p-4 sm:p-5 rounded-2xl border transition-all ' + (
+      isClosed
+        ? 'bg-surface-subtle/70 border-border-warm/70 opacity-80'
+        : 'bg-surface border-border-warm hover:border-border-focused hover:shadow-sm'
+    );
+
+    let badgeHtml = '';
+    if (item.score !== null && item.score !== undefined) {
+      badgeHtml =
+        '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold bg-semantic-success/15 text-semantic-success border border-semantic-success/30">' +
+          '<span class="material-symbols-outlined text-sm font-bold">check_circle</span>' +
+          'الدرجة: ' + toDigits(item.score) + '/10' +
+        '</span>';
+    } else if (isClosed) {
+      badgeHtml =
+        '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold bg-surface-dim text-outline border border-outline-variant">' +
+          '<span class="material-symbols-outlined text-sm">lock</span>' +
+          'انتهى الموعد' +
+        '</span>';
+    } else {
+      badgeHtml =
+        '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold bg-secondary/15 text-secondary border border-secondary/30">' +
+          '<span class="material-symbols-outlined text-sm font-bold">hourglass_top</span>' +
+          'لم تُقيَّم بعد' +
+        '</span>';
+    }
+
+    let buttonHtml = '';
+    if (isClosed) {
+      buttonHtml =
+        '<button disabled class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-surface-variant text-outline cursor-not-allowed font-bold text-sm flex items-center justify-center gap-1.5 border border-outline-variant/60">' +
+          '<span class="material-symbols-outlined text-base">lock_clock</span>' +
+          '<span>انتهى الموعد</span>' +
+        '</button>';
+    } else if (item.started) {
+      buttonHtml =
+        '<button disabled class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-semantic-success/20 text-semantic-success cursor-not-allowed font-bold text-sm flex items-center justify-center gap-1.5 border border-semantic-success/40">' +
+          '<span class="material-symbols-outlined text-base">check_circle</span>' +
+          '<span>تم التسجيل</span>' +
+        '</button>';
+    } else {
+      buttonHtml =
+        '<button class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-primary hover:bg-tertiary-container text-white font-bold text-sm flex items-center justify-center gap-2 shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-border-focused active:scale-[0.98]">' +
+          '<span class="material-symbols-outlined text-base">arrow_back</span>' +
+          '<span>' + kind.button + '</span>' +
+        '</button>';
+    }
+
+    const week = item.week_key ? fmtWeek(item.week_key + 'T00:00:00Z') : '';
+    const notes = [item.subject_name, week ? 'أسبوع ' + week : ''].filter(Boolean).join(' • ');
+
+    card.innerHTML =
+      '<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-2.5">' +
+        '<div class="flex-1">' +
+          '<div class="flex flex-wrap items-center gap-2 mb-1.5">' +
+            '<h4 class="text-primary font-title-md font-bold text-base leading-snug">' + item.title + '</h4>' +
+            badgeHtml +
+          '</div>' +
+          '<p class="text-xs text-text-secondary font-medium leading-relaxed">' +
+            'آخر موعد: ' + fmtDeadline(item.closes_at) + ' • ' + kind.sub +
+          '</p>' +
+        '</div>' +
+        '<div class="shrink-0 pt-1 sm:pt-0">' + buttonHtml + '</div>' +
+      '</div>' +
+      '<div class="mt-3 pt-2.5 border-t border-border-warm/60 flex items-center gap-2 text-xs text-on-surface-variant">' +
+        '<span class="material-symbols-outlined text-sm text-secondary">info</span>' +
+        '<span class="truncate">' + notes + '</span>' +
+      '</div>';
+
+    if (!isClosed) {
+      const btn = card.querySelector('button');
+      btn.addEventListener('click', function () { startTask(item); });
+    }
+    return card;
+  }
+
+  async function startTask(item) {
+    if (!item.started) {
+      try {
+        await api('/student/assessments/' + item.id + '/start', { method: 'POST', body: {} });
+        item.started = true;
+      } catch (e) { /* ignore; still open link */ }
+    }
+    renderTasks();
+    if (!item.start_url) { toast('لا يوجد رابط لهذا العنصر'); return; }
+    window.open(item.start_url, '_blank', 'noopener');
+  }
+
+  /* ---------- العرض ---------- */
+  function renderTasks() {
+    const container = $('tasks-list');
+    container.innerHTML = '';
+    let list = currentSubjectKey ? itemsOf(currentSubjectKey) : [];
+    if (currentFilter === 'open') list = list.filter(function (i) { return i.is_open; });
+    else if (currentFilter === 'closed') list = list.filter(function (i) { return !i.is_open; });
+
+    if (!list.length) {
+      const empty = document.createElement('div');
+      empty.className = 'text-center py-10 px-4 text-text-secondary text-sm';
+      empty.textContent = currentFilter === 'open'
+        ? 'لا توجد مهام متاحة حاليًا'
+        : currentFilter === 'closed'
+          ? 'لا توجد مهام منتهية في هذا القسم'
+          : 'لا توجد مهام في هذا القسم بعد';
+      container.appendChild(empty);
+      return;
+    }
+    list.forEach(function (i) { container.appendChild(taskCard(i)); });
+  }
+
+  function setFilter(mode) {
+    currentFilter = mode;
+    const active = 'px-3.5 py-1.5 rounded-lg bg-primary text-white shadow-xs';
+    const idle = 'px-3.5 py-1.5 rounded-lg bg-surface-subtle hover:bg-surface text-text-secondary border border-border-warm';
+    $('filterAll').className = mode === 'all' ? active : idle;
+    $('filterOpen').className = mode === 'open' ? active : idle;
+    $('filterClosed').className = mode === 'closed' ? active : idle;
+    renderTasks();
+  }
+
+  function openSubjectView(code) {
+    currentSubjectKey = code;
+    const subject = SUBJECTS.find(function (s) { return s.code === code; });
+    const meta = SUBJECT_META[code] || { icon: 'apps', title: '', desc: '' };
+    const list = itemsOf(code);
+
+    $('detail-title').textContent = meta.title || (subject ? subject.name_ar : '');
+    $('detail-desc').textContent = meta.desc || '';
+    $('detail-icon').textContent = meta.icon;
+    const n = list.length;
+    $('detail-task-count-pill').textContent = n
+      ? toDigits(n) + ' ' + plural(n, 'مهمة', 'مهمتان', 'مهام') + ' في هذا القسم'
+      : 'لا توجد مهام في هذا القسم';
+
+    renderTasks();
+    $('subjects-hub-view').classList.add('hidden');
+    $('subject-detail-view').classList.remove('hidden');
+    $('subject-detail-view').classList.add('flex');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function returnToHub() {
+    currentSubjectKey = null;
+    $('subject-detail-view').classList.add('hidden');
+    $('subject-detail-view').classList.remove('flex');
+    $('subjects-hub-view').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function handleGlobalBack() {
+    if (currentSubjectKey !== null) {
+      returnToHub();
+    } else {
+      window.history.length > 1 ? window.history.back() : location.href = 'student-home.html';
+    }
+  }
+
+  /* ---------- التحميل ---------- */
+  async function loadAll() {
+    const subsRes = await api('/student/subjects');
+    SUBJECTS = subsRes.data || subsRes;
+    const asmRes = await api('/student/assessments');
+    ITEMS = asmRes.data || asmRes;
+
+    const grid = $('subjectsGrid');
+    grid.innerHTML = '';
+    SUBJECTS.forEach(function (s) { grid.appendChild(subjectCard(s)); });
+
+    // شريط الموعد الأسبوعي
+    const open = ITEMS.filter(function (i) { return i.is_open; });
+    const openItems = open.slice().sort(function (a, b) { return (a.closes_at || '') < (b.closes_at || '') ? -1 : 1; });
+    if (openItems.length) {
+      $('deadlineTitle').textContent = 'أقرب موعد: ' + fmtDeadline(openItems[0].closes_at);
+      $('deadlineSub').textContent = 'لديك ' + toDigits(open.length) + ' ' +
+        plural(open.length, 'مهمة متاحة', 'مهمتان متاحتان', 'مهام متاحة') + ' الآن';
+    } else {
+      $('deadlineTitle').textContent = 'لا توجد مهام مفتوحة حاليًا';
+      $('deadlineSub').textContent = 'سيتم فتح المهام الجديدة في بداية أسبوع المدرسة';
+    }
+
+    // الحالة السريعة أسفل الشبكة
+    const closed = ITEMS.filter(function (i) { return !i.is_open; });
+    const quick = $('quickStatus');
+    quick.innerHTML =
+      '<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-subtle border border-border-warm text-xs font-bold text-text-secondary">' +
+        '<span class="material-symbols-outlined text-sm text-secondary">checklist</span>' +
+        'إجمالي المهام: ' + toDigits(ITEMS.length) +
+      '</span>' +
+      '<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-semantic-success/10 border border-semantic-success/30 text-xs font-bold text-semantic-success">' +
+        '<span class="material-symbols-outlined text-sm">schedule</span>' +
+        'متاحة: ' + toDigits(open.length) +
+      '</span>' +
+      '<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-dim border border-outline-variant text-xs font-bold text-outline">' +
+        '<span class="material-symbols-outlined text-sm">lock</span>' +
+        'منتهية: ' + toDigits(closed.length) +
+      '</span>';
+  }
+
+  /* ---------- الربط ---------- */
+  async function boot() {
+    const me = await requireAuth(['student']);
+    if (!me) return;
+    try {
+      await loadAll();
+    } catch (e) {
+      toast((e && e.message) || 'تعذر تحميل المهام');
+    }
+    $('filterAll').addEventListener('click', function () { setFilter('all'); });
+    $('filterOpen').addEventListener('click', function () { setFilter('open'); });
+    $('filterClosed').addEventListener('click', function () { setFilter('closed'); });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+</script>
+
+
+</body></html>

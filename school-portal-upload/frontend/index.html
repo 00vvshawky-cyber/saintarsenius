@@ -1,0 +1,600 @@
+<!DOCTYPE html><html dir="rtl" lang="ar" style="width: 390px; min-height: 646px; position: relative;"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_blank" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>
+  .gender-selected { background-color: #fddfbc !important; color: #2a1700 !important; }
+  .gender-idle-selected { background-color: #fafafa !important; color: #6E6058 !important; }
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-fixed": "#ffdbcf", "outline": "#87736d", "surface-bright": "#fbf9f5", "surface-subtle": "#F4EFEA", "primary-fixed-dim": "#ffb59d", "on-secondary-fixed-variant": "#653e00", "on-primary-fixed": "#390c00", "inverse-on-surface": "#f2f0ed", "error-container": "#ffdad6", "surface-container": "#efeeea", "surface": "#FFFFFF", "on-tertiary-fixed": "#390c00", "on-primary-container": "#ca775c", "outline-variant": "#d9c1ba", "secondary-fixed": "#ffddb8", "on-tertiary-fixed-variant": "#763219", "secondary": "#855300", "secondary-fixed-dim": "#feb960", "surface-container-lowest": "#ffffff", "primary-container": "#491402", "surface-dim": "#dbdad6", "on-secondary-container": "#754900", "surface-variant": "#e4e2df", "primary": "#270600", "primary-fixed": "#ffdbd0", "on-primary-fixed-variant": "#74341d", "secondary-container": "#fdb965", "on-surface": "#1b1c1a", "tertiary-container": "#69270d", "on-error": "#ffffff", "on-surface-variant": "#54433e", "on-secondary": "#ffffff", "surface-tint": "#924a33", "surface-container-low": "#f5f3ef", "background": "#fbf9f5", "tertiary": "#270600", "inverse-primary": "#ffb59d", "inverse-surface": "#30312e", "surface-container-highest": "#e4e2df", "surface-container-high": "#e9e8e4", "tertiary-fixed-dim": "#ffb59c", "on-error-container": "#93000a", "border-warm": "#E6DFD5", "text-secondary": "#6E6058", "on-tertiary": "#ffffff", "semantic-error": "#C62828", "on-background": "#1b1c1a", "semantic-warning": "#E65100", "on-secondary-fixed": "#2a1700", "error": "#ba1a1a", "on-tertiary-container": "#cd7658", "semantic-success": "#2E7D32", "border-focused": "#C88A36", "on-primary": "#ffffff", "text-primary": "#2B1E1A", "semantic-disabled": "#BDBDBD", "audio-scrubber-track": "#E2DACF" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-tablet": "1.5rem", "margin": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "2rem", "space-md": "1rem", "margin-desktop": "2.5rem", "gutter": "1rem", "space-lg": "1.5rem", "gutter-tablet": "1.5rem" }, fontFamily: { "label-lg": ["Cairo"], "display-lg": ["Noto Serif"], "title-md": ["Cairo"], "headline-md": ["Noto Serif"], "body-sm": ["Cairo"], "label-md": ["Cairo"], "label-sm": ["Cairo"], "headline-lg": ["Noto Serif"], "title-lg": ["Cairo"], "body-md": ["Cairo"], "body-lg": ["Cairo"] }, fontSize: { "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "44px", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "32px", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "400" }], "headline-lg": ["26px", { "lineHeight": "36px", "fontWeight": "700" }], "title-lg": ["18px", { "lineHeight": "28px", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["17px", { "lineHeight": "28px", "fontWeight": "500" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-background font-body-md text-text-primary min-h-screen flex flex-col pt-safe pb-safe selection:bg-secondary-container selection:text-on-secondary-container"><main class="flex-1 flex flex-col relative w-full bg-background"><div class="flex flex-col w-full px-margin pb-space-xl">
+<!-- Liturgical Top Branding -->
+<div class="flex flex-col items-center text-center mt-space-sm mb-space-lg">
+<!-- School Emblem Wrapper with monastic halo styling -->
+<div class="relative w-24 h-24 mb-space-sm flex items-center justify-center">
+<div class="absolute inset-0 rounded-full bg-secondary/15 transform scale-110"></div>
+<div class="absolute inset-0 rounded-full bg-surface-subtle shadow-sm"></div>
+<img alt="شعار مدرسة القديس أرسانيوس للألحان والتسبحة" class="w-20 h-20 rounded-full object-cover relative z-10 p-0.5 bg-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa5IXmFCfUSXV-rEQROYwHZZFre94aWWsLpUymDCY7LBnsoKELaxlGA6DT-Eq7fsP-HdU_Tz5RDgw1e0Qq5D3Z9ONrOtfKdacLZdz07PwdYkJ_b2Rmv1820nGb8RdG0SRAokXekPW_J03umBtjHdf4TWmzvm7IeGtLfZwLBmhGTVI4tVViBztMWSd5U6hy8ngzWwdfS3-IQ1hM4b0cw0rGw5zoB2b59o9WiQo7qQfsJ-piAsU9qJ_3b_4ps1I3PnwVGg">
+
+</div>
+<!-- School & Church Titles -->
+<h1 class="font-headline-lg text-headline-lg text-text-primary tracking-tight mb-1">مدرسة القديس أرسانيوس</h1>
+<p class="font-title-md text-title-md text-secondary mb-0.5">للألحان والتسبحة الكنسية</p>
+<div class="flex items-center gap-1.5 text-text-secondary">
+<span class="material-symbols-outlined text-base">church</span>
+<span class="font-body-sm text-body-sm">كنيسة السيدة العذراء مريم ببشتيل</span>
+</div>
+</div>
+<!-- Segmented Tab Switcher -->
+<div class="bg-surface-subtle p-1 rounded-xl flex items-center justify-between gap-1 mb-space-lg shadow-sm">
+<button class="flex-1 py-2.5 px-3 rounded-lg font-title-md text-title-md transition-all flex items-center justify-center gap-2 bg-primary-container text-on-primary shadow-sm" id="tabBtnLogin" onclick="switchAuthTab('login')" type="button">
+<span class="material-symbols-outlined text-lg">login</span>
+<span class="">دخول</span>
+</button>
+<button class="flex-1 py-2.5 px-3 rounded-lg font-title-md text-title-md transition-all flex items-center justify-center gap-2 text-text-secondary hover:text-text-primary" id="tabBtnRegister" onclick="switchAuthTab('register')" type="button">
+<span class="material-symbols-outlined text-lg">person_add</span>
+<span class="">انضمام للمدرسة</span>
+</button>
+</div>
+<!-- TAB 1: LOGIN FORM -->
+<section class="flex-col flex" id="loginSection">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md">
+<div class="mb-space-md text-right">
+<h2 class="font-title-lg text-title-lg text-text-primary">تسجيل الدخول</h2>
+
+</div>
+<form class="space-y-space-md" id="loginForm" onsubmit="handleLoginSubmit(event)">
+<!-- Phone Field -->
+<div>
+<label class="block font-label-lg text-label-lg text-text-primary mb-1" for="loginPhone">
+            رقم الموبايل
+          </label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-bright text-text-primary rounded-lg py-2.5 px-3 text-right pr-10 pl-3 font-body-md text-body-md placeholder:text-text-secondary/50 focus:outline-none focus:bg-surface shadow-sm transition-all" dir="ltr" id="loginPhone" maxlength="11" placeholder="01xxxxxxxxx" required="" type="tel">
+<span class="material-symbols-outlined text-text-secondary absolute right-3 pointer-events-none text-xl">phone_iphone</span>
+</div>
+
+</div>
+<!-- Password Field -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<label class="font-label-lg text-label-lg text-text-primary" for="loginPassword">
+              كلمة المرور
+            </label>
+<button class="font-label-sm text-label-sm text-secondary hover:underline" onclick="alert('يرجى التواصل مع إدارة المدرسة أو أمين الخدمة لإعادة تعيين كلمة المرور')" type="button">
+              نسيت كلمة المرور؟
+            </button>
+</div>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-bright text-text-primary rounded-lg py-2.5 px-3 pr-10 pl-10 font-body-md text-body-md placeholder:text-text-secondary/50 focus:outline-none focus:bg-surface shadow-sm transition-all" id="loginPassword" placeholder="••••••••" required="" type="password">
+<span class="material-symbols-outlined text-text-secondary absolute right-3 pointer-events-none text-xl">lock</span>
+<button class="absolute left-3 text-text-secondary hover:text-text-primary p-0.5 focus:outline-none flex items-center" onclick="togglePasswordVisibility('loginPassword', 'loginEyeIcon')" type="button">
+<span class="material-symbols-outlined text-xl" id="loginEyeIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-12 bg-primary-container hover:bg-tertiary-container text-on-primary rounded-lg font-title-md text-title-md flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.99] mt-space-lg" type="submit">
+<span class="">دخول</span>
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+</button>
+</form>
+</div>
+<!-- Pastoral Note Banner -->
+
+</section>
+<!-- TAB 2: REGISTRATION FORM -->
+<section class="flex-col hidden" id="registerSection">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md">
+<div class="mb-space-md text-right">
+<h2 class="font-title-lg text-title-lg text-text-primary">طلب انضمام طالب جديد</h2>
+
+</div>
+<form class="space-y-space-md" id="registerForm" onsubmit="handleRegistrationSubmit(event)">
+<!-- Student Photo Upload Section -->
+<div class="flex flex-col items-center justify-center p-space-md bg-surface-subtle rounded-xl shadow-sm">
+<button aria-label="اختيار صورة الطالب" class="relative w-24 h-24 rounded-full bg-surface-bright flex items-center justify-center overflow-hidden shadow-inner group focus:outline-none" id="avatarThumb" onclick="avatarPickFile()" type="button">
+<img alt="صورة الطالب" class="w-full h-full object-cover hidden" id="avatarPreview" style="transform-origin:center;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiIGZpbGw9IiNlOGVhZWQiLz48cGF0aCBkPSJNMTcwIDEzMCBsMzAgNDAgbDIwLTE1IGw0MCA1NSBIMTQweiIgZmlsbD0iI2JkYzFjNiIvPjxjaXJjbGUgY3g9IjI1MCIgY3k9IjEyMCIgcj0iMTgiIGZpbGw9IiNiZGMxYzYiLz48L3N2Zz4=">
+<div class="flex flex-col items-center justify-center text-text-secondary group-hover:text-primary transition-colors" id="avatarPlaceholder">
+<span class="material-symbols-outlined text-3xl">add_a_photo</span>
+<span class="font-label-sm text-label-sm mt-1">صورة الطالب</span>
+</div>
+<input accept="image/*" class="hidden" id="studentAvatarInput" onchange="avatarFileChosen(event)" type="file" required="">
+</button>
+</div>
+<!-- Full Name -->
+<div>
+<label class="block font-label-lg text-label-lg text-text-primary mb-1" for="regFullName">
+            الاسم رباعي <span class="text-semantic-error">*</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-bright text-text-primary rounded-lg py-2.5 px-3 pr-10 pl-3 font-body-md text-body-md placeholder:text-text-secondary/50 focus:outline-none focus:bg-surface shadow-sm" id="regFullName" maxlength="40" placeholder="مثال: يوسف مينا جرجس إبراهيم" required="" type="text">
+<span class="material-symbols-outlined text-text-secondary absolute right-3 pointer-events-none text-xl">badge</span>
+</div>
+</div>
+<!-- Gender Selection -->
+<div>
+<label class="block font-label-lg text-label-lg text-text-primary mb-1.5">
+            النوع <span class="text-semantic-error">*</span>
+</label>
+<div class="grid grid-cols-2 gap-2">
+<label id="genderMaleLabel" class="relative flex items-center justify-center gap-2 p-2.5 rounded-lg cursor-pointer transition-all bg-surface-subtle text-text-secondary shadow-sm font-label-lg text-label-lg">
+<input class="hidden" name="gender" onchange="handleGenderChange('male')" type="radio" value="male">
+<span class="material-symbols-outlined text-lg">face</span>
+<span class="">ذكر&nbsp;</span>
+</label>
+<label class="relative flex items-center justify-center gap-2 p-2.5 rounded-lg cursor-pointer transition-all bg-surface-subtle text-text-secondary shadow-sm font-label-lg text-label-lg" id="genderFemaleLabel">
+<input class="hidden" name="gender" onchange="handleGenderChange('female')" type="radio" value="female">
+<span class="material-symbols-outlined text-lg">face_3</span>
+<span class="">أنثى</span>
+</label>
+</div>
+</div>
+<!-- Deacon Rank (Conditional for Male) -->
+<div id="deaconRankContainer" class="">
+<label class="block font-label-lg text-label-lg text-text-primary mb-1" for="regDeaconRank">
+            الرتبة الشماسية 
+</label>
+<div class="relative flex items-center">
+<select class="w-full bg-surface-bright text-text-primary rounded-lg py-2.5 px-3 pr-10 pl-8 font-body-md text-body-md focus:outline-none focus:bg-surface shadow-sm appearance-none cursor-pointer" id="regDeaconRank">
+<option value="none">لم أرسم بعد</option>
+<option selected="" value="epsaltos">الإبصالتس</option>
+<option value="anagnostis">الأغنسطس</option>
+<option value="epidiakon">الإيبودياكون</option>
+<option value="diakon">الدياكون</option>
+<option value="archdiakon">الأرشيدياكون</option>
+</select>
+<span class="material-symbols-outlined text-text-secondary absolute right-3 pointer-events-none text-xl">church</span>
+<span class="material-symbols-outlined text-text-secondary absolute left-3 pointer-events-none text-xl">expand_more</span>
+</div>
+</div>
+<!-- Class / Stage Selection -->
+<div>
+<label class="block font-label-lg text-label-lg text-text-primary mb-1" for="regClassGrade">
+            المرحلة الدراسية 
+</label>
+<div class="relative flex items-center">
+<select class="w-full bg-surface-bright text-text-primary rounded-lg py-2.5 px-3 pr-10 pl-8 font-body-md text-body-md focus:outline-none focus:bg-surface shadow-sm appearance-none cursor-pointer" id="regClassGrade" required="">
+<option disabled="" selected="" value="">اختر المرحلة الدراسية</option>
+<option value="kg">حضانة</option>
+<option value="pri1_2">أولى وتانية</option>
+<option value="pri3_4">تالتة ورابعة</option>
+<option value="pri5_6">خامسة وستة</option>
+<option value="prep">إعدادي</option>
+<option value="sec">ثانوي</option>
+<option value="youth">شباب</option>
+<option class="hidden" id="mothersClassOption" value="mothers">أمهات</option>
+</select>
+<span class="material-symbols-outlined text-text-secondary absolute right-3 pointer-events-none text-xl">school</span>
+<span class="material-symbols-outlined text-text-secondary absolute left-3 pointer-events-none text-xl">expand_more</span>
+</div>
+
+</div>
+<!-- Phone Number -->
+<div>
+<label class="block font-label-lg text-label-lg text-text-primary mb-1" for="regPhone">
+            رقم الموبايل 
+</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-bright text-text-primary rounded-lg py-2.5 px-3 text-right pr-10 pl-3 font-body-md text-body-md placeholder:text-text-secondary/50 focus:outline-none focus:bg-surface shadow-sm" dir="ltr" id="regPhone" maxlength="11" placeholder="01xxxxxxxxx" required="" type="tel">
+<span class="material-symbols-outlined text-text-secondary absolute right-3 pointer-events-none text-xl">phone_iphone</span>
+</div>
+</div>
+<!-- WhatsApp Number -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<label class="block font-label-lg text-label-lg text-text-primary" for="regWhatsapp">
+            رقم الواتساب 
+</label>
+<label class="flex items-center gap-1.5 cursor-pointer select-none font-label-sm text-label-sm text-text-secondary" for="regWhatsappSame">
+<input class="w-4 h-4 accent-primary cursor-pointer" id="regWhatsappSame" onchange="handleWhatsappSame()" type="checkbox">
+<span>مطابق</span>
+</label>
+</div>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-bright text-text-primary rounded-lg py-2.5 px-3 text-right pr-10 pl-3 font-body-md text-body-md placeholder:text-text-secondary/50 focus:outline-none focus:bg-surface shadow-sm" dir="ltr" id="regWhatsapp" maxlength="11" placeholder="01xxxxxxxxx" type="tel">
+<span class="material-symbols-outlined text-text-secondary absolute right-3 pointer-events-none text-xl">chat</span>
+</div>
+</div>
+<!-- Parent Phone Number -->
+<div>
+<label class="block font-label-lg text-label-lg text-text-primary mb-1" for="regParentPhone">
+            رقم ولي الأمر 
+</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-bright text-text-primary rounded-lg py-2.5 px-3 text-right pr-10 pl-3 font-body-md text-body-md placeholder:text-text-secondary/50 focus:outline-none focus:bg-surface shadow-sm" dir="ltr" id="regParentPhone" maxlength="11" placeholder="01xxxxxxxxx" type="tel">
+<span class="material-symbols-outlined text-text-secondary absolute right-3 pointer-events-none text-xl">family_restroom</span>
+</div>
+</div>
+<!-- Birth Date -->
+<div>
+<label class="block font-label-lg text-label-lg text-text-primary mb-1" for="regBirthDate">
+            تاريخ الميلاد 
+</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-bright text-text-primary rounded-lg py-2.5 px-3 pr-10 pl-3 font-body-md text-body-md focus:outline-none focus:bg-surface shadow-sm" id="regBirthDate" placeholder="يوم / شهر / سنة" autocomplete="off" maxlength="10" required="" type="text" onchange="normalizeBirthText()">
+<button aria-label="اختيار التاريخ من التقويم" class="absolute right-2 p-1 rounded-full text-text-secondary hover:text-primary-container focus:outline-none" onclick="openBirthPicker()" type="button">
+<span class="material-symbols-outlined text-xl pointer-events-none">calendar_month</span>
+</button>
+</div>
+</div>
+<!-- Password -->
+<div>
+<label class="block font-label-lg text-label-lg text-text-primary mb-1" for="regPassword">
+            كلمة المرور الجديدة 
+</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-bright text-text-primary rounded-lg py-2.5 px-3 pr-10 pl-10 font-body-md text-body-md placeholder:text-text-secondary/50 focus:outline-none focus:bg-surface shadow-sm" id="regPassword" minlength="6" placeholder="••••••••" required="" type="password">
+<span class="material-symbols-outlined text-text-secondary absolute right-3 pointer-events-none text-xl">lock</span>
+<button class="absolute left-3 text-text-secondary hover:text-text-primary p-0.5 focus:outline-none flex items-center" onclick="togglePasswordVisibility('regPassword', 'regEyeIcon')" type="button">
+<span class="material-symbols-outlined text-xl" id="regEyeIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Registration Submit Button -->
+<button class="w-full h-12 bg-primary-container hover:bg-tertiary-container text-on-primary rounded-lg font-title-md text-title-md flex items-center justify-center gap-2 shadow-md transition-all active:scale-[0.99] mt-space-lg" type="submit">
+<span class="material-symbols-outlined text-lg">how_to_reg</span>
+<span class="">إرسال طلب الانضمام</span>
+</button>
+</form>
+</div>
+<!-- Church Fellowship Footnote -->
+
+</section>
+<!-- SUCCESS CONFIRMATION MODAL -->
+<div class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-margin hidden" id="successModal">
+<div class="bg-surface rounded-xl max-w-sm w-full p-space-lg shadow-xl text-center flex flex-col items-center">
+<!-- Liturgical Success Emblem -->
+<div class="w-16 h-16 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-2">تم استلام طلبك بنجاح!</h3>
+<p class="font-body-md text-body-md text-text-secondary mb-space-lg">
+        طلب الانضمام إلى <span class="text-primary font-semibold">مدرسة القديس أرسانيوس</span> قيد المراجعة لدى إدارة المدرسة والآباء الكهنة. سيتم التواصل معك عبر الواتساب فور اعتماده.
+      </p>
+<div class="w-full space-y-2">
+<button class="w-full h-11 bg-primary-container text-on-primary rounded-lg font-title-md text-title-md shadow-sm flex items-center justify-center gap-2" onclick="closeSuccessModalAndGoLogin()" type="button">
+<span class="">العودة لصفحة الدخول</span>
+<span class="material-symbols-outlined text-lg">login</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script src="photo-crop.js"></script>
+<script src="photo-cropper.js"></script>
+<script src="date-picker.js"></script>
+<script src="app.js"></script>
+<script>
+  function switchAuthTab(target) {
+    const loginSection = document.getElementById('loginSection');
+    const registerSection = document.getElementById('registerSection');
+    const tabBtnLogin = document.getElementById('tabBtnLogin');
+    const tabBtnRegister = document.getElementById('tabBtnRegister');
+
+    if (target === 'login') {
+      loginSection.classList.remove('hidden');
+      loginSection.classList.add('flex');
+      registerSection.classList.add('hidden');
+      registerSection.classList.remove('flex');
+
+      tabBtnLogin.className = "flex-1 py-2.5 px-3 rounded-lg font-title-md text-title-md transition-all flex items-center justify-center gap-2 bg-primary-container text-on-primary shadow-sm";
+      tabBtnRegister.className = "flex-1 py-2.5 px-3 rounded-lg font-title-md text-title-md transition-all flex items-center justify-center gap-2 text-text-secondary hover:text-text-primary";
+    } else {
+      registerSection.classList.remove('hidden');
+      registerSection.classList.add('flex');
+      loginSection.classList.add('hidden');
+      loginSection.classList.remove('flex');
+
+      tabBtnRegister.className = "flex-1 py-2.5 px-3 rounded-lg font-title-md text-title-md transition-all flex items-center justify-center gap-2 bg-primary-container text-on-primary shadow-sm";
+      tabBtnLogin.className = "flex-1 py-2.5 px-3 rounded-lg font-title-md text-title-md transition-all flex items-center justify-center gap-2 text-text-secondary hover:text-text-primary";
+    }
+  }
+
+  function handleGenderChange(gender) {
+    const deaconContainer = document.getElementById('deaconRankContainer');
+    const mothersOption = document.getElementById('mothersClassOption');
+    const mothersNote = document.getElementById('mothersNote');
+    const maleLabel = document.getElementById('genderMaleLabel');
+    const femaleLabel = document.getElementById('genderFemaleLabel');
+    const classGrade = document.getElementById('regClassGrade');
+
+    const base = "relative flex items-center justify-center gap-2 p-2.5 rounded-lg cursor-pointer transition-all shadow-sm font-label-lg text-label-lg";
+
+    if (gender === 'female') {
+      // Female state
+      deaconContainer.classList.add('hidden');
+      mothersOption.classList.remove('hidden');
+      if (mothersNote) mothersNote.classList.remove('hidden');
+
+      maleLabel.className = base + " gender-idle-selected";
+      femaleLabel.className = base + " gender-selected";
+    } else {
+      // Male state
+      deaconContainer.classList.remove('hidden');
+      mothersOption.classList.add('hidden');
+      if (mothersNote) mothersNote.classList.add('hidden');
+
+      if (classGrade.value === 'mothers') {
+        classGrade.value = '';
+      }
+
+      maleLabel.className = base + " gender-selected";
+      femaleLabel.className = base + " gender-idle-selected";
+    }
+  }
+
+  // إعادة الزرّين لحالة عدم الاختيار (متساويان في اللون)
+  function resetGenderButtons() {
+    const base = "relative flex items-center justify-center gap-2 p-2.5 rounded-lg cursor-pointer transition-all bg-surface-subtle text-text-secondary shadow-sm font-label-lg text-label-lg";
+    document.getElementById('genderMaleLabel').className = base;
+    document.getElementById('genderFemaleLabel').className = base;
+  }
+
+  function togglePasswordVisibility(inputId, iconId) {
+    const input = document.getElementById(inputId);
+    const icon = document.getElementById(iconId);
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  /* ============ الصورة الشخصية — المكوّن المشترك photo-cropper.js ============
+     نفس المحرّر المستخدم في طلب الانضمام: اختيار ملف ← قصّ داخل دائرة ←
+     حفظ 512×512 WebP. النتيجة تُحفظ في avatarSavedDataUrl وتُرسل مع الطلب. */
+  const avatarPhoto = { file: null, bitmap: null, dataUrl: null, crop: null };
+  let avatarSavedDataUrl = null; // الناتج النهائي المحفوظ (512×512)
+
+  function avatarPickFile() {
+    document.getElementById('studentAvatarInput').click();
+  }
+
+  async function avatarFileChosen(event) {
+    const file = event.target.files && event.target.files[0];
+    if (!file) return;
+    if (!file.type.startsWith('image/')) {
+      toast('يرجى اختيار ملف صورة صالح');
+      return;
+    }
+    try {
+      avatarPhoto.file = file;
+      await PhotoCropper.open({
+        file: file,
+        onSaved: function (dataUrl) {
+          avatarSavedDataUrl = dataUrl;
+          const preview = document.getElementById('avatarPreview');
+          preview.src = dataUrl;
+          preview.classList.remove('hidden');
+          document.getElementById('avatarPlaceholder').classList.add('hidden');
+          syncAvatarTools();
+        },
+        onCancel: function () {
+          // إلغاء: نُعيد المصغّرة لحالتها إن لم تُحفظ صورة بعد
+          if (!avatarSavedDataUrl) {
+            document.getElementById('studentAvatarInput').value = '';
+            avatarPhoto.file = null;
+            document.getElementById('avatarPreview').classList.add('hidden');
+            document.getElementById('avatarPlaceholder').classList.remove('hidden');
+            syncAvatarTools();
+          }
+        },
+      });
+    } catch (e) {
+      toast(e.message || 'تعذر قراءة الصورة المختارة — جرّب صورة أخرى');
+    }
+  }
+
+  // إبقاء واجهة قديمة للتوافق (لم تعد تُستخدم بعد الآن)
+  function syncAvatarTools() {
+    // المصغّرة تفعّل المؤشر فقط؛ لا أدوات خارجية بعد الآن
+    const thumb = document.getElementById('avatarThumb');
+    if (thumb) thumb.classList.toggle('ring-2', !!avatarSavedDataUrl);
+  }
+
+  // أكواد الفصول في التصميم ← أكواد الباك إند (بدون تعديل الـ HTML)
+  const CLASS_CODE_MAP = {
+    kg: "nursery",
+    pri1_2: "g1_2",
+    pri3_4: "g3_4",
+    pri5_6: "g5_6",
+    prep: "prep",
+    sec: "secondary",
+    youth: "youth",
+    mothers: "mothers",
+  };
+
+  // مربع «مطابق»: اعتماد رقم الطالب كرقم واتساب
+  function handleWhatsappSame() {
+    const same = document.getElementById('regWhatsappSame');
+    const wa = document.getElementById('regWhatsapp');
+    if (same.checked) {
+      wa.value = document.getElementById('regPhone').value.trim();
+      wa.readOnly = true;
+      wa.classList.add('opacity-70');
+    } else {
+      wa.readOnly = false;
+      wa.classList.remove('opacity-70');
+      wa.value = '';
+    }
+  }
+
+  // تاريخ الميلاد: إدخال يدوي «يوم / شهر / سنة» + منتقي التقويم (تخزين YYYY-MM-DD)
+  // المنتقي نفسه في المكوّن المشترك frontend/date-picker.js (نفسه في شاشة الاشتراكات)
+  function parseBirthInput(text) {
+    return DatePicker.parse(text);
+  }
+
+  function formatBirthDisplay(iso) {
+    return DatePicker.format(iso);
+  }
+
+  function normalizeBirthText() {
+    const input = document.getElementById('regBirthDate');
+    const iso = parseBirthInput(input.value);
+    if (iso) input.value = formatBirthDisplay(iso);
+  }
+
+  function openBirthPicker() {
+    const input = document.getElementById('regBirthDate');
+    DatePicker.open({
+      value: parseBirthInput(input.value),
+      title: 'تاريخ الميلاد',
+      minYear: 1940,
+      maxYear: new Date().getFullYear(),
+      allowFuture: false,
+      onPick: function (iso) {
+        input.value = formatBirthDisplay(iso);
+      },
+    });
+  }
+
+  async function handleLoginSubmit(event) {
+    event.preventDefault();
+    const phone = document.getElementById('loginPhone').value.trim();
+    const password = document.getElementById('loginPassword').value;
+
+    if (!/^\d{11}$/.test(phone)) {
+      toast('يرجى إدخال رقم هاتف صحيح مكون من 11 رقم');
+      return;
+    }
+    if (!password) {
+      toast('يرجى إدخال كلمة المرور');
+      return;
+    }
+
+    setBusy('loginForm', true, 'جارٍ التحقق...');
+    try {
+      const data = await api('/auth/login', {
+        method: 'POST',
+        body: { login_key: phone, password: password },
+      });
+      toast('مرحباً بك في مدرسة القديس أرسانيوس للألحان! جاري التحويل...', 'success');
+      saveSession(data);
+      setTimeout(() => redirectAfterLogin(data), 600);
+    } catch (err) {
+      if (err.status === 403 && err.details && err.details.admin_contact_phone) {
+        // ACCOUNT_PENDING / ACCOUNT_REJECTED / ACCOUNT_SUSPENDED
+        const suspendReason = err.details.suspension_reason;
+        const base = err.code === 'ACCOUNT_SUSPENDED'
+          ? (suspendReason
+              ? 'انتهت مدة الاشتراك — السبب: ' + suspendReason + '، للتواصل مع إدارة المدرسة:'
+              : 'انتهت مدة الاشتراك، للتواصل مع إدارة المدرسة:')
+          : err.message + ' — للتواصل مع إدارة المدرسة:';
+        toast(base, 'error', {
+          label: err.details.admin_contact_phone,
+          href: 'tel:' + err.details.admin_contact_phone,
+        });
+      } else {
+        toast(err.message || 'تعذر تسجيل الدخول، حاول مرة أخرى');
+      }
+    } finally {
+      setBusy('loginForm', false);
+    }
+  }
+
+  async function handleRegistrationSubmit(event) {
+    event.preventDefault();
+    const fullName = document.getElementById('regFullName').value.trim().slice(0, 40);
+    const phone = document.getElementById('regPhone').value.trim();
+    const whatsappSame = document.getElementById('regWhatsappSame').checked;
+    let whatsapp = document.getElementById('regWhatsapp').value.trim();
+    const parentPhone = document.getElementById('regParentPhone').value.trim();
+    const birthIso = parseBirthInput(document.getElementById('regBirthDate').value);
+    const password = document.getElementById('regPassword').value;
+    const classCode = document.getElementById('regClassGrade').value;
+    const genderInput = document.querySelector('input[name="gender"]:checked');
+    const gender = genderInput ? genderInput.value : 'male';
+
+    // جميع بيانات الانضمام إلزامية
+    if (!fullName) { toast('يرجى إدخال الاسم الرباعي'); return; }
+    if (!/^\d{11}$/.test(phone)) { toast('يرجى التحقق من صحة رقم الموبايل (11 رقم)'); return; }
+    if (whatsappSame) whatsapp = phone;
+    if (!whatsapp) { toast('يرجى إدخال رقم الواتساب أو تحديد «مطابق»'); return; }
+    if (!/^\d{11}$/.test(whatsapp)) { toast('رقم الواتساب يجب أن يتكون من 11 رقمًا'); return; }
+    const parentOptional = classCode === 'youth' || classCode === 'mothers';
+    if (!parentPhone && !parentOptional) { toast('يرجى إدخال رقم ولي الأمر — إلزامي لفصلك'); return; }
+    if (parentPhone && !/^\d{11}$/.test(parentPhone)) { toast('رقم ولي الأمر يجب أن يتكون من 11 رقمًا'); return; }
+    if (parentPhone && parentPhone === phone) { toast('رقم ولي الأمر يجب أن يختلف عن رقم الطالب'); return; }
+    if (!birthIso) { toast('يرجى إدخال تاريخ ميلاد صحيح (يوم / شهر / سنة)'); return; }
+    if (password.length < 6) { toast('كلمة المرور يجب ألا تقل عن 6 أحرف'); return; }
+    if (!classCode) { toast('يرجى اختيار المرحلة الدراسية'); return; }
+    if (classCode === 'mothers' && gender !== 'female') { toast('فصل الأمهات مخصص للسيدات فقط'); return; }
+    if (gender === 'male' && !document.getElementById('regDeaconRank').value) { toast('يرجى اختيار الرتبة الشماسية'); return; }
+    if (!avatarSavedDataUrl) { toast('يرجى إضافة صورة الطالب الشخصية'); return; }
+
+    const body = {
+      full_name: fullName,
+      phone: phone,
+      whatsapp: whatsapp,
+      parent_phone: parentPhone || null,
+      birth_date: birthIso,
+      gender: gender,
+      deacon_rank: gender === 'male' ? document.getElementById('regDeaconRank').value : null,
+      class_code: CLASS_CODE_MAP[classCode] || classCode,
+      password: password,
+    };
+
+    setBusy('registerForm', true, 'جارٍ الإرسال...');
+    try {
+      body.photo = avatarSavedDataUrl;
+      await api('/auth/register', { method: 'POST', body: body });
+      const modal = document.getElementById('successModal');
+      modal.classList.remove('hidden');
+    } catch (err) {
+      toast(err.message || 'تعذر إرسال طلب الانضمام، حاول مرة أخرى');
+    } finally {
+      setBusy('registerForm', false);
+    }
+  }
+
+  function closeSuccessModalAndGoLogin() {
+    const modal = document.getElementById('successModal');
+    modal.classList.add('hidden');
+    const form = document.getElementById('registerForm');
+    form.reset();
+    document.getElementById('avatarPreview').classList.add('hidden');
+    document.getElementById('avatarPlaceholder').classList.remove('hidden');
+    avatarSavedDataUrl = null;
+    avatarPhoto.file = null;
+    avatarPhoto.bitmap = null;
+    syncAvatarTools();
+    handleGenderChange('male');
+    resetGenderButtons();
+    switchAuthTab('login');
+  }
+
+  // فصل الحضانة: رتبة «لم أرسم بعد» تُختار تلقائيًا وتُقفل (لا يمكن تغييرها)
+  const regClassSelect = document.getElementById('regClassGrade');
+  const regRankSelect = document.getElementById('regDeaconRank');
+  function syncNurseryRank() {
+    const isNursery = regClassSelect.value === 'kg';
+    if (isNursery) regRankSelect.value = 'none';
+    regRankSelect.disabled = isNursery;
+    regRankSelect.style.opacity = isNursery ? '0.6' : '';
+    regRankSelect.classList.toggle('cursor-not-allowed', isNursery);
+    regRankSelect.classList.toggle('cursor-pointer', !isNursery);
+  }
+  regClassSelect.addEventListener('change', syncNurseryRank);
+  syncNurseryRank(); // عند استعادة حالة النموذج من المتصفح
+
+  // رقم الواتساب «مطابق» ← يتبع أي تغيير في رقم الموبايل
+  document.getElementById('regPhone').addEventListener('input', function () {
+    if (document.getElementById('regWhatsappSame').checked) {
+      document.getElementById('regWhatsapp').value = this.value.trim();
+    }
+  });
+
+  // إعادة تعيين النموذج ← مسح الصورة المختارة وفتح حقل الواتساب
+  document.getElementById('registerForm').addEventListener('reset', function () {
+    avatarSavedDataUrl = null;
+    avatarPhoto.file = null;
+    avatarPhoto.bitmap = null;
+    syncAvatarTools();
+    const wa = document.getElementById('regWhatsapp');
+    wa.readOnly = false;
+    wa.classList.remove('opacity-70');
+  });
+</script></main>
+
+
+
+</body></html>
